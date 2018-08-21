@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="com.rd.zhongqipiaoetong.utils.DisplayFormat" />
+
+        <variable
+            name="item"
+            type="com.rd.zhongqipiaoetong.module.account.model.CashRecordMo" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/item_selector"
+        android:onClick="@{item.onItemClick}">
+
+        <!-- 金融产品增信项目第五期 -->
+        <TextView
+            android:id="@+id/item_title"
+            style="@style/LogTitleTextViewThemeBlack"
+            android:text="@{item.borrowName}" />
+
+        <!-- 投资中 -->
+        <TextView
+            style="@style/TextViewThemeBlack"
+            android:layout_width="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:text="@{item.status ==1?@string/product_had_return:@string/product_no_return}"
+            android:textColor='@{item.status== 1 ? @color/text_red : @color/text_grey}' />
+
+        <!-- 15,000 -->
+        <TextView
+            style="@style/TextViewThemeBlack"
+            android:layout_below="@id/item_title"
+            android:text="@{DisplayFormat.doubleFormat(item.capital)}"
+            android:textColor="@color/app_color_secondary" />
+
+        <!-- 2015-09-20 -->
+        <TextView
+            style="@style/TextViewThemeBlack"
+            android:layout_width="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/item_title"
+            android:text="@{DisplayFormat.coverTimeYYMMDD(item.addTime)}"
+            android:textColor="@color/text_grey" />
+    </RelativeLayout>
+</layout>

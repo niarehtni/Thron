@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.rd.zhongqipiaoetong.module.more.viewmodel.MoreVM" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorGrey"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/titleBar"
+            layout="@layout/appbar_layout" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/x30"
+                    android:background="@color/colorViewbg"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/ArrowTextViewThemeBlackLineLeft"
+                        android:onClick="@{viewModel.onIntroduceClick}"
+                        android:padding="@dimen/x30"
+                        android:text="@string/more_about_us"
+                        android:textColor="@color/text_dark"
+                        android:textSize="@dimen/x35"
+                        app:colorFilter="@{@color/app_color_secondary}"
+                        app:drawableLeft="@{@drawable/more_about}"
+                        app:drawableRight="@{@drawable/ic_arrow_right}" />
+
+                    <TextView
+                        style="@style/ArrowTextViewThemeBlackLineLeft"
+                        android:onClick="@{viewModel.noticeClick}"
+                        android:padding="@dimen/x30"
+                        android:text="@string/more_msg"
+                        android:textColor="@color/text_dark"
+                        android:textSize="@dimen/x35"
+                        app:colorFilter="@{@color/app_color_secondary}"
+                        app:drawableLeft="@{@drawable/more_msg}"
+                        app:drawableRight="@{@drawable/ic_arrow_right}" />
+
+                    <TextView
+                        style="@style/ArrowTextViewThemeBlackLineLeft"
+                        android:onClick="@{viewModel.messageClick}"
+                        android:padding="@dimen/x30"
+                        android:text="@string/more_web"
+                        android:textColor="@color/text_dark"
+                        android:textSize="@dimen/x35"
+                        app:colorFilter="@{@color/app_color_secondary}"
+                        app:drawableLeft="@{@drawable/website_news}"
+                        app:drawableRight="@{@drawable/ic_arrow_right}" />
+
+                    <TextView
+                        style="@style/ArrowTextViewThemeBlackLineLeft"
+                        android:onClick="@{viewModel.activityListClick}"
+                        android:padding="@dimen/x30"
+                        android:text="@string/more_activity"
+                        android:textColor="@color/text_dark"
+                        android:textSize="@dimen/x35"
+                        app:colorFilter="@{@color/app_color_secondary}"
+                        app:drawableLeft="@{@drawable/activity_center}"
+                        app:drawableRight="@{@drawable/ic_arrow_right}" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/x30"
+                    android:background="@color/colorViewbg"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/ArrowTextViewThemeBlackLineLeft"
+                        android:onClick="@{viewModel.feedBackClick}"
+                        android:padding="@dimen/x30"
+                        android:text="@string/more_opinion"
+                        android:textColor="@color/text_dark"
+                        android:textSize="@dimen/x35"
+                        android:visibility="gone"
+                        app:drawableLeft="@{@drawable/more_opinion}"
+                        app:drawableRight="@{@drawable/ic_arrow_right}" />
+
+                    <TextView
+                        style="@style/ArrowTextViewThemeBlackLineLeft"
+                        android:onClick="@{viewModel.inviteClick}"
+                        android:padding="@dimen/x30"
+                        android:text="@string/more_invite"
+                        android:textColor="@color/text_dark"
+                        android:textSize="@dimen/x35"
+                        app:drawableLeft="@{@drawable/more_invite}"
+                        app:drawableRight="@{@drawable/ic_arrow_right}" />
+
+                    <TextView
+                        style="@style/ArrowTextViewThemeBlackLineLeft"
+                        android:onClick="@{viewModel.helpCenterClick}"
+                        android:padding="@dimen/x30"
+                        android:text="@string/more_help"
+                        android:textColor="@color/text_dark"
+                        android:textSize="@dimen/x35"
+                        app:drawableLeft="@{@drawable/more_help}"
+                        app:drawableRight="@{@drawable/ic_arrow_right}" />
+
+                    <LinearLayout
+                        style="@style/WhiteSelectorLayoutThemeLineLeft"
+                        android:onClick="@{viewModel.servicePhoneClick}"
+                        android:padding="0dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawablePadding="@dimen/x20"
+                            android:padding="@dimen/x30"
+                            android:text="@string/more_service"
+                            android:textColor="@color/text_dark"
+                            android:textSize="@dimen/x35"
+                            app:drawableLeft="@{@drawable/more_service}" />
+
+                        <TextView
+                            style="@style/ArrowTextViewThemeBlack"
+                            android:layout_width="wrap_content"
+                            android:drawablePadding="@dimen/x20"
+                            android:padding="@dimen/x30"
+                            android:textColor="@color/text_grey"
+                            android:textSize="@dimen/x35" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/WhiteSelectorLayoutThemeLineLeft"
+                        android:onClick="@{viewModel.verisonClick}"
+                        android:padding="0dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawablePadding="@dimen/x20"
+                            android:padding="@dimen/x30"
+                            android:text="@string/more_version"
+                            android:textColor="@color/text_dark"
+                            android:textSize="@dimen/x35"
+                            app:drawableLeft="@{@drawable/more_version}" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/x30"
+                            android:text="@{viewModel.versionName}"
+                            android:textColor="@color/text_grey"
+                            android:textSize="@dimen/x35" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+</layout>

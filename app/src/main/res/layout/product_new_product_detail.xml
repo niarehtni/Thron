@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="java.lang.String"/>
+        <import type="com.rd.zhongqipiaoetong.utils.DisplayFormat" />
+
+        <variable
+            name="vm"
+            type="com.rd.zhongqipiaoetong.module.product.viewmodel.NewProductVM" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorGrey"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/titleBar"
+            layout="@layout/appbar_layout" />
+
+        <in.srain.cube.views.ptr.PtrClassicFrameLayout
+            android:id="@+id/ptrAll"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            app:ptrFrame="@{vm.listener}">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="@dimen/x20">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/app_color_principal"
+                        android:orientation="vertical"
+                        android:padding="@dimen/x20">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="@string/product_rate"
+                            android:textColor="@color/text_white"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@{vm.exproduct.showYearRate}"
+                            android:textColor="@color/text_white"
+                            android:textSize="24sp"/>
+
+                        <com.rd.zhongqipiaoetong.view.CountProgress
+                            android:id="@+id/financing_CountProgress"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            custom:orientation="Vertical"
+                            custom:proColorTop="@color/white"
+                            custom:proHeight="6dp"
+                            custom:textSizes="14sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/app_color_principal"
+                        android:orientation="horizontal"
+                        android:paddingBottom="@dimen/x10"
+                        android:paddingTop="@dimen/x30"
+                        app:alpha="@{200}">
+                        <!--项目总额-->
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/product_invest_amount"
+                            android:textColor="@color/whitesmoke" />
+                        <!--起投金额-->
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/investment_detail_formaount"
+                            android:textColor="@color/whitesmoke" />
+                        <!--项目期限-->
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@{vm.exproduct.getTimetypeStr}"
+                            android:textColor="@color/whitesmoke" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/app_color_principal"
+                        android:paddingBottom="@dimen/x30"
+                        app:alpha="@{200}">
+                        <!--项目总额-->
+                        <TextView
+                            android:id="@+id/financing_rate_key"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@{DisplayFormat.doubleFormat(vm.exproduct.amountBorrow)}"
+                            android:textColor="@color/colorViewbg"
+                            android:textSize="18sp" />
+                        <!--起投金额-->
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@{DisplayFormat.doubleFormat(vm.exproduct.investMin)}"
+                            android:textColor="@color/colorViewbg"
+                            android:textSize="18sp"
+                            android:id="@+id/textView2" />
+                        <!--项目期限-->
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@{String.valueOf(vm.exproduct.timeLimit)}"
+                            android:textColor="@color/colorViewbg"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/x20"
+                        android:background="@color/colorViewbg"
+                        android:orientation="vertical"
+                        android:paddingLeft="@dimen/x24"
+                        android:paddingRight="@dimen/x24">
+
+                        <!--回款方式-->
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/x100"
+                            android:background="@drawable/item_selector_line"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/product_return_style"
+                                android:textColor="@color/text_dark" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"
+                                android:text="@{DisplayFormat.getRepayMentStr(vm.exproduct.repayWay)}"
+                                android:textColor="@color/text_grey" />
+                        </RelativeLayout>
+
+
+
+                    </LinearLayout>
+
+                    <!--了解项目-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/ArrowTextViewThemeBlackLineLeft"
+                            android:gravity="center_vertical"
+                            android:onClick="@{vm.learnProjectClick}"
+                            android:text="@string/product_understand_project"
+                            android:textColor="@color/text_dark" />
+
+                        <!--投资记录-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:onClick="@{vm.investRecordClick}"
+                            android:paddingLeft="@dimen/x20"
+                            android:paddingStart="@dimen/x20">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/product_invest_record"
+                                android:textColor="@color/text_dark"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                style="@style/ArrowTextViewThemeBlack"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:gravity="right"
+                                android:text="@{@string/product_invest_count(DisplayFormat.intFormat(vm.exproduct.investedCount))}"
+                                android:textColor="@color/text_grey" />
+                        </LinearLayout>
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/x80"
+                            android:onClick="@{vm.expClick}"
+                            android:paddingLeft="@dimen/x28"
+                            android:background="@color/white"
+                            android:paddingRight="@dimen/x28"
+                            app:visibility="@{vm.exproduct.canInvest}">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical"
+                                android:text="@string/newproduct_tyb"
+                                android:textColor="@color/text_dark"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentRight="true"
+                                android:drawablePadding="@dimen/x8"
+                                android:drawableRight="@drawable/ic_arrow_right"
+                                android:gravity="center_vertical"
+                                android:text="@{vm.expAmount == 0?(vm.exproduct.hasExp?@string/newproduct_tyb1:@string/newproduct_tyb2):@string/newproduct_choose(DisplayFormat.doubleFormat(vm.expAmount))}"
+                                android:textColor="@color/text_grey"
+                                android:textSize="14sp" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+        </in.srain.cube.views.ptr.PtrClassicFrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x88"
+            android:background="@{vm.exproduct.canInvest?@drawable/rectangle_btn_normal:@drawable/rectangle_btn_disable}">
+
+            <ImageView
+                android:layout_width="@dimen/x88"
+                android:layout_height="@dimen/x88"
+                android:enabled="@{vm.exproduct.canInvest}"
+                android:onClick="@{vm.calculatorClick}"
+                android:scaleType="center"
+                android:src="@drawable/ic_calculator" />
+
+            <View
+                android:layout_width="@dimen/x2"
+                android:layout_height="match_parent"
+                android:background="@color/white" />
+
+            <com.rd.zhongqipiaoetong.view.NoDoubleClickButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:enabled="@{vm.exproduct.canInvest}"
+                android:onClick="@{vm.investClick}"
+                android:text="@{vm.exproduct.getStatusStr}"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</layout>

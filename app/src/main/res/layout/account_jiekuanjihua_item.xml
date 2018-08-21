@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.rd.zhongqipiaoetong.module.account.model.JieKuanMo" />
+
+        <import type="com.rd.zhongqipiaoetong.utils.DisplayFormat" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:onClick="@{item.click}"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x20"
+            android:background="@color/line_grey" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/x20">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@{item.name}"
+                android:textColor="@color/text_dark"
+                android:textSize="36px" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{item.status}"
+                android:textColor="@{item.statusColor?@color/red_btn:@color/text_black}"
+                android:textSize="36px" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y1"
+            android:layout_marginLeft="@dimen/x20"
+            android:background="@color/line_grey" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x180"
+            android:padding="@dimen/x20">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/x20"
+                android:layout_toLeftOf="@+id/item_rpb"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@{DisplayFormat.doubleFormat(item.amountBorrow)}"
+                        android:textColor="@color/text_dark"
+                        android:textSize="@dimen/x36" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/x20"
+                        android:text="借款金额（元）"
+                        android:textSize="24px" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@{DisplayFormat.doubleFormat(item.amountInvested)}"
+                        android:textColor="@color/text_dark"
+                        android:textSize="@dimen/x36" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/x20"
+                        android:text="已募集（元）"
+                        android:textSize="24px" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <com.rd.zhongqipiaoetong.view.RoundProgressBar
+                android:id="@+id/item_rpb"
+                android:layout_width="@dimen/x140"
+                android:layout_height="@dimen/x140"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                app:progressBorrow="@{DisplayFormat.doubleFormat(item.progressPercentage)}"
+                app:roundColor="@color/grey_bg"
+                app:roundProgressColor="@color/app_color_secondary"
+                app:roundTextSize="@dimen/sp16" />
+        </RelativeLayout>
+    </LinearLayout>
+</layout>

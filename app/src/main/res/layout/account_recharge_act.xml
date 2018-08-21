@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="com.rd.zhongqipiaoetong.view.FullyLinearLayoutManager" />
+
+        <import type="com.rd.zhongqipiaoetong.utils.DisplayFormat" />
+        <import type="com.rd.zhongqipiaoetong.utils.UrlUtils"/>
+
+        <variable
+            name="viewModel"
+            type="com.rd.zhongqipiaoetong.module.account.viewmodel.RechargeVM" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorGrey"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/titleBar"
+            layout="@layout/appbar_layout" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    style="@style/WhiteLayoutTheme"
+                    android:layout_marginTop="@dimen/x20"
+                    android:background="@drawable/item_selector"
+                    android:visibility="gone">
+
+                    <TextView
+                        style="@style/TextViewThemeBlack"
+                        android:layout_width="wrap_content"
+                        android:text="@string/recharge_bank_card" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/x20"
+                        android:layout_marginStart="@dimen/x20"
+                        android:contentDescription="@string/empty"
+                        app:src="@{viewModel.selecteditem.logoPicUrl}" />
+
+                    <TextView
+                        style="@style/ArrowTextViewThemeBlack"
+                        android:padding="@dimen/x20"
+                        android:text="@{@string/recharge_bank_title(viewModel.selecteditem.bank,DisplayFormat.getShortBankNO(viewModel.selecteditem.bankNo))}" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/WhiteLayoutTheme"
+                    android:layout_marginTop="@dimen/x20">
+
+                    <EditText
+                        style="@style/EditTextTheme"
+                        android:id="@+id/recharge_money"
+                        android:layout_width="0dp"
+                        android:layout_margin="0dp"
+                        android:layout_weight="1"
+                        android:afterTextChanged="@{viewModel.input}"
+                        android:hint="@{@string/recharge_input_hint(viewModel.item.minInvest)}"
+                        android:imeOptions="actionDone"
+                        android:inputType="numberDecimal"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        style="@style/TextViewThemeBlack"
+                        android:layout_width="wrap_content"
+                        android:text="@string/unit_yuan" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/WhiteLayoutTheme"
+                    android:layout_marginTop="@dimen/x20">
+
+                    <TextView
+                        style="@style/TextViewThemeBlack"
+                        android:layout_width="wrap_content"
+                        android:text="@string/recharge_kyye" />
+
+                    <TextView
+                        style="@style/TextViewThemeBlack"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:text="@{DisplayFormat.doubleMoney(viewModel.item.balance)}"
+                        android:textColor="@color/text_grey" />
+                </LinearLayout>
+
+                <Button
+                    style="@style/FilletBtnStyle"
+                    android:layout_margin="@dimen/x30"
+                    android:enabled="@{viewModel.enable}"
+                    android:onClick="@{viewModel.submit}"
+                    android:text="@string/recharge_submit" />
+
+                <TextView
+                    style="@style/TipsTheme"
+                    android:text="@{@string/recharge_tips(viewModel.url)}" />
+
+                <ImageView
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/recharge" />
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,681 @@
+<resources>
+    <string name="app_name">票e通</string>
+    <string name="app_crash">很抱歉,程序出现异常,即将退出.</string>
+    <string name="app_network_error">网络链接错误，请查看网络是否已连接!</string>
+    <string name="app_exit">再按一次退出程序</string>
+
+    <!-- common -->
+    <string name="empty"></string>
+    <string name="msg_toast_title">温馨提示</string>
+    <string name="msg_system_error">系统异常请联系客服人员!</string>
+    <string name="msg_net_error">网络异常，数据加载失败!</string>
+    <string name="confirm">确定</string>
+    <string name="close">关闭</string>
+    <string name="get_back">返回</string>
+    <string name="cancel">取消</string>
+    <string name="delete">删除</string>
+    <string name="previous">上一步</string>
+    <string name="next">下一步</string>
+    <string name="commit">提交</string>
+    <string name="day">天</string>
+    <string name="month">月</string>
+    <string name="year">年</string>
+    <string name="days">%1$s天</string>
+    <string name="months">%1$s月</string>
+    <string name="months2">%1$s个月</string>
+    <string name="years">%1$s年</string>
+    <string name="unit_yuan">元</string>
+    <string name="unit_percent">%</string>
+    <string name="record">记录</string>
+    <string name="count">%1$s笔</string>
+    <string name="num">%1$s张</string>
+    <string name="page_loading">加载中&#8230;</string>
+    <string name="apr_percent">%1$s%%</string>
+    <string name="default_money">0.00</string>
+    <string name="unlimit">无限制</string>
+    <string name="line">-</string>
+    <string name="yuan">%1$s 元</string>
+    <string name="fen">%1$s 份</string>
+    <string name="month2">个月</string>
+    <string name="empty_zero">0</string>
+
+    <!-- dialog -->
+    <string name="dialog_title">提示</string>
+    <string name="dialog_confirm">确定</string>
+    <string name="dialog_cancel">取消</string>
+    <string name="dialog_calculate_title">计算收益</string>
+    <string name="dialog_calculate_income">预估收益(元)</string>
+    <string name="dialog_calculate_money">理财金额</string>
+    <string name="dialog_bindbank">开户银行</string>
+    <string name="dialog_area">选择地区</string>
+
+    <!-- permission -->
+    <string name="permission_context">为了能更好的使用本应用，请授予如下权限。</string>
+    <string name="permission_settings">去设置</string>
+
+    <!-- 底部菜单 -->
+    <string name="bottom_tv_home">首页</string>
+    <string name="bottom_tv_list">产品列表</string>
+    <string name="bottom_tv_mine">我的账户</string>
+    <string name="bottom_tv_more">更多</string>
+
+    <!-- 我的消息 -->
+    <string name="msg_title">我的消息</string>
+    <string name="msg_delete">确定删除这条消息吗？</string>
+    <string name="msg_read_all">全部标记为已读</string>
+    <string name="msg_delete_all">批量删除消息</string>
+    <string name="msg_select_text">已选中%1$s个</string>
+    <string name="msg_delete_confirm">确认删除</string>
+    <string name="msg_mark_read">标为已读</string>
+    <string name="msg_mark_unread">标为未读</string>
+
+    <!-- 产品列表-->
+    <string name="product_list_title">产品列表</string>
+    <string name="product_new_user">新手专享</string>
+    <string name="product_exp">体验标</string>
+    <string name="product_lave_time">项目期限 %1$s 天</string>
+    <string name="product_lave_time_month">项目期限 %1$s 个月</string>
+    <string name="product_lave_time_int">项目期限 %1$d 天</string>
+    <string name="product_lave_time_month_int">项目期限 %1$d 个月</string>
+    <string name="product_lave1_time">剩余期限 %1$s 天</string>
+    <string name="product_lave1_time_month">剩余期限 %1$s 个月</string>
+
+    <string name="product_rate">--预期年化利率--</string>
+    <string name="product_rate2">预期年化利率</string>
+    <string name="product_borrow_money">借款金额(元)</string>
+    <string name="product_return_style">回款方式</string>
+    <string name="product_invest_time">发布时间</string>
+    <string name="product_invest_range">投资区间</string>
+    <string name="product_understand_project">了解项目</string>
+    <string name="product_protocol">借款协议</string>
+    <string name="product_protocol_bond_in">浏览协议</string>
+    <string name="product_invest_record">投资记录</string>
+    <string name="product_invest_amount">项目总额(元)</string>
+    <string name="product_limit">剩余期限 %1$s 天</string>
+    <string name="product_project_share">项目总额 %1$s 元</string>
+    <string name="product_start_money">起购金额 %1$s 元</string>
+    <string name="product_each_money">每份金额 %1$s 元</string>
+    <string name="product_submit">立即投资</string>p
+    <string name="product_chose_err">只能使用一种理财券</string>
+    <string name="product_bond_discount_name">折让率</string>
+    <string name="product_bond_amount">债权总价(元)</string>
+
+    <!-- 转让记录 -->
+    <string name="product_invest_title1">投资记录</string>
+    <string name="product_invest_title2">转让记录</string>
+    <string name="product_sold_out">已售罄</string>
+    <string name="product_invest_count">%1$s笔</string>
+    <string name="product_time_limit">剩余期限 %1$s 天</string>
+    <string name="product_discount_rate">折让率 %1$s</string>
+
+    <!--还款计划-->
+    <string name="product_return_title">还款计划</string>
+    <string name="product_had_return">已还款</string>
+    <string name="product_no_return">未还款</string>
+
+    <!--借款详情-->
+    <string name="product_borrower_title">产品项目详情</string>
+    <string name="product_borrower_info">借款方信息</string>
+    <string name="product_username">用户名</string>
+    <string name="product_age">年龄</string>
+    <string name="product_education">学历</string>
+    <string name="product_marriage">婚姻状况</string>
+    <string name="product_household_city">户籍城市</string>
+    <string name="product_work_time">工作时间</string>
+    <string name="product_income_range">收入范围</string>
+    <string name="product_had_car">车产</string>
+    <string name="product_had_house">房产</string>
+    <string name="product_checking_project">审核项目</string>
+    <string name="product_state">状态</string>
+    <string name="product_pass_time">通过时间</string>
+    <string name="product_return_ability">还款能力证明</string>
+    <string name="product_credit_report">信用报告</string>
+    <string name="product_had_authen">已认证</string>
+    <string name="product_no_authen">未认证</string>
+    <string name="product_had_marriage">已婚</string>
+    <string name="product_no_marriage">未婚</string>
+    <string name="product_had">有</string>
+    <string name="product_no">没有</string>
+    <string name="product_bonddetail_timelave">剩余期限(天)</string>
+
+    <!-- 银行卡（bankCard - bc） -->
+    <string name="bc_title">银行卡</string>
+    <string name="bc_add_card">添加银行卡</string>
+    <string name="bc_add">添加</string>
+    <string name="bc_isFast">已开通快捷支付</string>
+    <string name="bc_toFast">未开通快捷支付</string>
+    <string name="bc_notfast">您尚未开通快捷支付</string>
+    <string name="bc_tip">温馨提示：请添加相同姓名的银行卡</string>
+    <string name="bc_realname">真实姓名</string>
+    <string name="bc_realname_hint">请输入您的真实姓名</string>
+    <string name="bc_realname_null">真实姓名不能为空</string>
+    <string name="bc_realname_error">输入的真实姓名不正确</string>
+    <string name="bc_bankname">开户银行</string>
+    <string name="bc_bankname_hint">请选择开户银行</string>
+    <string name="bc_bankname_null">开户银行不能为空</string>
+    <string name="bc_bank_card_num">银行账号</string>
+    <string name="bc_bank_card_num_hint">请输入银行账号</string>
+    <string name="bc_area">所在地区</string>
+    <string name="bc_area_hint">请选择所在地区</string>
+    <string name="bc_branch">支行名称</string>
+    <string name="bc_branch_hint">请输入支行名称（选填）</string>
+    <string name="bc_submit">确认添加</string>
+    <string name="submit_success">绑卡成功</string>
+
+    <!-- 帮助中心 -->
+    <string name="helpcenter_title">帮助中心</string>
+
+    <!--我的账户-->
+    <string name="account_title">我的账户</string>
+    <string name="account_vip_level">VIP %1$d</string>
+    <string name="account_all_asset">我的资产(元)</string>
+    <string name="account_collecting_income">待到账收益(元)</string>
+    <string name="account_total_income">已收收益(元)</string>
+    <string name="account_use_money">可用余额(元)</string>
+    <string name="account_recharge">充值</string>
+    <string name="account_withdraw">提现</string>
+    <string name="account_asset_statistics">资产统计</string>
+    <string name="account_invest_manage">投资管理</string>
+    <string name="account_payment_plan">回款计划</string>
+    <string name="account_log">资金记录</string>
+    <string name="account_to_transfer">我要转让</string>
+    <string name="account_to_auto">自动投标</string>
+    <string name="account_my_red_packet">我的红包</string>
+    <string name="account_exp">体验金</string>
+    <string name="account_score_log">积分记录</string>
+    <string name="account_slb">生利宝</string>
+    <string name="account_loan_manage">借款管理</string>
+    <string name="account_repayment_manage">还款管理</string>
+    <string name="account_mall">积分商城</string>
+    <string name="account_task">我的任务</string>
+    <string name="account_risk">风险评测</string>
+    <string name="account_realname_no">您尚未开通支付账户，请开通</string>
+    <string name="account_authorize_no">您尚未授权，请授权</string>
+    <string name="account_bank_no">您尚未绑卡，请绑卡</string>
+    <string name="account_pswd_no">您尚未设置支付密码，请设置</string>
+    <string name="payment_account_realname">开通实名账户</string>
+
+    <!-- 授权 -->
+    <string name="authorize">授权</string>
+
+    <!-- 投资记录（investmentRecord - ir） -->
+    <string name="ir_title">投资管理</string>
+    <string name="ir_detail">详情</string>
+    <string name="ir_xy">协议</string>
+    <string name="ir_hkjl">回款记录</string>
+    <string name="ir_hkzzhye">回款到账户余额</string>
+    <string name="ir_period">第%1$s期</string>
+
+    <!-- 我的优惠券 -->
+    <string name="coupon_title">我的红包</string>
+    <string name="coupon_myexp">我的体验金</string>
+    <string name="coupon_tips">温馨提示：投资可使用红包额度=投标金额*5%，一次可使用多个红包。</string>
+    <string name="coupon_optional">红包总额：%1$s 元</string>
+    <string name="coupon_selected">已选红包：%1$s 元</string>
+    <string name="up_optional">可选加息券：%1$s 张</string>
+    <string name="up_selected">已选加息券：%1$s 张</string>
+    <string name="exp_optional">可选体验券：%1$s 张</string>
+    <string name="exp_selected">已选体验券：%1$s 元</string>
+    <string name="coupon_redpacke">红包</string>
+    <string name="coupon_experience">体验券</string>
+    <string name="coupon_uprate">加息券</string>
+    <string name="coupon_exchange">兑换</string>
+    <string name="coupon_exchange_dialog">确认兑换红包？</string>
+
+    <!-- 回款记录 -->
+    <string name="payment_record_title">回款记录</string>
+    <string name="payment_record_period">第%1$s期（共%2$s期）</string>
+
+    <string name="cashvalue_recode_title">充值提现记录</string>
+
+    <!-- 积分记录 -->
+    <string name="score_log_title">积分记录</string>
+    <string name="score_log_scores">您的当前积分有</string>
+    <string name="score_log_scorefomat">%1$s积分</string>
+
+    <!-- 我的资产 -->
+    <string name="assets_title">资产统计</string>
+    <string name="assets_recharge">充值</string>
+    <string name="assets_withdraw">提现</string>
+    <string name="assets_total_tips">总资产(元)</string>
+    <string name="assets_dqlc">定期理财(元)</string>
+    <string name="assets_zqzr">债权转让(元)</string>
+    <string name="assets_kyye">可用余额(元)</string>
+    <string name="assets_djje">冻结金额(元)</string>
+    <string name="assets_ztje">在投金额(元)</string>
+    <string name="assets_dsjr">待收金额(元)</string>
+    <string name="assets_dssy">待收收益(元)</string>
+    <string name="assets_dzzsj">待到账收益(元)</string>
+    <string name="coupon_over">过期时间</string>
+
+    <!-- 投资 -->
+    <string name="investment_title">投资</string>
+    <string name="investment_tendername">投资金额</string>
+    <string name="investment_syktje">剩余可购金额</string>
+    <string name="investment_syktfs">剩余可投份数</string>
+    <string name="investment_tzqj">投资区间</string>
+    <string name="investment_qtfs">起投份数</string>
+    <string name="investment_input_hint">请输入投资金额</string>
+    <string name="investment_input_fen">请输入投资份数</string>
+    <string name="investment_estimated_earnings">预期收益：%1$s </string>
+    <string name="investment_hb">红包</string>
+    <string name="investment_xzhb">请选择红包</string>
+    <string name="investment_exp">体验券</string>
+    <string name="investment_xzexp">请选择体验券</string>
+    <string name="investment_up">加息券</string>
+    <string name="investment_xzup">请选择加息券</string>
+    <string name="investment_kyye">可用余额</string>
+    <string name="investment_need_pay">您需要支付 %1$s </string>
+    <string name="investment_submit">确认支付</string>
+    <string name="investment_pass_usemoney">您的余额不足</string>
+    <string name="investment_torecharge">可用余额不足，请充值</string>
+    <string name="investment_less_minamount">实际投资金额不能小于最小投标金额 %1$s 元!</string>
+    <string name="investment_pass_maxamount">实际投资金额不能大于最大投标额度,当前可投 %1$s 元!</string>
+    <string name="investment_less_mincount">投资份数不能低于 %1$s 份</string>
+    <string name="investment_less_maxcount">投资份数不能超过 %1$s 份</string>
+    <string name="investment_dirpwd">请输入定向标密码</string>
+    <string name="investment_inputpwd">请输入支付密码</string>
+    <string name="investment_dir">定向密码</string>
+    <string name="investment_paypwd">请输入支付密码</string>
+    <string name="investment_sure">支付确认</string>
+    <string name="investment_actual_name">实际支付</string>
+    <string name="investment_noAuthorized">您的账户还未授权,是否前去授权?</string>
+    <string name="investment_limit">投资金额只能为起投金额的整数倍!</string>
+    <string name="investment_lave_bond">剩余债权</string>
+    <string name="investment_buyall">请购买全部剩余可投金额!</string>
+    <string name="investment_buyallcount">请购买全部剩余份数</string>
+    <string name="investment_actual">实际支付 %1$s </string>
+    <string name="investment_zherang">折让金额 %1$s </string>
+    <string name="investment_detail_lave">剩余可投</string>
+    <string name="investment_detail_lave_flow">剩余可投(份)</string>
+    <string name="investment_detail_formaount">起投金额(元)</string>
+    <string name="investment_detail_eachmoney">每份金额(元)</string>
+    <string name="investment_detail_timelimit">项目期限(天)</string>
+    <string name="investment_detail_formaount2">起投金额</string>
+
+    <!-- 登录页面 -->
+    <string name="login_title">登录</string>
+    <string name="login_et_username">手机号/用户名/邮箱</string>
+    <string name="login_et_password">登录密码</string>
+    <string name="login_btn_login">登录</string>
+    <string name="login_tv_forget">忘记密码</string>
+    <string name="login_tv_register">注册新用户</string>
+    <string name="login_tv_error_time">密码错误，您还有 %1$s 次输入机会</string>
+    <string name="login_tv_lock_toast">您的账户已冻结，账号将在24小时之后自动解冻。</string>
+    <string name="login_tv_find_pwd">找回密码</string>
+    <string name="login_find_pwd_success">重置密码成功</string>
+    <string name="login_tv_call_service">拨打客服</string>
+
+    <!-- 更多页面 -->
+    <string name="more_about_us">平台简介</string>
+    <string name="more_title">更多</string>
+    <string name="more_center">个人中心</string>
+    <string name="more_web">网站资讯</string>
+    <string name="more_activity">活动中心</string>
+    <string name="activity_no">暂时没有活动哦</string>
+    <string name="more_msg">公告</string>
+    <string name="more_invite">邀请好友</string>
+    <string name="more_opinion">意见反馈</string>
+    <string name="more_help">帮助中心</string>
+    <string name="more_service">客服服务</string>
+    <string name="more_phone">0571&#8211;88006226</string>
+    <string name="phone">拨打电话：%1$s</string>
+    <string name="more_version">版本信息</string>
+
+    <!-- 邀请好友 -->
+    <string name="invitation_title">邀请好友</string>
+    <string name="invitation_share_friend">分享给好友</string>
+    <string name="invitation_record">好友记录</string>
+    <string name="invitation_share_success">分享成功</string>
+    <string name="invitation_share_fail">分享失败</string>
+    <string name="invitation_share_cancel">分享取消</string>
+    <string name="invitation_collect_success">收藏成功</string>
+    <!--首页-->
+    <string name="home_invest_expect_apr">预期年化利率</string>
+    <string name="home_invest_now">立即抢购</string>
+    <string name="home_invest_security">资金由第三方资金托管平台托管</string>
+    <string name="home_invest_sold"> %1$s 人已投</string>
+    <string name="home_invest_total"> 总额 %1$s 元</string>
+    <string name="home_invest_purchase"> %1$s 元起购</string>
+    <string name="home_invest_term">期限 %1$s </string>
+    <string name="home_invest">优选计划</string>
+
+    <!-- 充值 -->
+    <string name="recharge_title">充值</string>
+    <string name="recharge_bank_title">%1$s 尾号(%2$s)</string>
+    <string name="recharge_bank_card">银行卡</string>
+    <string name="recharge_input_hint">请输入充值金额(不能小于%1$s元)</string>
+    <string name="recharge_kyye">可用余额</string>
+    <string name="recharge_sxf">手续费</string>
+    <string name="recharge_tips">温馨提示：若需要大额充值，请登录%1$s使用网银充值.</string>
+    <string name="recharge_submit">充值</string>
+    <string name="recharge_limit_tip1">银行</string>
+    <string name="recharge_limit_tip2">单笔限额(元)</string>
+    <string name="recharge_limit_tip3">每日限额(元)</string>
+    <string name="recharge_limit_tip4">每月限额(元)</string>
+    <string name="recharge_symbol">+%1$s</string>
+    <string name="recharge_balance">余额：%1$s</string>
+
+    <!-- 提现 -->
+    <string name="withdraw_title">提现</string>
+    <string name="withdraw_input_hint">请输入提现金额</string>
+    <string name="withdraw_money_hint">提现金额大于可用金额</string>
+    <string name="withdraw_money_hint_error">提现不能小于%1$s元</string>
+    <string name="withdraw_ktx">可提现</string>
+    <string name="withdraw_submit">提现</string>
+    <string name="withdraw_tips">温馨提示：\n预计到账时间：T日10：00AM之前申请提现，预计当日到账；T日10：00AM以后申请提现，预计最晚T+1个工作日到账；\n\n遇双休日或法定节假日顺延，实际到账时间根据账户托管方（第三方支付平台）及提现银行而有所差异。</string>
+    <string name="withdraw_symbol">-%1$s</string>
+
+    <!-- 充值 提现 记录 -->
+    <string name="financial_title">资金记录</string>
+
+    <!-- 注册页面 -->
+    <string name="register_title">注册</string>
+    <string name="register_phone_hint">请输入您的手机号码</string>
+    <string name="register_code_hint">请输入验证码</string>
+    <string name="register_get_code">获取验证码</string>
+    <string name="register_login">登录</string>
+    <string name="register_set_password">密码设置</string>
+    <string name="register_pwd_hint">登录密码由8&#8211;16位数字及字母组成</string>
+    <string name="register_invite_code">邀请码</string>
+    <string name="register_invit_hint">请输入邀请人（选填）</string>
+    <string name="register_register">注册</string>
+    <string name="register_agree_one">点击注册表示同意</string>
+    <string name="register_agree_two">《百安用户服务协议》</string>
+
+    <!-- 账户中心转让列表 -->
+    <string name="creditor_title">转让列表</string>
+    <string name="expected_apr">预期年化利率</string>
+    <string name="remaining_time">持有期限 %1$s 天</string>
+    <string name="can_transfer_money">可转金额 %1$s 元</string>
+    <string name="invest_money">投资金额 %1$s 元</string>
+    <string name="transfer_record_money">转让价值 %1$s 元</string>
+    <string name="transfer_recall">撤回</string>
+    <string name="transfer_recall_dialog">确认撤回该债权？</string>
+
+    <string name="transfer_title">债权转让</string>
+    <string name="transfer_bondmoney">债权价值</string>
+    <string name="transfer_money">转让债权</string>
+    <string name="transfer_money_hint">金额必须小于等于债权价值</string>
+    <string name="transfer_money_err">转让金额必须大于最小转让金额 %1$s 元</string>
+    <string name="transfer_money_err1">剩余转让金额不足</string>
+    <string name="transfer_money_success">转让成功</string>
+    <string name="transfer_name">债权名称</string>
+    <string name="transfer_name_hint">请输入债权名称</string>
+    <string name="transfer_sumit">确定转让？</string>
+    <string name="discount_apr">折让率</string>
+    <string name="transfer_price">转让价格</string>
+    <string name="hand_fee">手续费</string>
+    <string name="real_income">预估到账</string>
+    <string name="transfer_confirm">确认转让</string>
+    <string name="transfer_tips_one">点击“确认转让”即表示同意</string>
+    <string name="transfer_tips_two">《转让协议》</string>
+    <string name="transfer_rule_tips2">温馨提示：\n1.债权转让成功后平台将收取手续费，手续费金额为转让金额 * %1$s%%\n2.还款方式为一次性还款的项目转让时，转让成功前收益归转让人所有，转让成功后收益归受让人所有\n3.还款方式为每月还息到期还本以及按月分期还款的项目转让时，还未到账的收益将全部转赠给受让人</string>
+    <string name="transfer_rule_tips1">温馨提示：\n1.债权转让成功后平台将收取手续费，手续费金额为%1$s元\n2.还款方式为一次性还款的项目转让时，转让成功前收益归转让人所有，转让成功后收益归受让人所有\n3.还款方式为每月还息到期还本以及按月分期还款的项目转让时，还未到账的收益将全部转赠给受让人</string>
+
+    <string name="transfer_finish">转让完成</string>
+    <string name="transfer_can">立即受让</string>
+    <!-- 账户与安全 -->
+    <string name="person_info_title">账户与安全</string>
+    <string name="person_info_head_img">头像</string>
+    <string name="person_info_username">用户名</string>
+    <string name="person_info_bind_phone">绑定手机</string>
+    <string name="person_info_bind_email">绑定邮箱</string>
+    <string name="person_info_pwd_manage">密码管理</string>
+    <string name="person_info_auto">自动投标</string>
+    <string name="person_info_payment">支付账户</string>
+    <string name="person_info_bank_card">银行卡</string>
+    <string name="person_info_sign_out">退出登录</string>
+    <string name="person_info_sign_out_prompt">确定要登出当前账号?</string>
+    <string name="person_info_go_open">去开通</string>
+    <string name="person_info_go_opened">已开通</string>
+    <string name="person_info_go_bind">去绑定</string>
+    <string name="person_info_take_photo">拍照</string>
+    <string name="person_info_pick_photo">相册选取</string>
+
+    <!-- 绑定邮箱 -->
+    <string name="email_title">绑定邮箱</string>
+    <string name="email_get_code">发送邮箱验证码</string>
+    <string name="email_get_code_success">验证码发送成功</string>
+    <string name="email_submit">确认绑定</string>
+    <string name="email_bind_success">绑定成功</string>
+    <string name="email_hint">请输入邮箱地址</string>
+    <string name="email_hint_error">邮箱格式不正确</string>
+    <string name="email_hint_err">请输入邮箱验证码</string>
+
+    <!-- 密码管理 -->
+    <string name="pwd_title">密码管理</string>
+    <string name="pwd_modify_login">登录密码</string>
+    <string name="pwd_modify_payment">支付密码</string>
+    <string name="pwd_modify_gesture">手势密码</string>
+    <string name="pwd_modify">修改</string>
+    <string name="pwd_set">设置</string>
+    <string name="pwd_modifyloginpwd_hint_1">请输入原登录密码</string>
+    <string name="pwd_modifyloginpwd_hint_2">登录密码由8-16位数字和字母组成</string>
+    <string name="pwd_modifypaynpwd_hint_1">请输入原支付密码</string>
+    <string name="pwd_modifypaynpwd_hint_2">新支付密码由8-16位数字和字母组成</string>
+    <string name="pwd_modifypaynpwd_hint_3">请再输入一次支付密码</string>
+    <string name="pwd_modifypaynpww_notequals">两次输入密码不一样</string>
+    <string name="pwd_modify_sure">确认修改</string>
+    <string name="pwd_modify_notnull_old">旧密码不能为空</string>
+    <string name="pwd_modify_notnull_new">新密码不能为空</string>
+    <string name="pwd_modify_notnull_newagain">确认密码不能为空</string>
+    <string name="pwd_modify_error_old">旧密码格式不正确</string>
+    <string name="pwd_modify_error_new">新密码格式不正确</string>
+    <string name="pwd_modifylogin_notnull_old">原密码不能为空</string>
+    <string name="pwd_modifylogin_notnull_new">新密码不能为空</string>
+
+    <!-- 重置密码 -->
+    <string name="resetpaypwd_title">忘记支付密码</string>
+    <string name="resetpaypwd_tips">为了保障资金安全,需要进行校验才可设置新支付密码</string>
+    <string name="resetpaypwd_hint_identify">请输入身份证后六位</string>
+    <string name="resetpaypwd_hint_code">请输入校验码</string>
+    <string name="resetpaypwd_confirm">支付密码确认</string>
+    <string name="resetpaypwd_phone">您绑定的手机号码: %1$s </string>
+    <string name="resetpaypwd_error_card">请输入身份证后6位</string>
+    <string name="resetpaypwd_error_code1">请输入验证码</string>
+    <string name="resetpaypwd_error_code2">请输入正确的验证码</string>
+    <string name="resetpaypwd_error_pwd">请输入新支付密码</string>
+    <string name="resetpaypwd_check_pwd">新支付密码格式不正确</string>
+    <string name="resetpaypwd_error_pwdagain">请输入确认密码</string>
+    <string name="resetpaypwd_error_notequal">两次输入的密码不一致</string>
+    <string name="resetpaypwd_error_illeagle">密码不能包含^+|$</string>
+
+    <!-- 找回密码 -->
+    <string name="findpwd_ed_hint">请输入您注册的手机号码</string>
+    <string name="findpwd_title">找回密码</string>
+    <string name="findpwd_setpwd">密码设置</string>
+
+    <string name="auto_title">自动投标</string>
+    <string name="auto_usemoney">您的可用余额:</string>
+    <string name="auto_param">投标参数详情</string>
+    <string name="auto_log">自动投标记录</string>
+    <string name="auto_status">自动投标状态</string>
+    <string name="auto_status_success">投标成功</string>
+    <string name="auto_status_fail">投标失败</string>
+    <string name="auto_invest_tips">注意事项:\n1.可用余额大于300元才能开启此功能\n2.开启自动投标后，自动投标功能将在5分钟内生效\n3.自动投标时不可使用红包等奖励进行投资\n4.若设定投资金额区间时，将根据账户可用余额和项目剩余可投金额执行投资，投资金额为区间值</string>
+    <string name="auto_log_title">自动投标记录</string>
+    <string name="auto_log_money">投资总额(元)</string>
+    <string name="auto_log_time">投标时间:</string>
+    <string name="auto_detail_title">投标参数详情</string>
+    <string name="auto_detail_money">投资金额:</string>
+    <string name="auto_detail_time">投资时间:</string>
+    <string name="auto_detail_apr">年化收益:</string>
+    <string name="auto_detail_style">还款方式:</string>
+    <string name="auto_detail_button">修改参数</string>
+    <string name="auto_detail_money_type1">可用余额全投</string>
+    <string name="auto_detail_money_type2">固定每次投资金额</string>
+    <string name="auto_detail_money_type3">投资金额区间</string>
+    <string name="auto_detail_time_type">月范围必须在</string>
+    <string name="auto_detail_time_type1">天范围必须在</string>
+    <string name="auto_detail_apr_type">不低于</string>
+    <string name="auto_detail_type">不限制</string>
+    <string name="auto_setup_title">自动投资</string>
+    <string name="auto_setup_money">投资金额</string>
+    <string name="auto_setip_money_hint">输入整数</string>
+    <string name="auto_setup_time">投资时间</string>
+    <string name="auto_setup_apr">年化收益</string>
+    <string name="auto_setup_button">保存设置</string>
+    <string name="auto_setip_apr_hint">请输入</string>
+    <string name="auto_setup_repayment">还款方式</string>
+    <!-- 提示-->
+    <string name="auto_invest_toast1">请输入固定投标金额！</string>
+    <string name="auto_invest_toast2">请输入大于100的投标金额！</string>
+    <string name="auto_invest_toast3">请输入正确的区间金额！</string>
+    <string name="auto_invest_toast4">请输入最低投标金额！</string>
+    <string name="auto_invest_toast5">请输入最高投标金额！</string>
+    <string name="auto_invest_toast6">请选择月标最低投资期限！</string>
+    <string name="auto_invest_toast7">请选择月标投资期限！</string>
+    <string name="auto_invest_toast8">请选择正确的投资期限范围！</string>
+    <string name="auto_invest_toast9">请输入最低收益率！</string>
+    <string name="auto_invest_toast10">关闭自动投标成功！</string>
+    <string name="auto_invest_toast11">设置自动投标成功！</string>
+    <string name="auto_invest_toast12">请至少选择一种还款方式！</string>
+    <string name="auto_invest_toast13">请选择天标最低投资期限！</string>
+    <string name="auto_invest_toast14">请选择天标最高投资期限！</string>
+    <string name="auto_invest_toast15">请至少选择一种投资时间！</string>
+    <string name="auto_invest_toast16">可用余额小于300元</string>
+    <string name="auto_invest_toast17">固定投资金额不能小于100！</string>
+    <string name="auto_invest_modifysuccess">自动投标修改成功</string>
+
+    <!-- 设置支付密码 -->
+    <string name="setpaypwd_title">设置支付密码</string>
+
+    <!-- 支付账户 -->
+    <string name="payment_account_title">支付账户</string>
+    <string name="payment_account_tips">为了保障您的资金安全，请提供真实信息</string>
+    <string name="payment_account_input_realname">请输入您的真实姓名</string>
+    <string name="payment_account_input_realname_err">真实姓名仅为中文</string>
+    <string name="payment_account_input_id_card">请输入您的身份证号</string>
+    <string name="payment_account_input_id_card_err">身份证格式不对</string>
+    <string name="payment_account_submit">确认开通</string>
+    <string name="payment_account_prompt">温馨提示：支付密码在首次开通托管账户时会以短信的形式发送到您的手机</string>
+
+    <!--  意见反馈  -->
+    <string name="feedback_title">意见反馈</string>
+    <string name="feedback_et_content_hint">告诉我们您的问题、建议和意见，帮助我们更好的优化产品。</string>
+    <string name="feedback_et_phone">请留下您的手机号码，以便我们联系您。</string>
+    <string name="feedback_tv_title">您还可以通过其他方式反馈：</string>
+    <string name="feedback_call">拨打客服热线</string>
+    <string name="feedback_call_phone">0571&#8211;88006226</string>
+    <string name="feedback_wechat">关注微信公众平台</string>
+    <string name="feedback_wechat_code">百安资产</string>
+
+    <!--  分享  -->
+    <string name="share_title">分享</string>
+    <string name="share_wechat">微信</string>
+    <string name="share_wxcircle">朋友圈</string>
+    <string name="share_sina">新浪微博</string>
+
+    <!-- 借款管理 -->
+    <string name="loan_title">借款管理</string>
+    <string name="loan_zjje">在借金额(元)</string>
+    <string name="loan_lsje">历史借款(元)</string>
+    <string name="loan_repayment">本期应还款%1$s</string>
+    <string name="loan_submit">还款</string>
+    <string name="loan_jkje">借款金额(元)</string>
+    <string name="loan_ymjje">已募集金额(元)</string>
+
+    <!-- 借款详情 -->
+    <string name="loan_detail_title">借款详情</string>
+    <string name="loan_detail_status">状态</string>
+    <string name="loan_detail_type">借款类型</string>
+    <string name="loan_detail_apr">年化利率</string>
+    <string name="loan_detail_limit">借款期限</string>
+    <string name="loan_detail_record">还款记录</string>
+
+    <!-- 登录注册 -->
+    <string name="register_phone_err">手机号格式错误</string>
+    <string name="register_code_send">验证码已发送</string>
+    <string name="register_code_err">验证码格式错误</string>
+    <string name="register_pwd_old_err">原密码格式不正确</string>
+    <string name="register_pwd_new_err">新密码格式不正确</string>
+    <string name="register_pwd_err">密码格式不正确</string>
+    <string name="register_success">注册成功</string>
+    <string name="register_pwd_notnull">密码不能为空</string>
+    <string name="register_phone_notnull">账号不能为空</string>
+
+    <!-- 空态值 -->
+    <string name="empty_product">暂无产品哦，等下再来看看吧</string>
+    <string name="empty_invest">暂无投资记录</string>
+    <string name="empty_loan">暂无借款记录</string>
+    <string name="empty_repay">暂无还款记录</string>
+    <string name="empty_invest_bond">暂无债权记录</string>
+    <string name="empty_repayment">暂无回款计划</string>
+    <string name="empty_repaymentlog">暂无回款记录</string>
+    <string name="empty_transaction">暂无交易记录</string>
+    <string name="empty_recharge">暂无充值记录</string>
+    <string name="empty_account">暂无资金记录</string>
+    <string name="empty_withdraw">暂无提现记录</string>
+    <string name="empty_redenvelope">暂无红包</string>
+    <string name="empty_experience">暂无体验券</string>
+    <string name="empty_uprate">暂无加息券</string>
+    <string name="empty_record">暂无记录</string>
+    <string name="empty_coupon">很遗憾，您暂无可以使用的优惠券/红包/体验券</string>
+    <string name="empty_bank_card">您尚未绑定银行卡</string>
+    <string name="empty_network">您的网络无法连接</string>
+    <string name="empty_loading_error">数据加载失败，请点击页面刷新</string>
+    <string name="empty_notice">暂无公告</string>
+    <string name="empty_message">您还没有消息哦</string>
+    <string name="empty_activity">近期没有活动哦</string>
+    <string name="empty_stay_tuned">敬请期待</string>
+
+    <!-- 蒲公英 -->
+    <string name="pgy_update_no">已经是最新版本</string>
+    <string name="pgy_update_update">更新</string>
+    <string name="pgy_update_have_new">app有新的版本可供使用，是否更新?</string>
+    <string name="pgy_update_update_now">确定</string>
+    <string name="pgy_update_update_after">取消</string>
+
+    <!-- 友盟分享 -->
+    <string name="umeng_share_content">卓越财富人生，百安理财伴您同行，快来试试吧。</string>
+    <string name="umeng_share_success">分享成功</string>
+    <string name="umeng_share_failed">分享失败</string>
+
+    <string name="newproduct_title">项目详情</string>
+    <string name="newproduct_apr">预期年化收益率</string>
+    <string name="newproduct_award">新手奖励</string>
+    <string name="newproduct_register">注册就送</string>
+    <string name="newproduct_amount">8888</string>
+    <string name="newproduct_exp">元体验金</string>
+    <string name="newproduct_know">了解项目</string>
+    <string name="newproduct_record">投资记录</string>
+    <string name="newproduct_tyb">体验金</string>
+    <string name="newproduct_tyb1">请选择体验金</string>
+    <string name="newproduct_tyb2">无可用体验金</string>
+    <string name="newproduct_safe">安全保障</string>
+    <string name="newproduct_safe2">多重保障</string>
+    <string name="newproduct_choose">已选择%1$s元</string>
+    <string name="newproduct_hint">请先选择体验金</string>
+
+    <string name="security_title">安全保障</string>
+    <string name="security_mode1">业务模式</string>
+    <string name="security_mode2">业务模式围绕核心企业的P2P模式</string>
+    <string name="security_mechanism1">机构合作</string>
+    <string name="security_mechanism2">风险控制全面、系统、独立、权威</string>
+    <string name="security_product1">项目审核</string>
+    <string name="security_product2">项目审核多重审核、严谨透明</string>
+    <string name="security_cash1">资金保护</string>
+    <string name="security_cash2">第三方资金存管，安全放心</string>
+    <string name="security_web1">网站建设</string>
+    <string name="security_web2">银行级别的投资安全保障</string>
+
+    <string name="newproduct_time">发布时间%1$s</string>
+    <string name="newproduct_timeday">项目期限%1$s天</string>
+
+    <string name="security1">安全透明</string>
+    <string name="security2">稳定经营</string>
+    <string name="security3">资质优良</string>
+
+    <!-- 债权列表 -->
+    <string name="bondlist_apr">预期收益率</string>
+    <string name="bondlist_timelimit">剩余期限</string>
+    <string name="bondlist_bondapr">折让率</string>
+
+    <string name="risk_title1">1 尽职调查与资信评估</string>
+    <string name="risk_content1">对借款人及项目进行全方位实地尽职调查，严格审核企业基本信息、贷款卡记录、企业资产与负债，并通过借款人收入情况及资产情况对借款人资信情况做相应评估。</string>
+    <string name="risk_title2">2 贷后管理持续跟踪</string>
+    <string name="risk_content2">贷后管理细致入微，项目跟踪到还款最后一秒，定期检查与不定期检查相结合，线下公司自查与风控人员专人检查相结合，风险控制贯穿项目始终。</string>
+    <string name="risk_title3">3 风险预警提前处置</string>
+    <string name="risk_content3">结合贷后管理情况及其他渠道信息反馈，及早发现融资人风险，及早进行预警，及早排除资金风险。</string>
+</resources>

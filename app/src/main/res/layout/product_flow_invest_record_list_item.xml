@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="com.rd.zhongqipiaoetong.utils.DisplayFormat" />
+        <import type="java.lang.String"/>
+        <variable
+            name="item"
+            type="com.rd.zhongqipiaoetong.module.product.model.FlowTenderMo" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/x24"
+        android:paddingRight="@dimen/x24">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/x16"
+            android:paddingTop="@dimen/x16">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{item.userName}"
+                android:textColor="@color/text_dark" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x16"
+                android:text="@{DisplayFormat.coverTimeYYMMDDmmss(item.addTime)}"
+                android:textColor="@color/text_grey" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="@{String.valueOf(item.buyCopies)}"
+            android:textColor="@color/text_black"
+            android:textSize="18sp" />
+    </RelativeLayout>
+</layout>

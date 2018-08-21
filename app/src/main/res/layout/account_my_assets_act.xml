@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.rd.zhongqipiaoetong.module.account.viewmodel.MyAssetsVM" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/titleBar"
+            layout="@layout/appbar_layout" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/titleBar"
+            android:layout_marginBottom="@dimen/x120"
+            app:addItemDecoration="@{0}" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x120"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+            <Button
+                style="@style/FilletBtnStyle"
+                android:layout_margin="@dimen/x10"
+                android:layout_weight="1"
+                android:onClick="@{viewModel.rechargeClick}"
+                android:text="@string/assets_recharge" />
+
+            <Button
+                style="@style/FilletBtnStyle"
+                android:layout_margin="@dimen/x10"
+                android:layout_weight="1"
+                android:onClick="@{viewModel.withdrawClick}"
+                android:text="@string/assets_withdraw" />
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

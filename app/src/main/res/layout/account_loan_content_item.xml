@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="com.rd.zhongqipiaoetong.utils.DisplayFormat" />
+
+        <variable
+            name="item"
+            type="com.rd.zhongqipiaoetong.module.account.model.BorrowMo" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/x20"
+        android:background="@drawable/item_selector"
+        android:orientation="vertical">
+
+        <LinearLayout
+            style="@style/WhiteLayoutTheme"
+            android:background="@drawable/item_selector_line_both">
+
+            <TextView
+                style="@style/TextViewThemeBlack"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="@{item.name}" />
+
+            <TextView
+                style="@style/TextViewThemeBlack"
+                android:layout_width="wrap_content"
+                android:text="@{item.statusStr}"
+                android:textColor="@color/text_grey" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/WhiteLayoutTheme"
+            android:paddingLeft="0dp"
+            android:paddingRight="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <!-- 15,000.00 -->
+                <TextView
+                    style="@style/TextViewThemeBlack"
+                    android:gravity="center"
+                    android:text="@{DisplayFormat.doubleFormat(item.allAmount)}"
+                    android:textSize="20sp" />
+
+                <TextView
+                    style="@style/TextViewThemeBlack"
+                    android:gravity="center"
+                    android:paddingTop="0dp"
+                    android:text="@string/loan_jkje"
+                    android:textColor="@color/text_grey"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <!-- 15,000.00 -->
+                <TextView
+                    style="@style/TextViewThemeBlack"
+                    android:gravity="center"
+                    android:text="@{DisplayFormat.doubleFormat(item.collectAmount)}"
+                    android:textSize="20sp" />
+
+                <TextView
+                    style="@style/TextViewThemeBlack"
+                    android:gravity="center"
+                    android:paddingTop="0dp"
+                    android:text="@string/loan_ymjje"
+                    android:textColor="@color/text_grey"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <com.rd.zhongqipiaoetong.view.RoundProgressBar
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x150"
+                android:layout_weight="1"
+                android:padding="@dimen/x20"
+                app:progress="@{item.progressPercentage}"
+                app:roundColor="@color/colorGrey"
+                app:roundProgressColor="@color/app_color_secondary"
+                app:roundWidth="@dimen/x8"
+                app:textColor="@color/app_color_secondary"
+                app:textIsDisplayable="true" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>

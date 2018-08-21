@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ################################################################################################### -->
+    <!-- GridLayout 中的view样式 -->
+    <!-- ################################################################################################### -->
+
+    <!-- 基础 GridLayout 布局的样式 -->
+    <style name="BaseGridLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:alignmentMode">alignBounds</item>
+        <item name="android:background">@color/colorViewbg</item>
+        <item name="android:columnOrderPreserved">false</item>
+        <item name="android:useDefaultMargins">false</item>
+    </style>
+
+    <!-- GridLayout 中的 TextView的内容样式 -->
+    <style name="TextViewInGrid">
+        <item name="android:padding">@dimen/x20</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/text_grey</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!-- GridLayout 中的 TextView的black内容样式 -->
+    <style name="TextViewInGridBlack" parent="@style/TextViewInGrid">
+        <item name="android:textColor">@color/text_dark</item>
+        <item name="android:layout_gravity">fill_horizontal</item>
+    </style>
+
+    <!-- GridLayout 中的 TextView的grey内容样式 -->
+    <style name="TextViewInGridGrey" parent="@style/TextViewInGrid">
+        <item name="android:textColor">@color/text_grey</item>
+        <item name="android:layout_gravity">fill_horizontal</item>
+        <item name="android:gravity">end</item>
+    </style>
+
+    <!-- GridLayout 中的 EditText的内容样式 -->
+    <style name="EditTextInGrid" parent="@style/TextViewInGridBlack">
+        <item name="android:background">@color/colorViewbg</item>
+        <item name="android:textColorHint">@color/hint_grey</item>
+    </style>
+
+    <!-- GridLayout 中的 带向右箭头的TextView的black内容样式 -->
+    <style name="ArrowTextViewInGridBlack" parent="@style/TextViewInGridBlack">
+        <item name="android:background">@drawable/item_selector</item>
+        <item name="android:drawableEnd">@drawable/ic_arrow_right</item>
+        <item name="android:drawableRight">@drawable/ic_arrow_right</item>
+        <item name="android:drawablePadding">@dimen/x20</item>
+        <item name="android:padding">@dimen/x20</item>
+    </style>
+
+    <!-- GridLayout 中的 带向右箭头的TextView的grey内容样式  -->
+    <style name="ArrowTextViewInGridGrey" parent="@style/TextViewInGridGrey">
+        <item name="android:background">@drawable/item_selector</item>
+        <item name="android:drawableEnd">@drawable/ic_arrow_right</item>
+        <item name="android:drawableRight">@drawable/ic_arrow_right</item>
+        <item name="android:drawablePadding">@dimen/x20</item>
+        <item name="android:padding">@dimen/x20</item>
+    </style>
+
+    <!-- 含下划线的TextViewBlack -->
+    <style name="TextViewInGridBlackLine" parent="@style/TextViewInGridBlack">
+        <item name="android:background">@drawable/item_selector_line</item>
+    </style>
+
+    <style name="TextViewInGridBlackLineLeft" parent="@style/TextViewInGridBlack">
+        <item name="android:background">@drawable/item_selector_line_left</item>
+    </style>
+
+    <style name="TextViewInGridBlackLineRight" parent="@style/TextViewInGridBlack">
+        <item name="android:background">@drawable/item_selector_line_right</item>
+    </style>
+
+    <style name="TextViewInGridBlackLineBoth" parent="@style/TextViewInGridBlack">
+        <item name="android:background">@drawable/item_selector_line_both</item>
+    </style>
+
+    <!-- 含下划线的TextViewGrey -->
+    <style name="TextViewInGridGreyLine" parent="@style/TextViewInGridGrey">
+        <item name="android:background">@drawable/item_selector_line</item>
+    </style>
+
+    <style name="TextViewInGridGreyLineLeft" parent="@style/TextViewInGridGrey">
+        <item name="android:background">@drawable/item_selector_line_left</item>
+    </style>
+
+    <style name="TextViewInGridGreyLineRight" parent="@style/TextViewInGridGrey">
+        <item name="android:background">@drawable/item_selector_line_right</item>
+    </style>
+
+    <style name="TextViewInGridGreyLineBoth" parent="@style/TextViewInGridGrey">
+        <item name="android:background">@drawable/item_selector_line_both</item>
+    </style>
+
+    <!-- 不含下划线 不含Arrow 的RightText -->
+    <style name="TextViewRight">
+        <item name="android:drawablePadding">@dimen/x20</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/text_grey</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_gravity">fill_horizontal</item>
+        <item name="android:gravity">end</item>
+    </style>
+
+    <!-- 不含下划线 不含Arrow 的LeftText -->
+    <style name="TextViewLeft">
+        <item name="android:textColor">@color/text_black</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!-- 不含下划线 含Arrow 的RightText -->
+    <style name="ArrowTextViewRight">
+        <item name="android:drawablePadding">@dimen/x20</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/text_grey</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_gravity">fill_horizontal</item>
+        <item name="android:gravity">end</item>
+        <item name="android:drawableEnd">@drawable/ic_arrow_right</item>
+        <item name="android:drawableRight">@drawable/ic_arrow_right</item>
+    </style>
+
+    <!-- 含下划线的ArrowTextViewInGridBlack -->
+    <style name="ArrowTextViewInGridBlackLine" parent="@style/ArrowTextViewInGridBlack">
+        <item name="android:background">@drawable/item_selector_line</item>
+    </style>
+
+    <style name="ArrowTextViewInGridBlackLineLeft" parent="@style/ArrowTextViewInGridBlack">
+        <item name="android:background">@drawable/item_selector_line_left</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="ArrowTextViewInGridBlackLineRight" parent="@style/ArrowTextViewInGridBlack">
+        <item name="android:background">@drawable/item_selector_line_right</item>
+    </style>
+
+    <style name="ArrowTextViewInGridBlackLineBoth" parent="@style/ArrowTextViewInGridBlack">
+        <item name="android:background">@drawable/item_selector_line_both</item>
+    </style>
+
+    <!-- 含下划线的ArrowTextViewInGridGrey -->
+    <style name="ArrowTextViewInGridGreyLine" parent="@style/ArrowTextViewInGridGrey">
+        <item name="android:background">@drawable/item_selector_line</item>
+    </style>
+
+    <style name="ArrowTextViewInGridGreyLineLeft" parent="@style/ArrowTextViewInGridGrey">
+        <item name="android:background">@drawable/item_selector_line_left</item>
+    </style>
+
+    <style name="ArrowTextViewInGridGreyLineRight" parent="@style/ArrowTextViewInGridGrey">
+        <item name="android:background">@drawable/item_selector_line_right</item>
+    </style>
+
+    <style name="ArrowTextViewInGridGreyLineBoth" parent="@style/ArrowTextViewInGridGrey">
+        <item name="android:background">@drawable/item_selector_line_both</item>
+    </style>
+
+    <style name="BaseLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/colorViewbg</item>
+        <item name="android:paddingLeft">@dimen/x20</item>
+        <item name="android:paddingRight">@dimen/x20</item>
+        <item name="android:paddingTop">@dimen/x20</item>
+        <item name="android:paddingBottom">@dimen/x20</item>
+    </style>
+
+    <style name="TopLayout" parent="@style/BaseLayout">
+        <item name="android:layout_marginTop">@dimen/x20</item>
+    </style>
+
+    <style name="NoTopLayout" parent="@style/BaseLayout">
+        <item name="android:paddingTop">0dp</item>
+    </style>
+
+    <style name="TextViewInLayout">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/text_grey</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="TextViewInLayoutBlack" parent="@style/TextViewInLayout">
+        <item name="android:textColor">@color/text_black</item>
+    </style>
+
+    <style name="TextViewInLayoutRight" parent="@style/TextViewInLayout">
+        <item name="android:layout_marginLeft">@dimen/x20</item>
+    </style>
+
+    <style name="EditTextInAuto" parent="@style/TextViewInLayoutBlack">
+        <item name="android:textColorHint">@color/text_grey</item>
+        <item name="android:textColor">@color/text_grey</item>
+        <item name="android:textSize">@dimen/sp14</item>
+        <item name="android:background">@drawable/auto_edit_bg</item>
+    </style>
+
+    <style name="TextViewInAutoNormal" parent="@style/TextViewInAuto">
+        <item name="android:background">@drawable/auto_setup_normal</item>
+    </style>
+
+    <style name="TextViewInAutoChecked" parent="@style/TextViewInAuto">
+        <item name="android:background">@drawable/auto_setup_checked</item>
+        <item name="android:textColor">@color/app_color_principal</item>
+    </style>
+
+    <style name="TextViewInAuto" parent="@style/TextViewInLayout">
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/sp14</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+
+</resources>

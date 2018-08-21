@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="select"
+            type="String" />
+
+        <variable
+            name="listener"
+            type="com.rd.zhongqipiaoetong.view.listener.PtrFrameListener" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/titleBar"
+            layout="@layout/appbar_layout" />
+
+        <in.srain.cube.views.ptr.PtrClassicFrameLayout
+            android:id="@+id/msg_ptr"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/titleBar"
+            app:ptrFrame="@{listener}">
+
+            <ListView
+                android:id="@+id/msg_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@color/grey_bg"
+                android:dividerHeight="0.3dp" />
+        </in.srain.cube.views.ptr.PtrClassicFrameLayout>
+
+        <com.rd.zhongqipiaoetong.view.PageLoadingView
+            android:id="@+id/msg_Loading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/titleBar"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/msg_footer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorViewbg"
+            android:clickable="true"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <View style="@style/hLineStyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/msg_select_text"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingEnd="@dimen/x15"
+                    android:paddingStart="@dimen/x15"
+                    android:text="@{select}"
+                    android:textColor="@color/text_black" />
+
+                <Button
+                    android:id="@+id/msg_button"
+                    style="@style/FilletBtnStyle"
+                    android:layout_width="@dimen/x200"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/x5"
+                    android:enabled="false"
+                    android:text="@string/msg_delete_confirm"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

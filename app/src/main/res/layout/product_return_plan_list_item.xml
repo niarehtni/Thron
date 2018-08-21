@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.rd.zhongqipiaoetong.module.product.model.ReturnPlanMo" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorViewbg"
+        android:gravity="center_vertical"
+        android:paddingBottom="@dimen/y12"
+        android:paddingLeft="@dimen/x24"
+        android:paddingRight="@dimen/x24"
+        android:paddingTop="@dimen/y12">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/x16"
+            android:text="@{item.nowCount + '/' + item.allCount}"
+            android:textColor="@color/text_black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="@{item.status.equals('0')  ? @string/product_no_return : @string/product_had_return}"
+            android:textColor="@{item.status.equals('0') ? @color/text_black : @color/app_color_secondary}" />
+    </RelativeLayout>
+</layout>

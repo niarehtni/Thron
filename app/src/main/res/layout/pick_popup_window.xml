@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:gravity="bottom"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/takePhotoBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/item_selector_line"
+        android:padding="@dimen/x20"
+        android:text="@string/person_info_take_photo"
+        android:textColor="@color/text_dark"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/pickPhotoBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/item_selector_line"
+        android:padding="@dimen/x20"
+        android:text="@string/person_info_pick_photo"
+        android:textColor="@color/text_dark"
+        android:textSize="18sp" />
+
+    <View
+        style="@style/hDividerStyle"
+        android:layout_height="@dimen/x30"
+        android:background="@color/colorGrey" />
+
+    <Button
+        android:id="@+id/cancelBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@drawable/item_selector"
+        android:padding="@dimen/x20"
+        android:text="@string/cancel"
+        android:textColor="@color/text_dark"
+        android:textSize="18sp" />
+</LinearLayout>

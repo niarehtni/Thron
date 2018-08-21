@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.rd.zhongqipiaoetong.module.account.viewmodel.PaymentAccountOCRVM" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/titleBar"
+            layout="@layout/appbar_layout" />
+
+        <TextView
+            style="@style/TipsTheme"
+            android:text="@string/payment_account_tips" />
+
+        <LinearLayout
+            android:background="@color/white"
+            android:onClick="@{viewModel.ocrScan}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewInGridBlack"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:text="身份证识别（头像）" />
+
+            <ImageView
+                android:id="@+id/realname_idcard_fan"
+                android:layout_width="@dimen/x107"
+                android:layout_height="@dimen/y70"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="@dimen/x10"
+                android:src="@drawable/icon_card_opposite" />
+
+            <ImageView
+                android:layout_marginRight="@dimen/x20"
+                android:layout_marginLeft="@dimen/x20"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_enter"/>
+
+        </LinearLayout>
+
+        <View
+            style="@style/TextViewThemeGreyLineLeft"
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+
+        <LinearLayout
+            android:background="@color/white"
+            android:id="@+id/realname_opp"
+            android:onClick="@{viewModel.ocrScan}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewInGridBlack"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:text="身份证识别（国徽）" />
+
+            <ImageView
+                android:id="@+id/realname_idcard_zheng"
+                android:layout_width="@dimen/x107"
+                android:layout_height="@dimen/y70"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="@dimen/x10"
+                android:layout_marginRight="@dimen/x20"
+                android:src="@drawable/icon_card_positive" />
+
+            <ImageView
+                    android:layout_marginRight="@dimen/x20"
+                    android:layout_marginLeft="@dimen/x20"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_enter"/>
+
+        </LinearLayout>
+
+        <View
+            style="@style/TextViewThemeGreyLineLeft"
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+
+        <LinearLayout
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewInGridBlack"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="姓名" />
+
+            <TextView
+                style="@style/TextViewInGridBlack"
+                android:editable="false"
+                android:text="@{viewModel.name}"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:hint="通过身份证识别自动填充" />
+
+        </LinearLayout>
+
+        <View
+            style="@style/TextViewThemeGreyLineLeft"
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+
+        <LinearLayout
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewInGridBlack"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="身份证" />
+
+            <TextView
+                style="@style/TextViewInGridBlack"
+                android:editable="false"
+                android:text="@{viewModel.idCard}"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:hint="通过身份证识别自动填充" />
+
+        </LinearLayout>
+
+        <View
+            style="@style/TextViewThemeGreyLine"
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+
+        <com.rd.zhongqipiaoetong.view.NoDoubleClickButton
+            style="@style/FilletBtnStyle"
+            android:layout_marginLeft="@dimen/x20"
+            android:layout_marginRight="@dimen/x20"
+            android:layout_marginTop="@dimen/x100"
+            android:enabled="@{viewModel.enable}"
+            android:onClick="@{viewModel.onRegisterClick}"
+            android:text="@string/payment_account_submit" />
+
+        <TextView
+            style="@style/TipsTheme"
+            android:layout_marginTop="@dimen/x20"
+            android:gravity="center"
+            android:text="@string/payment_account_prompt"
+            android:visibility="gone" />
+    </LinearLayout>
+</layout>

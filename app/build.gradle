@@ -1,0 +1,174 @@
+apply plugin: 'com.android.application'
+
+def releaseTime() {
+    return new Date().format("yyyy-MM-dd_HH-mm-ss", TimeZone.getTimeZone("GMT+8"))
+}
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+    // 关闭PNG合法性检查的
+    aaptOptions.cruncherEnabled = false
+    aaptOptions.useNewCruncher = false
+    // 开启dataBinding
+    dataBinding.enabled = true
+    // 移除lint检查的error
+    lintOptions.abortOnError = false
+    // 关闭增量编译
+    // compileOptions.incremental = false
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+    defaultConfig {
+        applicationId "com.rd.zhongqipiaoetong"
+        minSdkVersion 14
+        targetSdkVersion 22
+        // 版本信息
+        versionCode 1
+        versionName "1.0.0"
+        // dex突破65535的限制
+        multiDexEnabled true
+
+        ndk {
+            abiFilters "armeabi", "armeabi-v7a", "x86_64"
+        }
+    }
+
+    signingConfigs {
+        debug {
+//            // 签名store文件路径
+//            storeFile file("../zjjf")
+//            // 签名store文件的密码
+//            storePassword "123456"
+//            // 别名
+//            keyAlias "zjjf"
+//            // 别名的密码
+//            keyPassword "123456"
+        }
+
+        // 正式版
+        release {
+            // 签名store文件路径
+            storeFile file("../zjjf")
+            // 签名store文件的密码
+            storePassword "123456"
+            // 别名
+            keyAlias "zjjf"
+            // 别名的密码
+            keyPassword "123456"
+        }
+    }
+
+    buildTypes {
+        debug {
+            // 显示Log
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            signingConfig signingConfigs.debug
+
+            versionNameSuffix "-debug"
+            minifyEnabled false
+            zipAlignEnabled false
+            debuggable true
+            shrinkResources false
+        }
+
+        release {
+            // 不显示Log
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            signingConfig signingConfigs.release
+
+            // 是否混淆
+            minifyEnabled true
+            // zipAlign优化
+            zipAlignEnabled true
+            // 移除无用的resource文件,
+            shrinkResources true
+            // 混淆配置文件的位置
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            applicationVariants.all { variant ->
+                variant.outputs.each { output ->
+                    def outputFile = output.outputFile
+                    if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                        // 输出apk名称为 Ultron_v1.0_2016-04-15_wandoujia.apk
+                        // 保留基础签名版本
+                        def fileName
+                        if (variant.productFlavors[0].name == 'app') {
+                            fileName = "CLOUD_APP_release.apk"
+                            output.outputFile = new File(outputFile.parent + "/channel_app/", fileName)
+                        } else {
+                            fileName = "CLOUD_APP_v${defaultConfig.versionName}_channel_${variant.productFlavors[0].name}.apk"
+                            output.outputFile = new File(outputFile.parent + "/channel_app/", fileName)
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // 多渠道打包
+    productFlavors {
+        app {}
+        if (APP_TEST as int == 1) {
+//            anzhuosc {}
+//            anzhisc {}
+//            huaweiyysc {}
+//            baidusjzs {}
+//            sjzs360 {}
+//            yyb {}
+//            ppzs {}
+//            xiaomiyysc {}
+//            wandoujia {}
+//            pingtai {}
+//            oppo {}
+//            vivo {}
+//			JRTT {}
+        }
+
+        productFlavors.all {
+            flavor ->
+                flavor.manifestPlaceholders = [
+                        APP_PGYER_APPID  : "1854cfaa38536cf2345e49e72fabe7be",
+                        GETUI_APP_ID     : "mrmZ1D4Cmb9D4LdnS7c536",
+                        GETUI_APP_KEY    : "qxQouKgtRV9TK090kllob6",
+                        GETUI_APP_SECRET : "KxYHRSsw077quu5fjkZ7z1",
+                        UMENG_APPKEY     : "581ad45d99f0c75be8001d07",
+                        APP_CHANNEL_VALUE: name]
+        }
+    }
+}
+
+// 导入本地lib
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+
+    maven { url "https://jitpack.io" }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.getui:sdk:2.10.2.0'
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:design:23.3.0'
+    compile 'com.android.support:support-v4:23.3.0'
+    compile 'com.android.support:appcompat-v7:23.3.0'
+    compile 'com.android.support:palette-v7:23.3.0'
+    compile 'com.google.code.gson:gson:2.6'
+    compile 'com.github.bumptech.glide:glide:3.8.0'
+    compile 'com.github.bumptech.glide:okhttp3-integration:1.5.0@aar'
+    compile 'com.squareup.retrofit2:retrofit:2.3.0'
+    compile(name: 'UltraPTR-v1.0', ext: 'aar')
+    compile(name: 'ytkeyboard-release', ext: 'aar')
+    compile(name: 'Banner', ext: 'aar')
+    compile project(':MoneyMoreMore')
+    compile 'com.bigkoo:pickerview:2.0.8'
+    compile 'com.kyleduo.switchbutton:library:1.4.0'
+    compile 'com.qiniu:qiniu-android-sdk:7.3.3'
+    //自适应字体大小
+    compile 'me.grantland:autofittextview:0.2.1'
+    compile 'com.umeng.analytics:analytics:latest.integration'
+    compile 'com.timehop.stickyheadersrecyclerview:library:0.4.3@aar'
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.8.0'
+    compile files('libs/commons-lang.jar')
+}

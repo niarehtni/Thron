@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.rd.zhongqipiaoetong.module.account.viewmodel.AutoSetupVM" />
+
+        <import type="com.rd.zhongqipiaoetong.utils.DisplayFormat" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorGrey"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/titleBar"
+            layout="@layout/appbar_layout" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    style="@style/TextViewInGridBlackLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x90"
+                    android:layout_marginTop="@dimen/x20">
+
+                    <TextView
+                        style="@style/TextViewLeft"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/auto_usemoney"
+                        android:textSize="@dimen/sp14" />
+
+                    <TextView
+                        style="@style/TextViewRight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/x10"
+                        android:text="@{DisplayFormat.XLIFFNumFormat(DisplayFormat.doubleMoney(viewModel.useMoney),@color/app_color_secondary)}" />
+
+                </LinearLayout>
+
+                <View style="@style/hDividerStyle" />
+
+                <LinearLayout
+                    style="@style/BaseLayout"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/TextViewInLayout"
+                        android:text="@string/auto_setup_money"
+                        android:textSize="@dimen/sp14" />
+
+                    <TextView
+                        style="@style/TextViewInAuto"
+                        android:layout_width="@dimen/x270"
+                        android:layout_marginTop="@dimen/x20"
+                        android:background="@{viewModel.mo.isTendStyle(1) ? @drawable/auto_setup_checked : @drawable/auto_setup_normal}"
+                        android:clickable="true"
+                        android:onClick="@{viewModel.onMoneyType1Click}"
+                        android:text="@string/auto_detail_money_type1"
+                        android:textColor="@{viewModel.mo.isTendStyle(1) ? @color/app_color_principal : @color/text_grey}" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/x20"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/TextViewInAuto"
+                            android:layout_width="@dimen/x270"
+                            android:background="@{viewModel.mo.isTendStyle(2) ? @drawable/auto_setup_checked : @drawable/auto_setup_normal}"
+                            android:clickable="true"
+                            android:onClick="@{viewModel.onMoneyType2Click}"
+                            android:text="@string/auto_detail_money_type2"
+                            android:textColor="@{viewModel.mo.isTendStyle(2) ? @color/app_color_principal : @color/text_grey}" />
+
+                        <EditText
+                            android:id="@+id/auto_setup_money"
+
+                            style="@style/EditTextInAuto"
+                            android:layout_width="@dimen/x140"
+                            android:layout_marginLeft="@dimen/x20"
+                            android:focusableInTouchMode="@{viewModel.mo.isTendStyle(2)}"
+                            android:gravity="center"
+                            android:hint="@{viewModel.mo.isTendStyle(2) ? @string/auto_setip_money_hint : @string/empty}"
+                            android:inputType="number"
+                            android:text="@{viewModel.mo.isTendStyle(2) ? String.valueOf(viewModel.mo.money) : @string/empty}"
+                            app:watcher="@{viewModel.moneyWatcher}" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/x5"
+                            android:text="@string/unit_yuan"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/sp14" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/x20"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/TextViewInAuto"
+                            android:layout_width="@dimen/x270"
+                            android:background="@{viewModel.mo.isTendStyle(3) ? @drawable/auto_setup_checked : @drawable/auto_setup_normal}"
+                            android:clickable="true"
+                            android:onClick="@{viewModel.onMoneyType3Click}"
+                            android:text="@string/auto_detail_money_type3"
+                            android:textColor="@{viewModel.mo.isTendStyle(3) ? @color/app_color_principal : @color/text_grey}" />
+
+                        <EditText
+                            android:id="@+id/auto_setup_moneymin"
+                            style="@style/EditTextInAuto"
+                            android:layout_width="@dimen/x140"
+                            android:layout_marginLeft="@dimen/x20"
+                            android:focusableInTouchMode="@{viewModel.mo.isTendStyle(3)}"
+                            android:gravity="center"
+                            android:hint="@{viewModel.mo.isTendStyle(3) ? @string/auto_setip_money_hint : @string/empty}"
+                            android:inputType="number"
+                            android:text="@{viewModel.mo.isTendStyle(3) ? String.valueOf(viewModel.mo.min) : @string/empty}"
+                            app:watcher="@{viewModel.minWatcher}" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/x5"
+                            android:layout_marginRight="@dimen/x10"
+
+                            android:text="@string/unit_yuan"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/sp14" />
+
+                        <View
+                            style="@style/hLineStyle"
+                            android:layout_width="@dimen/x20"
+                            android:layout_gravity="center_vertical"
+                            android:background="@color/text_grey" />
+
+                        <EditText
+                            android:id="@+id/auto_setup_moneymax"
+                            style="@style/EditTextInAuto"
+                            android:layout_width="@dimen/x140"
+                            android:layout_marginLeft="@dimen/x10"
+                            android:focusableInTouchMode="@{viewModel.mo.isTendStyle(3)}"
+                            android:gravity="center"
+                            android:hint="@{viewModel.mo.isTendStyle(3) ? @string/auto_setip_money_hint : @string/empty}"
+                            android:inputType="number"
+                            android:text="@{viewModel.mo.isTendStyle(3) ? String.valueOf(viewModel.mo.max) : @string/empty}"
+                            app:watcher="@{viewModel.maxWatcher}" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/x5"
+                            android:text="@string/unit_yuan"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/sp14" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View style="@style/hDividerStyle" />
+
+                <LinearLayout
+                    style="@style/BaseLayout"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/TextViewInLayout"
+                        android:text="@string/auto_setup_time"
+                        android:textSize="@dimen/sp14" />
+
+                    <TextView
+                        style="@style/TextViewInAuto"
+                        android:layout_marginTop="@dimen/x20"
+                        android:background="@{viewModel.mo.isTime(false)  ? @drawable/auto_setup_checked : @drawable/auto_setup_normal}"
+                        android:onClick="@{viewModel.onTimeTypeClick}"
+                        android:text="@string/auto_detail_type"
+                        android:textColor="@{viewModel.mo.isTime(false) ? @color/app_color_principal : @color/text_grey}" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/x20"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/TextViewInAuto"
+                            android:background="@{viewModel.mo.isTime(true) ? @drawable/auto_setup_checked : @drawable/auto_setup_normal}"
+                            android:onClick="@{viewModel.onTimeType1Click}"
+                            android:text="@string/auto_detail_time_type"
+                            android:textColor="@{viewModel.mo.isTime(true) ? @color/app_color_principal : @color/text_grey}" />
+
+                        <TextView
+                            style="@style/EditTextInAuto"
+                            android:layout_width="@dimen/x200"
+                            android:layout_marginLeft="@dimen/x20"
+                            android:layout_marginRight="@dimen/x10"
+                            android:clickable="@{viewModel.mo.isTime(true)}"
+                            android:drawableRight="@{viewModel.mo.isTime(true) ? @drawable/ic_arrow_bottom : null}"
+                            android:gravity="center"
+                            android:onClick="@{viewModel.onTimeDowdClick}"
+                            android:text="@{viewModel.mo.isTime(true) ? @string/months2(String.valueOf(viewModel.mo.timelimitDown)) : @string/empty}" />
+
+                        <View
+                            style="@style/hLineStyle"
+                            android:layout_width="@dimen/x20"
+                            android:layout_gravity="center_vertical"
+                            android:background="@color/text_grey" />
+
+                        <TextView
+                            style="@style/EditTextInAuto"
+                            android:layout_width="@dimen/x200"
+                            android:layout_marginLeft="@dimen/x10"
+                            android:layout_marginRight="@dimen/x10"
+                            android:clickable="@{viewModel.mo.isTime(true)}"
+                            android:drawableRight="@{viewModel.mo.isTime(true) ? @drawable/ic_arrow_bottom : null}"
+                            android:gravity="center"
+                            android:onClick="@{viewModel.onTimeUpClick}"
+                            android:text="@{viewModel.mo.isTime(true) ? @string/months2(String.valueOf(viewModel.mo.timelimitUp)) : @string/empty}" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View style="@style/hDividerStyle" />
+
+                <LinearLayout
+                    style="@style/BaseLayout"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/TextViewInLayout"
+                        android:text="@string/auto_setup_apr"
+                        android:textSize="@dimen/sp14" />
+
+                    <TextView
+                        style="@style/TextViewInAuto"
+                        android:layout_marginTop="@dimen/x20"
+                        android:background="@{viewModel.mo.isApr(false)  ? @drawable/auto_setup_checked : @drawable/auto_setup_normal}"
+                        android:onClick="@{viewModel.onAprTypeClick}"
+                        android:text="@string/auto_detail_type"
+                        android:textColor="@{viewModel.mo.isApr(false) ? @color/app_color_principal : @color/text_grey}" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/x20">
+
+                        <TextView
+                            style="@style/TextViewInAuto"
+                            android:background="@{viewModel.mo.isApr(true) ? @drawable/auto_setup_checked : @drawable/auto_setup_normal}"
+                            android:onClick="@{viewModel.onAprType1Click}"
+                            android:text="@string/auto_detail_apr_type"
+                            android:textColor="@{viewModel.mo.isApr(true) ? @color/app_color_principal : @color/text_grey}" />
+
+                        <EditText
+                            android:id="@+id/auto_setup_apr"
+                            style="@style/EditTextInAuto"
+                            android:layout_width="@dimen/x200"
+                            android:layout_marginLeft="@dimen/x20"
+                            android:focusableInTouchMode="@{viewModel.mo.isApr(true)}"
+                            android:gravity="center"
+                            android:hint="@{viewModel.mo.isApr(true) ? @string/auto_setip_apr_hint : @string/empty}"
+                            android:inputType="numberDecimal"
+                            android:text="@{viewModel.mo.isApr(true) ? String.valueOf(viewModel.mo.aprDown) : @string/empty}"
+                            app:watcher="@{viewModel.aprWatcher}" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/x5"
+                            android:text="@string/unit_percent"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/sp14" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View style="@style/hDividerStyle" />
+
+                <LinearLayout
+                    style="@style/BaseLayout"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/TextViewInLayout"
+                        android:text="@string/auto_setup_repayment"
+                        android:textSize="@dimen/sp14" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/x20"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/TextViewInAuto"
+                            android:background="@{viewModel.mo.isStyle(1) ? @drawable/auto_setup_checked : @drawable/auto_setup_normal}"
+                            android:onClick="@{viewModel.onRepaymentType1Click}"
+                            android:text="@{DisplayFormat.getRepayMentStr(1)}"
+                            android:textColor="@{viewModel.mo.isStyle(1) ? @color/app_color_principal : @color/text_grey}" />
+
+                        <TextView
+                            style="@style/TextViewInAuto"
+                            android:layout_marginLeft="@dimen/x20"
+                            android:background="@{viewModel.mo.isStyle(2) ? @drawable/auto_setup_checked : @drawable/auto_setup_normal}"
+                            android:onClick="@{viewModel.onRepaymentType2Click}"
+                            android:text="@{DisplayFormat.getRepayMentStr(2)}"
+                            android:textColor="@{viewModel.mo.isStyle(2) ? @color/app_color_principal : @color/text_grey}" />
+
+                        <TextView
+                            style="@style/TextViewInAuto"
+                            android:layout_marginLeft="@dimen/x20"
+                            android:background="@{viewModel.mo.isStyle(3) ? @drawable/auto_setup_checked : @drawable/auto_setup_normal}"
+                            android:onClick="@{viewModel.onRepaymentType3Click}"
+                            android:text="@{DisplayFormat.getRepayMentStr(3)}"
+                            android:textColor="@{viewModel.mo.isStyle(3) ? @color/app_color_principal : @color/text_grey}" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View style="@style/hDividerStyle" />
+
+                <com.rd.zhongqipiaoetong.view.TimeButton
+                    style="@style/FilletBtnStyle"
+                    android:layout_marginLeft="@dimen/x20"
+                    android:layout_marginRight="@dimen/x20"
+                    android:layout_marginTop="@dimen/x30"
+                    android:enabled="@{viewModel.mo.enable}"
+                    android:onClick="@{viewModel.onCommitClick}"
+                    android:text="@string/auto_setup_button" />
+
+                <View style="@style/hDividerStyle" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+</layout>

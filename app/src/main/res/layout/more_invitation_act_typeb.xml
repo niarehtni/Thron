@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <!--<import type="com.rd.thron.utils.DisplayFormat" />-->
+
+        <variable
+            name="viewModel"
+            type="com.rd.zhongqipiaoetong.module.more.viewmodel.InvitationTypeBVM" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/titleBar"
+            layout="@layout/appbar_layout" />
+
+        <RelativeLayout
+            android:layout_gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/invite_bg_bottom"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/invite_share_click"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/x40"
+                android:background="@drawable/invite_btn"
+                android:onClick="@{viewModel.onShareLinkClick}"
+                />
+
+            <ImageView
+                android:id="@+id/code_iv"
+                android:layout_width="@dimen/x250"
+                android:layout_height="@dimen/x250"
+                android:layout_marginBottom="20dp"
+                android:layout_above="@+id/invite_share_click"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+    </LinearLayout>
+</layout>

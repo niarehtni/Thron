@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.rd.zhongqipiaoetong.module.account.viewmodel.ModifyLoginPwdVM" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorGrey"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/titleBar"
+            layout="@layout/appbar_layout" />
+
+        <com.rd.zhongqipiaoetong.view.IntegratedEditText
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:background="@drawable/shape_gray_ed"
+            android:layout_marginRight="@dimen/x20"
+            android:layout_marginLeft="@dimen/x20"
+            android:layout_marginTop="@dimen/x50">
+
+            <EditText
+                style="@style/LoginEditTextTheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/pwd_modifyloginpwd_hint_1"
+                android:text="@={viewmodel.oldPwd}"
+                android:inputType="textPassword"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/signup_delete"
+                android:visibility="visible" />
+        </com.rd.zhongqipiaoetong.view.IntegratedEditText>
+
+        <com.rd.zhongqipiaoetong.view.IntegratedEditText
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:background="@drawable/shape_gray_ed"
+            android:layout_marginRight="@dimen/x20"
+            android:layout_marginLeft="@dimen/x20"
+            android:layout_marginTop="@dimen/x50">
+
+            <EditText
+                style="@style/LoginEditTextTheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:text="@={viewmodel.newPwd}"
+                android:hint="@string/pwd_modifyloginpwd_hint_2"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/signup_delete"/>
+        </com.rd.zhongqipiaoetong.view.IntegratedEditText>
+
+        <Button
+            style="@style/FilletBtnStyle"
+            android:layout_marginRight="@dimen/x20"
+            android:layout_marginLeft="@dimen/x20"
+            android:layout_marginTop="@dimen/x50"
+            android:onClick="@{viewmodel.modifyClick}"
+            android:text="@string/pwd_modify_sure" />
+    </LinearLayout>
+</layout>

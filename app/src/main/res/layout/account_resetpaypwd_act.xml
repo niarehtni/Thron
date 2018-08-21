@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.rd.zhongqipiaoetong.module.account.viewmodel.ResetPayPwdVM" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorViewbg"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/titleBar"
+            layout="@layout/appbar_layout" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/x20"
+            android:background="@color/line_grey"
+            android:gravity="center"
+            android:padding="@dimen/x20"
+            android:text="@string/resetpaypwd_tips"
+            android:textColor="@color/text_dark"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/resetpaypwd_ed_identify"
+            style="@style/EditTextTheme"
+            android:layout_marginTop="@dimen/x10"
+            android:background="@drawable/shape_gray_ed"
+            android:hint="@string/resetpaypwd_hint_identify"
+            android:inputType="textVisiblePassword"
+            android:textColorHint="@color/hint_grey"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/x20"
+            android:text="@{@string/resetpaypwd_phone(viewmodel.phone)}"
+            android:textColor="@color/text_dark"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/resetpaypwd_ed_code"
+                style="@style/EditTextTheme"
+                android:layout_weight="1"
+                android:background="@drawable/shape_gray_ed"
+                android:hint="@string/resetpaypwd_hint_code"
+                android:inputType="number"
+                android:maxLength="6"
+                android:textColorHint="@color/hint_grey"
+                android:textSize="16sp" />
+
+            <com.rd.zhongqipiaoetong.view.TimeButton
+                android:id="@+id/resetpaypwd_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/x30"
+                android:layout_marginRight="@dimen/x30"
+                android:background="@drawable/fillet_btn"
+                android:padding="@dimen/x10"
+                android:text="@string/register_get_code"
+                android:textColor="@color/colorViewbg"
+                android:onClick="@{viewmodel.getCode}"/>
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/resetpaypwd_ed_pwd"
+            style="@style/EditTextTheme"
+            android:layout_marginTop="@dimen/x20"
+            android:background="@drawable/shape_gray_ed"
+            android:hint="@string/pwd_modifypaynpwd_hint_2"
+            android:inputType="textPassword"
+            android:maxLength="16"
+            android:textColorHint="@color/hint_grey"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/resetpaypwd_ed_pwdagain"
+            style="@style/EditTextTheme"
+            android:layout_marginTop="@dimen/x20"
+            android:background="@drawable/shape_gray_ed"
+            android:hint="@string/resetpaypwd_confirm"
+            android:inputType="textPassword"
+            android:maxLength="16"
+            android:textColorHint="@color/hint_grey"
+            android:textSize="16sp" />
+
+        <Button
+            style="@style/FilletBtnStyle"
+            android:layout_marginLeft="@dimen/x20"
+            android:layout_marginRight="@dimen/x20"
+            android:layout_marginTop="@dimen/x50"
+            android:onClick="@{viewmodel.sureClick}"
+            android:text="@string/confirm" />
+    </LinearLayout>
+</layout>

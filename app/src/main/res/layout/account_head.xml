@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="com.rd.zhongqipiaoetong.utils.DisplayFormat" />
+
+        <variable
+            name="accountVM"
+            type="com.rd.zhongqipiaoetong.module.account.viewmodel.AccountVM" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x10"
+            android:layout_marginStart="@dimen/x10"
+            android:layout_marginTop="@dimen/x11"
+            android:orientation="horizontal">
+
+            <!-- 三点 -->
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/threepoint"
+                android:contentDescription="@string/empty" />
+
+            <!-- 头像 -->
+            <com.rd.zhongqipiaoetong.view.RoundImageView
+                android:layout_width="@dimen/x80"
+                android:layout_height="@dimen/x80"
+                android:layout_marginLeft="@dimen/x10"
+                android:layout_marginStart="@dimen/x10"
+                android:onClick="@{accountVM.upLoadHeadImgClick}"
+                app:defaultImage="@{@drawable/morentouxiang}"
+                app:isSkipCache="@{true}"
+                app:src="@{accountVM.account.headPortraitUrl}" />
+
+            <!-- 187****6373 -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@{accountVM.account.username}"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <!-- 站内信 -->
+            <RelativeLayout
+                android:layout_width="@dimen/x110"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="@dimen/x20"
+                android:layout_marginRight="@dimen/x10"
+                android:contentDescription="@string/empty"
+                android:onClick="@{accountVM.myMsgManageClick}"
+                android:paddingLeft="@dimen/x50">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/x10"
+                    android:layout_marginRight="@dimen/x10"
+                    android:layout_marginTop="@dimen/x3"
+                    android:background="@drawable/account_top_msg"
+                    android:contentDescription="@string/empty" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x37"
+                    android:background="@drawable/msg_red"
+                    android:contentDescription="@string/empty"
+                    app:visibility="@{accountVM.account.unreadMsgCount>0}" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <!--        <TextView
+                    android:layout_width="@dimen/x80"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x30"
+                    android:layout_marginTop="@dimen/x10"
+                    android:background="@drawable/shape_vip_bg"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/x5"
+                    android:paddingBottom="@dimen/x5"
+                    android:text="@{@string/account_vip_level(accountVM.account.vip)}"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    app:visibility="@{accountVM.account.isShowVip}" />-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/x72"
+            android:layout_marginTop="@dimen/x16"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <!-- 我的资产(元) -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/account_all_asset"
+                    android:textColor="@color/ff_white"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/x10"
+                    android:onClick="@{accountVM.showMoney}"
+                    android:src="@drawable/asset_icon_show" />
+
+            </LinearLayout>
+
+            <!-- 2000 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/x16"
+                android:textColor="@color/white"
+                android:textSize="36sp"
+                app:toString="@{DisplayFormat.doubleFormat(accountVM.account.showAccountAmountTotal)}" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/x24"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <!-- 待到账收益(元) -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/account_collecting_income"
+                    android:textColor="@color/ff_white"
+                    android:textSize="14sp" />
+
+                <!-- 100 -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/x8"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    app:toString="@{DisplayFormat.doubleFormat(accountVM.account.showIncomeCollecting)}" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <!-- 已收收益(元) -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/account_total_income"
+                    android:textColor="@color/ff_white"
+                    android:textSize="14sp" />
+
+                <!-- 20 -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/x8"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    app:toString="@{DisplayFormat.doubleFormat(accountVM.account.showIncomeCollected)}" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

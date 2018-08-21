@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="com.rd.zhongqipiaoetong.utils.DisplayFormat" />
+
+        <import type="com.rd.zhongqipiaoetong.utils.FeatureUtils" />
+
+        <import type="android.view.View" />
+
+        <variable
+            name="vm"
+            type="com.rd.zhongqipiaoetong.module.product.viewmodel.InvestmentVM" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorGrey"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/titleBar"
+            layout="@layout/appbar_layout" />
+
+        <GridLayout
+            style="@style/BaseGridLayout"
+            android:columnCount="3">
+
+            <TextView
+                style="@style/TextViewInGridBlackLineLeft"
+                android:layout_columnSpan="2"
+                android:text="@string/investment_syktje" />
+
+            <TextView
+                style="@style/TextViewInGridGreyLine"
+                android:text="@{@string/yuan(DisplayFormat.doubleFormat(vm.model.getAmountInvestable))}" />
+
+            <TextView
+                style="@style/TextViewInGridBlack"
+                android:layout_columnSpan="2"
+                android:text="@string/investment_tzqj" />
+
+            <TextView
+                style="@style/TextViewInGridGrey"
+                android:text="@{vm.model.getLimit}" />
+
+            <View
+                style="@style/hDividerStyle"
+                android:layout_columnSpan="3" />
+
+            <LinearLayout
+                style="@style/BaseGridLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_columnSpan="3"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/y5"
+                android:paddingTop="@dimen/y5">
+
+                <EditText
+                    android:id="@+id/tender_ed"
+                    style="@style/EditTextInGrid"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:afterTextChanged="@{vm.investMoney}"
+                    android:hint="@string/investment_input_hint"
+                    android:inputType="number"
+                    android:maxLength="8" />
+
+                <TextView
+                    style="@style/TextViewInGridBlack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:text="@string/unit_yuan" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/TextViewInGridBlack"
+                android:layout_columnSpan="3"
+                android:background="@color/colorGrey"
+                android:padding="@dimen/x20"
+                android:text="@{@string/investment_estimated_earnings(DisplayFormat.doubleMoney(vm.earn))}"
+                android:textSize="14sp" />
+
+            <TextView
+                style="@style/TextViewInGridBlackLineLeft"
+                android:layout_columnSpan="2"
+                android:onClick="@{vm.couponClick}"
+                android:text="@string/investment_hb"
+                app:visibility="@{vm.model.getCanUseRedCoupen}" />
+
+            <TextView
+                style="@style/ArrowTextViewInGridGreyLine"
+                android:onClick="@{vm.couponClick}"
+                android:text="@{Double.valueOf(vm.redAmount) == 0.0 ? @string/investment_xzhb:@string/yuan(vm.redAmount)}"
+                app:visibility="@{vm.model.getCanUseRedCoupen}" />
+
+            <TextView
+                style="@style/TextViewInGridBlackLineLeft"
+                android:layout_columnSpan="2"
+                android:onClick="@{vm.expClick}"
+                android:text="@string/investment_exp"
+                app:visibility="@{vm.model.getCanUseExpCoupen}" />
+
+            <TextView
+                style="@style/ArrowTextViewInGridGreyLine"
+                android:onClick="@{vm.expClick}"
+                android:text="@{Double.valueOf(vm.expAmount) == 0 ? @string/investment_xzexp:vm.expAmount}"
+                app:visibility="@{vm.model.getCanUseExpCoupen}" />
+
+            <TextView
+                style="@style/TextViewInGridBlackLineLeft"
+                android:layout_columnSpan="2"
+                android:onClick="@{vm.upClick}"
+                android:text="@string/investment_up"
+                app:visibility="@{vm.model.getCanUseUpCoupen}" />
+
+            <TextView
+                style="@style/ArrowTextViewInGridGreyLine"
+                android:onClick="@{vm.upClick}"
+                android:text="@{Double.valueOf(vm.upRate) == 0 ? @string/investment_xzup: @string/apr_percent(vm.upRate)}"
+                app:visibility="@{vm.model.getCanUseUpCoupen}" />
+
+            <TextView
+                style="@style/TextViewInGridBlack"
+                android:layout_columnSpan="1"
+                android:background="@drawable/item_selector_line_left"
+                android:text="@string/investment_dir"
+                android:visibility="@{vm.model.isDirect == 1 ? View.VISIBLE : View.GONE}" />
+
+            <EditText
+                android:id="@+id/ed_dirpwd"
+                style="@style/EditTextInGrid"
+                android:layout_columnSpan="2"
+                android:layout_gravity="fill"
+                android:background="@drawable/bottom_line_grey"
+                android:gravity="right"
+                android:hint="@string/investment_dirpwd"
+                android:inputType="textPassword"
+                android:visibility="@{vm.model.isDirect == 1 ? View.VISIBLE : View.GONE}" />
+
+            <TextView
+                style="@style/TextViewInGridBlack"
+                android:layout_columnSpan="2"
+                android:text="@string/investment_kyye" />
+
+            <TextView
+                style="@style/TextViewInGridGrey"
+                android:text="@{DisplayFormat.doubleMoney(vm.model.getUseableBalanceAvailable)}" />
+        </GridLayout>
+
+        <TextView
+            style="@style/TextViewThemeBlack"
+            android:layout_marginTop="@dimen/x20"
+            android:text="@{DisplayFormat.XLIFFNumFormat(@string/investment_need_pay(DisplayFormat.doubleMoney(vm.pay)),@color/app_color_secondary)}"
+            android:textColor="@color/text_grey" />
+
+        <Button
+            style="@style/FilletBtnStyle"
+            android:layout_margin="@dimen/x20"
+            android:enabled="@{(Double.valueOf(vm.expAmount)!=0 || Double.valueOf(vm.tenderMoney)!=0)?true:false}"
+            android:onClick="@{(Double.valueOf(vm.expAmount)!=0 || Double.valueOf(vm.tenderMoney)!=0)?vm.submitClick:null}"
+            android:text="@string/investment_submit" />
+    </LinearLayout>
+</layout>

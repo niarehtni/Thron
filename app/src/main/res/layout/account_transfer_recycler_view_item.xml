@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="com.rd.zhongqipiaoetong.utils.DisplayFormat" />
+
+        <variable
+            name="item"
+            type="com.rd.zhongqipiaoetong.common.ui.BaseListItemMo" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorGrey"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x20"
+            app:visibility='@{item.isUpSpace}' />
+
+        <View
+            style="@style/hLineStyle"
+            android:layout_marginLeft="@dimen/x20"
+            app:visibility='@{item.upDriveType == 1}' />
+
+        <View
+            style="@style/hLineStyle"
+            app:visibility='@{item.upDriveType == 0}' />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/ArrowTextViewThemeBlack"
+                android:onClick="@{item.listener}"
+                android:text="@{item.desc}"
+                app:visibility='@{item.type == 1}' />
+
+            <TextView
+                style="@style/TextViewThemeBlack"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@color/colorViewbg"
+                android:paddingLeft="@dimen/x20"
+                app:text="@{item.desc}" />
+
+            <TextView
+                style="@style/TextViewThemeBlack"
+                android:layout_width="wrap_content"
+                android:background="@color/colorViewbg"
+                android:maxWidth="@dimen/x500"
+                android:paddingRight="@dimen/x20"
+                android:textColor="@color/text_grey"
+                app:text="@{item.content}" />
+
+        </LinearLayout>
+
+        <View
+            style="@style/hLineStyle"
+            app:visibility='@{item.downDriveType == 1}' />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x20"
+            app:visibility='@{item.isDownSpace}' />
+    </LinearLayout>
+</layout>

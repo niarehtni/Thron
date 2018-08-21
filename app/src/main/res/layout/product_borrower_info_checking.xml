@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="com.rd.zhongqipiaoetong.utils.DisplayFormat" />
+
+        <variable
+            name="borrowerDetail"
+            type="com.rd.zhongqipiaoetong.module.product.model.BorrowerDetailMo" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorGrey"
+            android:padding="@dimen/x24"
+            android:text="@string/product_borrower_info" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorViewbg"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/x24"
+            android:paddingRight="@dimen/x24">
+            <!--用户名-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x100"
+                android:background="@drawable/item_selector_line"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/product_username"
+                    android:textColor="@color/text_dark" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:text="@{borrowerDetail.name}"
+                    android:textColor="@color/text_grey" />
+            </RelativeLayout>
+
+            <!--年龄-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x100"
+                android:background="@drawable/item_selector_line"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/product_age"
+                    android:textColor="@color/text_dark" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:text="@{String.valueOf(borrowerDetail.age)}"
+                    android:textColor="@color/text_grey" />
+            </RelativeLayout>
+
+            <!--学历-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x100"
+                android:background="@drawable/item_selector_line"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/product_education"
+                    android:textColor="@color/text_dark" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:text="@{borrowerDetail.education}"
+                    android:textColor="@color/text_grey" />
+            </RelativeLayout>
+
+            <!--婚姻状况-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x100"
+                android:background="@drawable/item_selector_line"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/product_marriage"
+                    android:textColor="@color/text_dark" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:text="@{borrowerDetail.marriage.equals('1') ? @string/product_had_marriage : @string/product_no_marriage}"
+                    android:textColor="@color/text_grey" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorViewbg"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/x24"
+            android:paddingRight="@dimen/x24">
+
+            <!--户籍城市-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x100"
+                android:background="@drawable/item_selector_line"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/product_household_city"
+                    android:textColor="@color/text_dark" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:text="@{borrowerDetail.city}"
+                    android:textColor="@color/text_grey" />
+            </RelativeLayout>
+
+            <!--工作时间-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x100"
+                android:background="@drawable/item_selector_line"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/product_work_time"
+                    android:textColor="@color/text_dark" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:text="@{@string/year(borrowerDetail.workTime)}"
+                    android:textColor="@color/text_grey" />
+            </RelativeLayout>
+
+            <!--收入范围-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x100"
+                android:background="@drawable/item_selector_line"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/product_income_range"
+                    android:textColor="@color/text_dark" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:text="@{DisplayFormat.intMoney(borrowerDetail.income)}"
+                    android:textColor="@color/text_grey" />
+            </RelativeLayout>
+
+            <!--车产-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x100"
+                android:background="@drawable/item_selector_line"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/product_had_car"
+                    android:textColor="@color/text_dark" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:text="@{borrowerDetail.car.equals('1') ? @string/product_had : @string/product_no}"
+                    android:textColor="@color/text_grey" />
+            </RelativeLayout>
+
+            <!--房产-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x100"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/product_had_house"
+                    android:textColor="@color/text_dark" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:text="@{borrowerDetail.house.equals('1') ? @string/product_had : @string/product_no}"
+                    android:textColor="@color/text_grey" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

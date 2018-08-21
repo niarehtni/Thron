@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="com.rd.zhongqipiaoetong.utils.DisplayFormat" />
+
+        <variable
+            name="mo"
+            type="com.rd.zhongqipiaoetong.module.account.model.ScoreLogMo" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x20"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="@dimen/x2"
+                android:layout_height="@dimen/x24"
+                android:background="@color/app_color_secondary"
+                android:visibility="@{mo.firstLineVisible}" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_scorelog_circle" />
+
+            <LinearLayout
+                android:layout_width="@dimen/x2"
+                android:layout_height="@dimen/x80"
+                android:background="@color/app_color_secondary"
+                android:visibility="@{mo.secondLineVisible}" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x48"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingRight="@dimen/x20"
+                android:paddingTop="@dimen/x20">
+
+                <TextView
+                    style="@style/TextViewInLayout"
+                    android:text="@{mo.scoreTypeName}"
+                    android:textColor="@color/text_dark" />
+
+                <TextView
+                    style="@style/TextViewInAuto"
+                    android:layout_width="match_parent"
+                    android:gravity="right"
+                    android:text="@{@string/score_log_scorefomat(mo.score)}"
+                    android:textColor="@color/app_color_secondary" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/TextViewInAuto"
+                android:layout_marginTop="@dimen/x16"
+                android:text="@{DisplayFormat.coverTimeYYMMDDmmss(mo.addTime)}" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>

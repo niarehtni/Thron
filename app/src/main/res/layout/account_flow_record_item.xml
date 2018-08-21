@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="com.rd.zhongqipiaoetong.utils.DisplayFormat" />
+
+        <import type="java.lang.String" />
+
+        <import type="java.lang.Integer" />
+
+        <variable
+            name="item"
+            type="com.rd.zhongqipiaoetong.module.product.model.FlowTenderMo" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/item_selector">
+
+        <!-- 金融产品增信项目第五期 -->
+        <TextView
+            android:id="@+id/item_title"
+            style="@style/LogTitleTextViewThemeBlack"
+            android:text="@{item.projectName}" />
+
+        <!-- 投资中 -->
+        <TextView
+            style="@style/TextViewThemeBlack"
+            android:layout_width="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            app:statusStr="@{String.valueOf(item.status)}" />
+
+        <!-- 1 -->
+        <TextView
+            style="@style/TextViewThemeBlack"
+            android:layout_below="@id/item_title"
+            android:text="@{String.valueOf(Integer.valueOf(item.buyCopies))}"
+            android:textColor="@color/app_color_secondary" />
+
+        <!-- 2015-09-20 -->
+        <TextView
+            style="@style/TextViewThemeBlack"
+            android:layout_width="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/item_title"
+            android:text="@{DisplayFormat.coverTimeYYMMDD(item.addTime)}"
+            android:textColor="@color/text_grey" />
+    </RelativeLayout>
+</layout>

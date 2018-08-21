@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="com.rd.zhongqipiaoetong.utils.DisplayFormat" />
+
+        <variable
+            name="transferMo"
+            type="com.rd.zhongqipiaoetong.module.account.model.TransferMo" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/x30"
+        android:background="@color/colorViewbg"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/x15">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxWidth="@dimen/x500"
+                android:text="@{transferMo.borrowName}"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x20"
+                android:textSize="@dimen/x25" />
+
+        </LinearLayout>
+
+        <View style="@style/hLineStyle" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/x20">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/x10"
+                    android:text="@{DisplayFormat.aprFormat(DisplayFormat.doubleFormat(transferMo.rateYear))}"
+                    android:textColor="@color/app_color_secondary"
+                    android:textSize="16sp" />
+
+                <TextView
+                    style="@style/TextViewThemeBlack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:paddingLeft="@dimen/x0"
+                    android:paddingTop="0px"
+                    android:text="@string/expected_apr"
+                    android:textColor="@color/text_grey" />
+
+            </LinearLayout>
+
+            <View
+                style="@style/vLineStyle"
+                android:layout_marginBottom="@dimen/x35"
+                android:layout_marginTop="@dimen/x35" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/x20"
+                android:layout_weight="1.5"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/TextViewThemeBlack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:middleColor="@{@color/text_black}"
+                    app:middleValue="@{@string/remaining_time(transferMo.holdDays)}" />
+
+                <TextView
+                    style="@style/TextViewThemeBlack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:paddingTop="0px"
+                    app:middleColor="@{@color/text_black}"
+                    app:middleValue="@{@string/can_transfer_money(DisplayFormat.doubleFormat(transferMo.remainCapital))}" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

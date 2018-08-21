@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="com.rd.zhongqipiaoetong.utils.DisplayFormat" />
+
+        <variable
+            name="item"
+            type="com.rd.zhongqipiaoetong.module.product.model.InvestRecordMo" />
+
+        <variable
+            name="config"
+            type="com.rd.zhongqipiaoetong.common.FeatureConfig" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorViewbg"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/x24"
+        android:paddingRight="@dimen/x24">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/x16"
+            android:paddingTop="@dimen/x16">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{item.username}"
+                android:textColor="@color/text_dark" />
+
+            <TextView
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x16"
+                android:text="@{DisplayFormat.coverTimeYYMMDDmmss(item.addTime)}"
+                android:textColor="@color/text_grey" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/x16"
+            android:paddingTop="@dimen/x16">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{DisplayFormat.doubleFormat(item.capital)}"
+                android:textColor="@color/text_black"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/img_status_ll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginTop="@dimen/x16"
+                android:orientation="horizontal"
+                app:visibility="@{item.isshow &amp;&amp; item.isShowIcon}">
+
+                <ImageView
+                    android:id="@+id/use_hong"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_marginRight="5dp"
+                    android:src="@{item.usedRedMoney == 0 ? @drawable/hong_no:@drawable/hong}"
+                    app:visibility="@{item.usedRedMoney != 0}" />
+
+                <ImageView
+                    android:id="@+id/use_xi"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="5dp"
+                    android:src="@{item.usedUpRate == 0 ? @drawable/xi_no:@drawable/xi}"
+                    app:visibility="@{item.usedUpRate != 0}" />
+
+                <ImageView
+                    android:id="@+id/use_ti"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="5dp"
+                    android:src="@{ item.usedExperienceMoney == 0 ? @drawable/ti_no:@drawable/ti}"
+                    app:visibility="@{item.usedExperienceMoney != 0}" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

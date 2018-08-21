@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="me.tatarka.bindingcollectionadapter.LayoutManagers" />
+
+        <variable
+            name="viewModel"
+            type="com.rd.zhongqipiaoetong.module.product.viewmodel.ChoiceCouponVM" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorGrey"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/titleBar"
+            layout="@layout/appbar_layout" />
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            app:addItemDecoration="@{viewModel.type}"
+            app:itemView="@{viewModel.itemView}"
+            app:items="@{viewModel.items}"
+            app:layoutManager="@{LayoutManagers.linear()}"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y110"
+            android:background="@color/colorViewbg"
+            android:paddingLeft="@dimen/x20"
+            android:paddingRight="@dimen/x20">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{@string/coupon_optional(String.valueOf(viewModel.redAllMoney))}"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{@string/coupon_selected(String.valueOf(viewModel.redNum))}"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <Button
+                style="@style/FilletBtnStyle"
+                android:layout_width="@dimen/x160"
+                android:layout_margin="@dimen/x20"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:onClick="@{viewModel.sureChoice}"
+                android:text="@string/confirm" />
+        </RelativeLayout>
+    </LinearLayout>
+</layout>

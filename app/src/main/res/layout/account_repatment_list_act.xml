@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="me.tatarka.bindingcollectionadapter.LayoutManagers" />
+
+        <variable
+            name="viewModel"
+            type="com.rd.zhongqipiaoetong.module.account.viewmodel.HuanKuanVM"/>
+
+        <import type="com.rd.zhongqipiaoetong.utils.DisplayFormat"/>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/titleBar"
+            layout="@layout/appbar_layout" />
+
+        <in.srain.cube.views.ptr.PtrClassicFrameLayout
+            android:id="@+id/ptrAll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:ptrFrame="@{viewModel.listener}"
+            >
+
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:addItemDecoration="@{viewModel.lineType}"
+                app:itemView="@{viewModel.itemView}"
+                app:items="@{viewModel.items}"
+                app:layoutManager="@{LayoutManagers.linear()}"/>
+
+        </in.srain.cube.views.ptr.PtrClassicFrameLayout>
+
+    </LinearLayout>
+</layout>

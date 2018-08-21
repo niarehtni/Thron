@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="com.rd.zhongqipiaoetong.utils.DisplayFormat" />
+
+        <variable
+            name="item"
+            type="com.rd.zhongqipiaoetong.module.account.model.AccountGridMo" />
+
+        <variable
+            name="isPrincipal"
+            type="boolean" />
+    </data>
+
+    <TextView
+        style="@style/AccountItemStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@{DisplayFormat.getResourcesString(item.titleId)}"
+        app:colorFilter="@{isPrincipal ? @color/app_color_principal : @color/app_color_secondary}"
+        app:drawableTop="@{item.drawbleId}" />
+
+</layout>
+

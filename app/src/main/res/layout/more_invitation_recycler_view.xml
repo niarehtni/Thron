@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="me.tatarka.bindingcollectionadapter.LayoutManagers" />
+
+        <variable
+            name="viewModel"
+            type="com.rd.zhongqipiaoetong.common.ui.BaseRecyclerViewVM" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorGrey"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/titleBar"
+            layout="@layout/appbar_layout"
+            app:hidden="@{viewModel.hidden}" />
+
+        <com.rd.zhongqipiaoetong.view.PageLoadingView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:emptyState="@{viewModel.emptyState}"
+            app:visibility="@{viewModel.emptyState.loading}" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:visibility="@{viewModel.tips != null}">
+
+            <TextView
+                style="@style/TipsTheme"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="@{viewModel.tips.length &lt; 1 ? @string/empty : viewModel.tips[0]}" />
+
+            <TextView
+                style="@style/TipsTheme"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@{viewModel.tips.length &lt; 2 ? @string/empty : viewModel.tips[1]}"
+                app:visibility="@{viewModel.tips.length &gt; 1}" />
+
+            <TextView
+                style="@style/TipsTheme"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="@{viewModel.tips.length &lt; 3 ? @string/empty : viewModel.tips[2]}"
+                app:visibility="@{viewModel.tips.length &gt; 1}" />
+        </LinearLayout>
+
+        <in.srain.cube.views.ptr.PtrClassicFrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:ptrFrame="@{viewModel.listener}">
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:addItemDecoration="@{viewModel.type}"
+                app:itemView="@{viewModel.itemView}"
+                app:items="@{viewModel.items}"
+                app:layoutManager="@{LayoutManagers.linear()}" />
+        </in.srain.cube.views.ptr.PtrClassicFrameLayout>
+    </LinearLayout>
+</layout>

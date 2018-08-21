@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.rd.zhongqipiaoetong.module.account.model.HuanKuanMo" />
+
+        <import type="com.rd.zhongqipiaoetong.utils.DisplayFormat" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/grey_bg"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x20" />
+
+        <TextView
+            android:onClick="@{item.detailClick}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:drawablePadding="@dimen/x20"
+            android:drawableRight="@drawable/ic_arrow_right"
+            android:maxLines="1"
+            android:padding="@dimen/x20"
+            android:text="@{item.borrowName}"
+            android:textColor="@color/text_dark"
+            android:textSize="36px" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/x20">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="本期应还本息（元）"
+                android:textColor="@color/text_black" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="@{DisplayFormat.doubleFormat(item.repaymentAmount)}"
+                android:textColor="@color/text_black" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/x20"
+            android:paddingRight="@dimen/x20">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="还款期数"
+                android:textColor="@color/text_black" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="@{item.repay}"
+                android:textColor="@color/text_black" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/x20">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="本期还款日"
+                android:textColor="@color/text_black" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="@{DisplayFormat.coverTimeYYMMDD(item.expectedRepaymentTime)}"
+                android:textColor="@color/text_black" />
+
+        </LinearLayout>
+
+        <TextView
+            android:onClick="@{item.repayClick}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center"
+            android:padding="@dimen/x20"
+            android:text="@{DisplayFormat.getRepayStatus(item.status)}"
+            android:textColor="@{item.repayColor ? @color/assets_blue :@color/text_black}"
+            android:textSize="36px" />
+
+    </LinearLayout>
+
+</layout>

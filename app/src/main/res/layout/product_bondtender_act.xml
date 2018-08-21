@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="com.rd.zhongqipiaoetong.utils.DisplayFormat" />
+
+        <import type="java.lang.String" />
+
+        <variable
+            name="vm"
+            type="com.rd.zhongqipiaoetong.module.product.viewmodel.BondTenderVM" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorGrey"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/titleBar"
+            layout="@layout/appbar_layout" />
+
+        <GridLayout
+            style="@style/BaseGridLayout"
+            android:columnCount="3">
+
+            <TextView
+                style="@style/TextViewInGridBlackLineLeft"
+                android:layout_columnSpan="2"
+                android:text="@string/investment_syktje" />
+
+            <TextView
+                style="@style/TextViewInGridGreyLine"
+                android:text="@{@string/yuan(DisplayFormat.doubleFormat(vm.model.bondRes.bondCapital))}" />
+
+            <TextView
+                style="@style/TextViewInGridBlack"
+                android:layout_columnSpan="2"
+                android:text="@string/investment_tzqj" />
+
+            <TextView
+                style="@style/TextViewInGridGrey"
+                android:text="@{DisplayFormat.doubleMoney(vm.model.bondRes.bondCapital)}" />
+
+            <View
+                style="@style/hDividerStyle"
+                android:layout_columnSpan="3" />
+
+            <EditText
+                android:id="@+id/bond_ed"
+                style="@style/EditTextInGrid"
+                android:layout_columnSpan="2"
+                android:enabled="false"
+                android:hint="@string/investment_input_hint"
+                android:inputType="number"
+                android:maxLength="8"
+                android:text="@{vm.model.bondRes.getInvestAmount}" />
+
+            <TextView
+                style="@style/TextViewInGridBlack"
+                android:layout_columnSpan="1"
+                android:gravity="end"
+                android:text="@string/unit_yuan" />
+
+            <TextView
+                style="@style/TextViewInGridBlack"
+                android:layout_columnSpan="3"
+                android:background="@color/colorGrey"
+                android:padding="@dimen/x20"
+                android:text="@{@string/investment_estimated_earnings(DisplayFormat.doubleMoney(vm.model.totalInterest))}"
+                android:textSize="14sp" />
+
+            <TextView
+                style="@style/TextViewInGridBlack"
+                android:layout_columnSpan="2"
+                android:text="@string/investment_kyye" />
+
+            <TextView
+                style="@style/TextViewInGridGrey"
+                android:text="@{DisplayFormat.doubleMoney(vm.model.balanceAvailable)}" />
+        </GridLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/x20">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{DisplayFormat.XLIFFNumFormat(@string/investment_zherang(DisplayFormat.doubleMoney(vm.discount)),@color/app_color_secondary)}"
+                android:textColor="@color/text_grey"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="@{DisplayFormat.XLIFFNumFormat(@string/investment_actual(DisplayFormat.doubleMoney(vm.actPay)),@color/app_color_secondary)}"
+                android:textColor="@color/text_grey"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <Button
+            style="@style/FilletBtnStyle"
+            android:layout_margin="@dimen/x20"
+            android:enabled="@{vm.model.bondRes.bondCapital==0?false:true}"
+            android:onClick="@{vm.model.bondRes.bondCapital==0?null:vm.submitClick}"
+            android:text="@string/investment_submit" />
+    </LinearLayout>
+</layout>

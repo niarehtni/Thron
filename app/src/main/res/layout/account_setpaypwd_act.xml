@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.rd.zhongqipiaoetong.module.account.viewmodel.SetPayPwdVM" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorViewbg"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/titleBar"
+            layout="@layout/appbar_layout" />
+
+        <EditText
+            android:id="@+id/setpaypwd_ed_pwd"
+            style="@style/EditTextTheme"
+            android:layout_marginTop="@dimen/x20"
+            android:background="@drawable/shape_gray_ed"
+            android:hint="@string/pwd_modifypaynpwd_hint_2"
+            android:inputType="textPassword"
+            android:maxLength="16"
+            android:textColorHint="@color/hint_grey"
+            android:textSize="16sp"
+            app:watcher="@{viewmodel.watcher}" />
+
+        <EditText
+            android:id="@+id/setpaypwd_ed_pwdagain"
+            style="@style/EditTextTheme"
+            android:layout_marginTop="@dimen/x20"
+            android:background="@drawable/shape_gray_ed"
+            android:hint="@string/resetpaypwd_confirm"
+            android:inputType="textPassword"
+            android:maxLength="16"
+            android:textColorHint="@color/hint_grey"
+            android:textSize="16sp" />
+
+        <com.rd.zhongqipiaoetong.view.NoDoubleClickButton
+            style="@style/FilletBtnStyle"
+            android:layout_marginLeft="@dimen/x20"
+            android:layout_marginRight="@dimen/x20"
+            android:layout_marginTop="@dimen/x50"
+            android:enabled="@{viewmodel.enable}"
+            android:onClick="@{viewmodel.sureClick}"
+            android:text="@string/confirm" />
+    </LinearLayout>
+</layout>

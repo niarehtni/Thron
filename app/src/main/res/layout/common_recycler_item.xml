@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.rd.zhongqipiaoetong.common.ui.BaseListItemMo" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/ArrowTextViewThemeBlack"
+            android:layout_marginBottom="@dimen/x20"
+            android:layout_marginTop="@dimen/x20"
+            android:onClick="@{item.listener}"
+            android:text="@{item.desc}"
+            app:visibility='@{item.type == 1}' />
+
+        <TextView
+            style="@style/TextViewThemeBlack"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background="@color/colorViewbg"
+            android:paddingLeft="@dimen/x20"
+            app:text="@{item.desc}" />
+
+        <TextView
+            style="@style/TextViewThemeBlack"
+            android:layout_width="wrap_content"
+            android:background="@color/colorViewbg"
+            android:paddingEnd="@dimen/x20"
+            android:paddingRight="@dimen/x20"
+            android:textColor="@color/text_grey"
+            app:text="@{item.content}" />
+    </LinearLayout>
+</layout>

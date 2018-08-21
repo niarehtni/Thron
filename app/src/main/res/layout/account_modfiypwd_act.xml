@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.rd.zhongqipiaoetong.module.account.viewmodel.ModifyLoginPwdVM" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorGrey"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/titleBar"
+            layout="@layout/appbar_layout" />
+
+        <com.rd.zhongqipiaoetong.view.IntegratedEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x20"
+            android:layout_marginRight="@dimen/x20"
+            android:layout_marginTop="@dimen/x50"
+            android:background="@drawable/shape_gray_ed"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/modifypwd_ed_old"
+                style="@style/LoginEditTextTheme"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/pwd_modifyloginpwd_hint_1"
+                android:inputType="textPassword"
+                android:text="@={viewmodel.oldPwd}"
+                android:textSize="@dimen/sp15"
+                app:list="@{viewmodel.edList}"
+                app:watcher="@{viewmodel.watcher}" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|right"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/signup_delete" />
+        </com.rd.zhongqipiaoetong.view.IntegratedEditText>
+
+        <com.rd.zhongqipiaoetong.view.IntegratedEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x20"
+            android:layout_marginRight="@dimen/x20"
+            android:layout_marginTop="@dimen/x50"
+            android:background="@drawable/shape_gray_ed"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/modifypwd_ed_new"
+                style="@style/LoginEditTextTheme"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x30"
+                android:layout_weight="1"
+                android:background="@drawable/bottom_line_white"
+                android:hint="@string/pwd_modifyloginpwd_hint_2"
+                android:inputType="textPassword"
+                android:paddingLeft="@dimen/x20"
+                android:text="@={viewmodel.newPwd}"
+                android:textColorHint="@color/hint_grey"
+                android:textSize="@dimen/sp15"
+                app:list="@{viewmodel.edList}"
+                app:watcher="@{viewmodel.watcher}" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|right"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/signup_delete" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|right"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" />
+
+        </com.rd.zhongqipiaoetong.view.IntegratedEditText>
+
+        <Button
+            style="@style/FilletBtnStyle"
+            android:layout_marginLeft="@dimen/x20"
+            android:layout_marginRight="@dimen/x20"
+            android:layout_marginTop="@dimen/x50"
+            android:enabled="@{viewmodel.enable}"
+            android:onClick="@{viewmodel.modifyClick}"
+            android:text="@string/confirm" />
+    </LinearLayout>
+</layout>

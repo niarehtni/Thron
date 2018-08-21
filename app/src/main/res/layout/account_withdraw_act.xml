@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="android.text.Html"/>
+
+        <import type="com.rd.zhongqipiaoetong.utils.DisplayFormat" />
+
+        <variable
+            name="viewModel"
+            type="com.rd.zhongqipiaoetong.module.account.viewmodel.WithdrawVM" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorGrey"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/titleBar"
+            layout="@layout/appbar_layout" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                style="@style/WhiteLayoutTheme"
+                android:layout_marginTop="@dimen/x20"
+                android:background="@drawable/item_selector"
+                android:onClick="@{viewModel.toBanKListClick}">
+
+                <TextView
+                    style="@style/TextViewThemeBlack"
+                    android:layout_width="wrap_content"
+                    android:text="@string/recharge_bank_card" />
+
+                <TextView
+                    style="@style/ArrowTextViewThemeBlack"
+                    android:padding="@dimen/x20"
+                    android:text="@{@string/recharge_bank_title(viewModel.bankmo.bank,DisplayFormat.getShortBankNO(viewModel.bankmo.bankNO))}" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/WhiteLayoutTheme"
+                android:layout_marginTop="@dimen/x20">
+
+                <EditText
+                    style="@style/EditTextTheme"
+                    android:id="@+id/withdraw_et"
+                    android:layout_width="0dp"
+                    android:layout_margin="0dp"
+                    android:layout_weight="1"
+                    android:afterTextChanged="@{viewModel.input}"
+                    android:hint="@string/withdraw_input_hint"
+                    android:imeOptions="actionDone"
+                    android:inputType="numberDecimal"
+                    android:maxLength="10"
+                    android:textSize="16sp"
+                    app:filter="@{true}" />
+
+                <TextView
+                    style="@style/TextViewThemeBlack"
+                    android:layout_width="wrap_content"
+                    android:text="@string/unit_yuan" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/WhiteLayoutTheme"
+                android:layout_marginTop="@dimen/x20">
+
+                <TextView
+                    style="@style/TextViewThemeBlack"
+                    android:layout_width="wrap_content"
+                    android:text="@string/withdraw_ktx" />
+
+                <TextView
+                    style="@style/TextViewThemeBlack"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="@{DisplayFormat.doubleMoney(viewModel.item.balance)}"
+                    android:textColor="@color/text_grey" />
+            </LinearLayout>
+
+
+            <Button
+                style="@style/FilletBtnStyle"
+                android:layout_margin="@dimen/x30"
+                android:enabled="@{viewModel.enable}"
+                android:onClick="@{viewModel.submit}"
+                android:text="@string/withdraw_submit" />
+
+            <TextView
+                style="@style/TipsTheme"
+                android:text="@{Html.fromHtml(viewModel.warmTips)}" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>

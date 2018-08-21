@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.rd.zhongqipiaoetong.module.account.viewmodel.ModifyPayPwdVM" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorGrey"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/titleBar"
+            layout="@layout/appbar_layout" />
+
+        <com.rd.zhongqipiaoetong.view.IntegratedEditText
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:background="@drawable/shape_gray_ed"
+            android:layout_marginRight="@dimen/x20"
+            android:layout_marginLeft="@dimen/x20"
+            android:layout_marginTop="@dimen/x50"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/modifypawpwd_ed_old"
+                style="@style/LoginEditTextTheme"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/pwd_modifypaynpwd_hint_1"
+                android:text="@={viewmodel.oldPwd}"
+                android:textSize="@dimen/sp15"
+                android:inputType="textPassword"
+                app:list="@{viewmodel.edList}"
+                app:watcher="@{viewmodel.watcher}"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|right"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/signup_delete" />
+        </com.rd.zhongqipiaoetong.view.IntegratedEditText>
+
+        <com.rd.zhongqipiaoetong.view.IntegratedEditText
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:background="@drawable/shape_gray_ed"
+            android:layout_marginRight="@dimen/x20"
+            android:layout_marginLeft="@dimen/x20"
+            android:layout_marginTop="@dimen/x50"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/modifypawpwd_ed_new"
+                style="@style/LoginEditTextTheme"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="textPassword"
+                android:text="@={viewmodel.newPwd}"
+                android:textSize="@dimen/sp15"
+                android:hint="@string/pwd_modifypaynpwd_hint_2"
+                app:list="@{viewmodel.edList}"
+                app:watcher="@{viewmodel.watcher}"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|right"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/signup_delete"/>
+        </com.rd.zhongqipiaoetong.view.IntegratedEditText>
+
+        <com.rd.zhongqipiaoetong.view.IntegratedEditText
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:background="@drawable/shape_gray_ed"
+            android:layout_marginRight="@dimen/x20"
+            android:layout_marginLeft="@dimen/x20"
+            android:layout_marginTop="@dimen/x50"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/modifypawpwd_ed_newagain"
+                style="@style/LoginEditTextTheme"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="textPassword"
+                android:text="@={viewmodel.againPwd}"
+                android:textSize="@dimen/sp15"
+                android:hint="@string/pwd_modifypaynpwd_hint_3"
+                app:list="@{viewmodel.edList}"
+                app:watcher="@{viewmodel.watcher}"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|right"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/signup_delete"/>
+        </com.rd.zhongqipiaoetong.view.IntegratedEditText>
+
+        <com.rd.zhongqipiaoetong.view.NoDoubleClickButton
+            style="@style/FilletBtnStyle"
+            android:layout_marginRight="@dimen/x20"
+            android:layout_marginLeft="@dimen/x20"
+            android:layout_marginTop="@dimen/x50"
+            android:onClick="@{viewmodel.modifyClick}"
+            android:enabled="@{viewmodel.enable}"
+            android:text="@string/confirm" />
+    </LinearLayout>
+</layout>

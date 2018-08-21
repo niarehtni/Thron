@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="com.rd.zhongqipiaoetong.utils.DisplayFormat" />
+
+        <variable
+            name="item"
+            type="com.rd.zhongqipiaoetong.module.account.model.RechargeRecordMo" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/item_selector">
+
+        <!-- 充值中 -->
+        <TextView
+            android:id="@+id/item_title"
+            style="@style/TextViewThemeBlack"
+            android:paddingBottom="@dimen/x10"
+            android:text="@{DisplayFormat.getRechareStr(item.status)}" />
+
+        <!-- +1000.00 -->
+        <TextView
+            style="@style/TextViewThemeBlack"
+            android:layout_width="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:paddingBottom="@dimen/x10"
+            android:text="@{@string/recharge_symbol(DisplayFormat.doubleMoney(item.cash))}"
+            android:textColor="@color/app_color_secondary" />
+
+        <!-- 余额：1000.00 -->
+        <TextView
+            style="@style/TextViewThemeBlack"
+            android:layout_below="@id/item_title"
+            android:paddingTop="@dimen/x10"
+            android:textColor="@color/text_grey"
+            android:textSize="14sp" />
+
+        <!-- 2014-06-25 -->
+        <TextView
+            style="@style/TextViewThemeBlack"
+            android:layout_width="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/item_title"
+            android:paddingTop="@dimen/x10"
+            android:text="@{DisplayFormat.coverTimeYYMMDDmmss(item.addTime)}"
+            android:textColor="@color/text_grey"
+            android:textSize="14sp" />
+    </RelativeLayout>
+</layout>

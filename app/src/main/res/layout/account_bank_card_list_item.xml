@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="com.rd.zhongqipiaoetong.utils.DisplayFormat" />
+
+        <import type="com.rd.zhongqipiaoetong.common.XMLBinding" />
+
+        <variable
+            name="info"
+            type="com.rd.zhongqipiaoetong.module.account.model.BankCardMo" />
+
+        <variable
+            name="viewModel"
+            type="com.rd.zhongqipiaoetong.module.account.viewmodel.BankCardListVM" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/x20"
+        android:layout_marginRight="@dimen/x20"
+        android:layout_marginTop="@dimen/x20"
+        android:padding="@dimen/x30"
+        app:bankCardBg="@{info.id}">
+
+        <!-- icon -->
+        <ImageView
+            android:id="@+id/bank_acronym"
+            android:layout_width="@dimen/x50"
+            android:layout_height="@dimen/x50"
+            android:layout_margin="@dimen/x10"
+            android:contentDescription="@string/empty"
+            android:gravity="center_vertical"
+            app:src="@{info.logoPicUrl}"/>
+
+        <!-- 招商银行 -->
+        <TextView
+            android:id="@+id/bank_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/bank_acronym"
+            android:layout_toRightOf="@id/bank_acronym"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="@{info.bank}"
+            android:textColor="@color/colorViewbg"
+            android:textSize="22sp" />
+
+        <!-- 快捷支付开通 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="@dimen/x10"
+            android:layout_marginRight="@dimen/x10"
+            android:singleLine="true"
+            android:onClick="@{info.toFast}"
+            android:text="@{info.isFastPayment()?@string/bc_isFast:@string/bc_toFast}"
+            android:textColor="@color/colorViewbg"
+            android:textSize="14sp"
+            app:visibility="@{info.isShow()}" />
+
+        <!-- 储蓄卡（已开通快捷支付） -->
+        <TextView
+            android:id="@+id/bank_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bank_name"
+            android:layout_toEndOf="@id/bank_acronym"
+            android:layout_toRightOf="@id/bank_acronym"
+            android:singleLine="true"
+            android:textColor="@color/colorViewbg"
+            android:visibility="gone" />
+
+        <!-- 隐私帐号 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bank_type"
+            android:layout_marginTop="@dimen/x20"
+            android:layout_toEndOf="@id/bank_acronym"
+            android:layout_toRightOf="@id/bank_acronym"
+            android:singleLine="true"
+            android:text="@{info.bankNo}"
+            android:textColor="@color/colorViewbg"
+            android:textSize="25sp" />
+    </RelativeLayout>
+</layout>

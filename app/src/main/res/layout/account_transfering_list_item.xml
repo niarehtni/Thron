@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="com.rd.zhongqipiaoetong.utils.DisplayFormat" />
+
+        <variable
+            name="transferMo"
+            type="com.rd.zhongqipiaoetong.module.account.model.TransferMo" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorViewbg"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/x5">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/x5">
+
+                <TextView
+                    style="@style/TextViewThemeBlack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxWidth="@dimen/x500"
+                    android:text="@{transferMo.borrowName}"
+                    android:textColor="@color/text_dark" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/x20"
+                    android:background="@drawable/shape_red_btn"
+                    android:onClick="@{transferMo.recallClick}"
+                    android:paddingBottom="@dimen/x10"
+                    android:paddingLeft="@dimen/x20"
+                    android:paddingRight="@dimen/x20"
+                    android:paddingTop="@dimen/x10"
+                    android:text="@string/transfer_recall"
+                    android:textColor="@color/red_btn"
+                    android:textSize="16sp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/x5">
+
+                <TextView
+                    style="@style/TextViewThemeBlack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="0px"
+                    app:middleColor="@{@color/text_black}"
+                    app:middleValue="@{@string/transfer_record_money(DisplayFormat.doubleFormat(transferMo.remainCapital))}" />
+
+                <TextView
+                    style="@style/TextViewThemeBlack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:paddingTop="0px"
+                    android:text="@{DisplayFormat.coverTimeYYMMDD(transferMo.addTime)}" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

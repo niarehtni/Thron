@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="com.rd.zhongqipiaoetong.utils.DisplayFormat" />
+
+        <variable
+            name="viewModel"
+            type="com.rd.zhongqipiaoetong.module.account.viewmodel.PersonInfoVM" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorGrey"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/titleBar"
+            layout="@layout/appbar_layout" />
+
+        <LinearLayout
+            style="@style/WhiteLayoutTheme"
+            android:layout_marginTop="@dimen/x20"
+            android:background="@drawable/item_selector"
+            android:gravity="center"
+            android:onClick="@{viewModel.onAvatarClick}"
+            android:padding="@dimen/x20">
+
+            <TextView
+                style="@style/TextViewThemeBlack"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="@string/person_info_head_img"
+                android:textColor="@color/text_dark" />
+
+            <com.rd.zhongqipiaoetong.view.RoundImageView
+                android:layout_width="@dimen/x100"
+                android:layout_height="@dimen/x100"
+                app:defaultImage="@{@drawable/morentouxiang}"
+                app:isSkipCache="@{true}"
+                app:src="@{viewModel.info.headUrl}" />
+        </LinearLayout>
+
+        <GridLayout
+            style="@style/BaseGridLayout"
+            android:layout_marginTop="@dimen/x20"
+            android:columnCount="2">
+
+            <TextView
+                style="@style/TextViewInGridBlackLineLeft"
+                android:text="@string/person_info_username" />
+
+            <TextView
+                style="@style/TextViewInGridGreyLine"
+                android:text="@{viewModel.info.username}" />
+
+            <TextView
+                style="@style/TextViewInGridBlackLineLeft"
+                android:text="@string/person_info_bind_phone" />
+
+            <TextView
+                style="@style/TextViewInGridGreyLine"
+                android:text="@{viewModel.info.phone}" />
+
+            <TextView
+                style="@style/TextViewInGridBlack"
+                android:text="@string/person_info_bind_email"
+                app:visibility="@{viewModel.isShowEmail}" />
+
+            <TextView
+                style="@style/TextViewInGridGrey"
+                android:clickable="@{viewModel.info != null&amp;&amp;viewModel.info.emailStatus==0}"
+                android:drawableEnd="@{viewModel.info.emailStatus==0?@drawable/ic_arrow_right:null}"
+                android:drawablePadding="@dimen/x10"
+                android:drawableRight="@{viewModel.info.emailStatus==0?@drawable/ic_arrow_right:null}"
+                android:onClick="@{viewModel.onEmailClick}"
+                android:text="@{viewModel.info.emailStatus==1?viewModel.info.email:@string/person_info_go_bind}"
+                app:visibility="@{viewModel.isShowEmail}" />
+
+            <View
+                style="@style/hDividerStyle"
+                android:layout_columnSpan="2" />
+
+            <TextView
+                style="@style/ArrowTextViewInGridBlackLineLeft"
+                android:layout_columnSpan="2"
+                android:clickable="@{viewModel.info != null}"
+                android:onClick="@{viewModel.onPwdManageClick}"
+                android:text="@string/person_info_pwd_manage" />
+
+            <LinearLayout
+                style="@style/TextViewInGridBlackLineLeft"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_columnSpan="2"
+                android:clickable="@{viewModel.info != null &amp;&amp; viewModel.info.realNameStatus != 1}"
+                android:onClick="@{viewModel.onPaymentClick}">
+
+                <TextView
+                    style="@style/TextViewLeft"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/person_info_payment"
+                    android:textColor="@color/text_dark" />
+
+                <TextView
+                    style="@style/TextViewRight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@{viewModel.info.realNameStatus == 1 || viewModel.info.realNameStatus == 3 || viewModel.info.realNameStatus == 6 ? null :  @drawable/ic_arrow_right}"
+                    android:text="@{viewModel.info.infoStatus}" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/TextViewInGridBlackLineLeft"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_columnSpan="2"
+                android:clickable="@{viewModel.info != null}"
+                android:onClick="@{viewModel.onBankCardClick}">
+
+                <TextView
+                    style="@style/TextViewLeft"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/person_info_bank_card"
+                    android:textColor="@color/text_dark" />
+
+                <TextView
+                    style="@style/ArrowTextViewRight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@{viewModel.info.bankNum > 0 ? @string/num(viewModel.info.bankNum): @string/person_info_go_bind}" />
+
+            </LinearLayout>
+        </GridLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/x60"
+            android:background="@drawable/item_selector"
+            android:onClick="@{viewModel.onSignOutClick}"
+            android:text="@string/person_info_sign_out" />
+    </LinearLayout>
+</layout>

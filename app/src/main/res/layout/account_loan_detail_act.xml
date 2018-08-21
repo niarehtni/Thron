@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="com.rd.zhongqipiaoetong.utils.DisplayFormat" />
+
+        <variable
+            name="viewModel"
+            type="com.rd.zhongqipiaoetong.module.account.viewmodel.LoanDetailVM" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/titleBar"
+            layout="@layout/appbar_layout" />
+
+        <LinearLayout
+            style="@style/WhiteLayoutTheme"
+            android:orientation="vertical">
+
+            <!-- 借款产品001号 -->
+            <TextView
+                style="@style/TextViewThemeBlackLineBoth"
+                android:text="@{viewModel.borrow.name}" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/x20"
+                android:layout_marginTop="@dimen/x20"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <!-- 15,000.00 -->
+                    <TextView
+                        style="@style/TextViewThemeBlack"
+                        android:gravity="center"
+                        android:text="@{DisplayFormat.doubleFormat(viewModel.borrow.allAmount)}"
+                        android:textColor="@color/app_color_secondary"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        style="@style/TextViewThemeBlack"
+                        android:gravity="center"
+                        android:paddingTop="0dp"
+                        android:text="@string/loan_jkje"
+                        android:textColor="@color/text_grey"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <!-- 15,000.00 -->
+                    <TextView
+                        style="@style/TextViewThemeBlack"
+                        android:gravity="center"
+                        android:text="@{DisplayFormat.doubleFormat(viewModel.borrow.collectAmount)}"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        style="@style/TextViewThemeBlack"
+                        android:gravity="center"
+                        android:paddingTop="0dp"
+                        android:text="@string/loan_ymjje"
+                        android:textColor="@color/text_grey"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <GridLayout
+            style="@style/BaseGridLayout"
+            android:layout_marginTop="@dimen/x20"
+            android:columnCount="2">
+
+            <TextView
+                style="@style/TextViewInGridBlackLineLeft"
+                android:text="@string/loan_detail_status" />
+
+            <!-- 投资中 -->
+            <TextView
+                style="@style/TextViewInGridGreyLine"
+                android:text="@{viewModel.borrow.statusStr}" />
+
+            <TextView
+                style="@style/TextViewInGridBlackLineLeft"
+                android:text="@string/loan_detail_type" />
+
+            <!-- 担保标 -->
+            <TextView
+                style="@style/TextViewInGridGreyLine"
+                android:text="@{viewModel.borrow.typeStr}" />
+
+            <TextView
+                style="@style/TextViewInGridBlackLineLeft"
+                android:text="@string/loan_detail_apr" />
+
+            <!-- 10% -->
+            <TextView
+                style="@style/TextViewInGridGreyLine"
+                android:text="@{@string/apr_percent(viewModel.borrow.statusStr)}" />
+
+            <TextView
+                style="@style/TextViewInGridBlack"
+                android:text="@string/loan_detail_limit" />
+
+            <!-- 90天 -->
+            <TextView
+                style="@style/TextViewInGridGrey"
+                android:text="@{@string/days(viewModel.borrow.timeLimit)}" />
+
+            <View
+                style="@style/hDividerStyle"
+                android:layout_columnSpan="2" />
+
+            <TextView
+                style="@style/TextViewInGridBlack"
+                android:text="@string/loan_detail_record" />
+
+            <!-- 3笔 -->
+            <TextView
+                style="@style/ArrowTextViewInGridGrey"
+                android:text="@{@string/count(viewModel.borrow.investedCount)}" />
+        </GridLayout>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.rd.zhongqipiaoetong.module.user.viewmodel.FindPwdFirstVM" />
+
+        <import type="com.rd.zhongqipiaoetong.utils.DisplayFormat" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@{DisplayFormat.getBackground(@drawable/shape_gradient_blue)}"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:onTouch="@{viewModel.layoutTouch}">
+
+        <LinearLayout
+            android:id="@+id/find_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/titleBar"
+                layout="@layout/appbar_layout" />
+
+            <ImageView
+                android:id="@+id/app_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/logo" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/findpwd_first"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/find_top"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <EditText
+                android:id="@+id/findpwd_phone"
+                style="@style/LoginEditTextTheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/findpwd_ed_hint"
+                android:inputType="number"
+                android:maxLength="11"
+                android:onFocusChange="@{viewModel.focusChange}"
+                android:textColor="@color/colorViewbg"
+                app:list="@{viewModel.edList}"
+                app:watcher="@{viewModel.codeWatcher}" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x20"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/findpwd_code"
+                    style="@style/LoginEditTextTheme"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/register_code_hint"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:onFocusChange="@{viewModel.focusChange}"
+                    android:textColor="@color/colorViewbg"
+                    app:list="@{viewModel.edList}"
+                    app:watcher="@{viewModel.watcher}" />
+
+                <com.rd.zhongqipiaoetong.view.TimeButton
+                    android:id="@+id/findpwd_timebtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="@dimen/x30"
+                    android:layout_marginRight="@dimen/x30"
+                    android:background="@drawable/fillet_login_btn"
+                    android:enabled="@{viewModel.codeEnable}"
+                    android:gravity="center"
+                    android:onClick="@{viewModel.getCodeClick}"
+                    android:paddingLeft="@dimen/x20"
+                    android:paddingRight="@dimen/x20"
+                    android:text="@string/register_get_code"
+                    android:textColor="@color/login_btn_textcolor" />
+            </LinearLayout>
+
+            <com.rd.zhongqipiaoetong.view.NoDoubleClickButton
+                style="@style/FilletLoginBtnStyle"
+                android:layout_marginLeft="@dimen/x25"
+                android:layout_marginRight="@dimen/x25"
+                android:layout_marginTop="@dimen/x50"
+                android:enabled="@{viewModel.btnEnable}"
+                android:onClick="@{viewModel.nextClick}"
+                android:text="@string/next" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/findpwd_second"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x20"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/findpwd_pwd"
+                    style="@style/LoginEditTextTheme"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/register_pwd_hint"
+                    android:inputType="textPassword"
+                    android:maxLength="16"
+                    android:onFocusChange="@{viewModel.focusChange}"
+                    android:textColor="@color/colorViewbg"
+                    app:watcher="@{viewModel.pwdWatcher}" />
+
+                <ImageView
+                    android:id="@+id/findpwd_eyes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/x35"
+                    android:onClick="@{viewModel.eyesClick}"
+                    android:src="@drawable/signup_bxs_pressed" />
+            </RelativeLayout>
+
+            <com.rd.zhongqipiaoetong.view.NoDoubleClickButton
+                style="@style/FilletLoginBtnStyle"
+                android:layout_marginLeft="@dimen/x25"
+                android:layout_marginRight="@dimen/x25"
+                android:layout_marginTop="@dimen/x50"
+                android:enabled="@{viewModel.pwdEnable}"
+                android:onClick="@{viewModel.sureClick}"
+                android:text="@string/findpwd_title" />
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

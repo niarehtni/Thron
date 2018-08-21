@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="com.rd.zhongqipiaoetong.common.FeatureConfig"/>
+
+        <import type="me.tatarka.bindingcollectionadapter.LayoutManagers" />
+
+        <import type="java.lang.String" />
+
+        <import type="com.rd.zhongqipiaoetong.utils.DisplayFormat" />
+
+        <variable
+            name="listener"
+            type="com.rd.zhongqipiaoetong.view.listener.PtrFrameListener" />
+
+        <variable
+            name="viewModel"
+            type="com.rd.zhongqipiaoetong.module.homepage.viewmodel.HomeVM" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <in.srain.cube.views.ptr.PtrClassicFrameLayout
+            android:id="@+id/ptrAll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:ptrFrame="@{viewModel.listener}">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/whitesmoke"
+                    android:orientation="vertical">
+
+                    <com.rd.banner.banner.ConvenientBanner
+                        android:id="@+id/convenient_banner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <LinearLayout
+                        app:visibility="@{FeatureConfig.enableIosIndexFeature == 1}"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawablePadding="@dimen/y15"
+                            android:drawableTop="@drawable/home_ico_zixun"
+                            android:gravity="center"
+                            android:onClick="@{viewModel.messageClick}"
+                            android:paddingBottom="@dimen/y20"
+                            android:paddingTop="@dimen/y30"
+                            android:text="@string/more_web"
+                            android:textColor="@color/text_dark" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawablePadding="@dimen/y15"
+                            android:drawableTop="@drawable/home_ico_huodong"
+                            android:gravity="center"
+                            android:onClick="@{viewModel.activityListClick}"
+                            android:paddingBottom="@dimen/y20"
+                            android:paddingTop="@dimen/y30"
+                            android:text="@string/more_activity"
+                            android:textColor="@color/text_dark" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawablePadding="@dimen/y15"
+                            android:drawableTop="@drawable/home_ico_pingtai"
+                            android:gravity="center"
+                            android:onClick="@{viewModel.onIntroduceClick}"
+                            android:paddingBottom="@dimen/y20"
+                            android:paddingTop="@dimen/y30"
+                            android:text="@string/more_about_us"
+                            android:textColor="@color/text_dark" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawablePadding="@dimen/y15"
+                            android:drawableTop="@drawable/home_ico_yaoqing"
+                            android:gravity="center"
+                            android:onClick="@{viewModel.inviteClick}"
+                            android:paddingBottom="@dimen/y20"
+                            android:paddingTop="@dimen/y30"
+                            android:text="@string/more_invite"
+                            android:textColor="@color/text_dark" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        style="@style/ArrowTextViewThemeBlackLine"
+                        android:layout_marginTop="@dimen/y15"
+                        android:onClick="@{viewModel.projectClick}"
+                        android:padding="@dimen/x20"
+                        android:text="@string/home_invest"
+                        android:textColor="@color/text_dark"
+                        android:textSize="@dimen/x30"
+                        app:colorFilter="@{@color/app_color_principal}"
+                        app:drawableLeft="@{@drawable/home_ico_jxlc}"
+                        app:drawableRight="@{@drawable/ic_arrow_right}" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:addItemDecoration="@{viewModel.type}"
+                        app:itemView="@{viewModel.itemViewInvest}"
+                        app:items="@{viewModel.itemsInvest}"
+                        app:layoutManager="@{LayoutManagers.linear()}" />
+
+                    <TextView
+                        android:id="@+id/home_invest_empty"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:drawableTop="@drawable/empty_state_product"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/y10"
+                        android:text="@string/empty_product"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        app:visibility="@{FeatureConfig.enableIosActivityFeature == 1}"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/ArrowTextViewThemeBlackLine"
+                            android:layout_marginTop="@dimen/y30"
+                            android:onClick="@{viewModel.activityListClick}"
+                            android:padding="@dimen/x20"
+                            android:text="@string/more_activity"
+                            android:textColor="@color/text_dark"
+                            android:textSize="@dimen/x30"
+                            app:colorFilter="@{@color/app_color_principal}"
+                            app:drawableLeft="@{@drawable/home_ico_hdzx}"
+                            app:drawableRight="@{@drawable/ic_arrow_right}" />
+
+                        <android.support.v7.widget.RecyclerView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:addItemDecoration="@{viewModel.typeAcitivity}"
+                            app:itemView="@{viewModel.itemViewActivity}"
+                            app:items="@{viewModel.itemsActvity}"
+                            app:layoutManager="@{LayoutManagers.linear()}" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/home_activity_empty"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/white"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/imageView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="@dimen/x10"
+                            android:paddingLeft="@dimen/x10"
+                            android:paddingRight="@dimen/x10"
+                            android:paddingTop="@dimen/x20"
+                            android:src="@drawable/home_pic_default_huodong" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="@dimen/x10"
+                            android:paddingLeft="@dimen/x10"
+                            android:paddingRight="@dimen/x10"
+                            android:paddingTop="@dimen/x20"
+                            android:src="@drawable/home_pic_default_huodong_e1" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/home_extra_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="@{viewModel.extraClick}"
+                        android:src="@drawable/home_extra_btn"
+                        android:visibility="gone" />
+
+                    <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:gravity="center_horizontal"-->
+                    <!--android:orientation="vertical">-->
+
+                    <!--<TextView-->
+                    <!--android:id="@+id/home_product_tv_name"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="@dimen/x60"-->
+                    <!--android:layout_marginRight="@dimen/x60"-->
+                    <!--android:layout_marginTop="@dimen/x60"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:ellipsize="end"-->
+                    <!--android:maxLines="1"-->
+                    <!--android:text="@{viewModel.item.tenderItem.name}"-->
+                    <!--android:adjustViewBounds="true"-->
+                    <!--android:textColor="@color/text_dark"-->
+                    <!--android:textSize="@dimen/x45"-->
+                    <!--android:drawablePadding="0dp"-->
+                    <!--app:homeIconType="@{String.valueOf(viewModel.item.tenderItem.type)}" />-->
+
+                    <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginTop="@dimen/x20"-->
+                    <!--android:text="@string/home_invest_expect_apr"-->
+                    <!--android:textColor="@color/text_grey"-->
+                    <!--android:textSize="@dimen/x30" />-->
+
+                    <!--<LinearLayout-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginTop="@dimen/x20"-->
+                    <!--android:orientation="horizontal">-->
+
+                    <!--<TextView-->
+                    <!--android:id="@+id/home_product_tv_per"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="@{viewModel.item.tenderItem.showRateYearMin}"-->
+                    <!--android:textColor="@color/app_color_secondary"-->
+                    <!--android:textSize="@dimen/x110" />-->
+
+                    <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="@dimen/x20"-->
+                    <!--android:text="%"-->
+                    <!--android:textColor="@color/orangered"-->
+                    <!--android:textSize="14sp"-->
+                    <!--android:visibility="gone" />-->
+                    <!--</LinearLayout>-->
+
+                    <!--<LinearLayout-->
+                    <!--android:id="@+id/home_ll_content"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginTop="@dimen/x30"-->
+                    <!--android:gravity="center"-->
+                    <!--android:orientation="horizontal"-->
+                    <!--android:paddingLeft="32dp"-->
+                    <!--android:paddingRight="32dp">-->
+
+                    <!--<LinearLayout-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:gravity="center"-->
+                    <!--android:orientation="horizontal">-->
+
+                    <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:textColor="@color/gray"-->
+                    <!--android:textSize="@dimen/x25"-->
+                    <!--app:middleColor="@{@color/text_dark}"-->
+                    <!--app:middleValue="@{@string/home_invest_purchase(DisplayFormat.intFormat(viewModel.item.tenderItem.investMin))}" />-->
+                    <!--</LinearLayout>-->
+
+                    <!--<View style="@style/vLineStyle" />-->
+
+                    <!--<LinearLayout-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:gravity="center"-->
+                    <!--android:orientation="horizontal">-->
+
+                    <!--<me.grantland.widget.AutofitTextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:textColor="@color/gray"-->
+                    <!--android:textSize="@dimen/x25"-->
+                    <!--app:middleColor="@{@color/text_dark}"-->
+                    <!--app:middleValue="@{@string/home_invest_total(viewModel.item.tenderItem.amountBorrow)}"-->
+                    <!--autofit:minTextSize="3sp" />-->
+                    <!--</LinearLayout>-->
+
+                    <!--<View style="@style/vLineStyle" />-->
+
+                    <!--<LinearLayout-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:gravity="center"-->
+                    <!--android:orientation="horizontal">-->
+
+                    <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:textColor="@color/gray"-->
+                    <!--android:textSize="@dimen/x25"-->
+                    <!--app:middleColor="@{@color/text_dark}"-->
+                    <!--app:middleValue="@{@string/home_invest_term(DisplayFormat.getString(viewModel.item.tenderItem.timeLimit))}" />-->
+
+                    <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="@{viewModel.item.isDay() ? @string/day :@string/month2}"-->
+                    <!--android:textColor="@color/gray"-->
+                    <!--android:textSize="@dimen/x25" />-->
+
+                    <!--</LinearLayout>-->
+                    <!--</LinearLayout>-->
+
+                    <!--<Button-->
+                    <!--android:id="@+id/home_product_btn_buy"-->
+                    <!--style="@style/FilletBtnStyle"-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="@dimen/y90"-->
+                    <!--android:layout_marginBottom="@dimen/x30"-->
+                    <!--android:layout_marginLeft="@dimen/x110"-->
+                    <!--android:layout_marginRight="@dimen/x110"-->
+                    <!--android:layout_marginTop="@dimen/x30"-->
+                    <!--android:gravity="center"-->
+                    <!--android:onClick="@{viewModel.item.tenderItem.status == 0 ?null :viewModel.onDetailClick}"-->
+                    <!--android:text="@string/home_invest_now"-->
+                    <!--android:textColor="@android:color/white"-->
+                    <!--android:textSize="@dimen/x40" />-->
+
+                    <!--<TextView-->
+                    <!--android:id="@+id/home_product_tv_guarantee"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginBottom="@dimen/x30"-->
+                    <!--android:drawablePadding="@dimen/x20"-->
+                    <!--android:text="@string/home_invest_security"-->
+                    <!--android:textColor="@color/text_grey"-->
+                    <!--android:textSize="12sp" />-->
+                    <!--</LinearLayout>-->
+                </LinearLayout>
+
+            </ScrollView>
+        </in.srain.cube.views.ptr.PtrClassicFrameLayout>
+
+        <RelativeLayout
+            android:id="@+id/home_show_ad"
+            android:layout_width="@dimen/x150"
+            android:layout_height="@dimen/x150"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/x20"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/home_iv_ad"
+                android:layout_width="@dimen/x128"
+                android:layout_height="@dimen/x128"
+                android:layout_centerInParent="true" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:onClick="@{viewModel.dismiss}"
+                android:src="@drawable/shut_down_icon" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+</layout>

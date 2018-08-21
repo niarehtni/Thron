@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="me.tatarka.bindingcollectionadapter.LayoutManagers" />
+
+        <variable
+            name="viewModel"
+            type="com.rd.zhongqipiaoetong.module.account.viewmodel.ScoreLogVM" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorGrey"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/titleBar"
+            layout="@layout/appbar_layout" />
+
+        <TextView
+            style="@style/TextViewInAuto"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/x20"
+            android:text="@string/score_log_scores" />
+
+        <TextView
+            style="@style/TextViewInLayoutBlack"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/x20"
+            android:drawableLeft="@drawable/icon_integral"
+            android:drawablePadding="@dimen/x8"
+            android:gravity="center_vertical"
+            android:text="@{viewModel.mo.validScore}"
+            android:textColor="@color/text_dark" />
+
+        <TextView
+            style="@style/TextViewInAuto"
+            android:layout_marginLeft="@dimen/x20"
+            android:layout_marginTop="@dimen/x32"
+            android:gravity="center_vertical"
+            android:text="@string/score_log_title" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x1"
+            android:layout_marginTop="@dimen/x10"
+            android:background="@color/line_grey" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.rd.zhongqipiaoetong.view.PageLoadingView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:emptyState="@{viewModel.emptyState}"
+                app:visibility="@{viewModel.emptyState.loading}" />
+
+            <in.srain.cube.views.ptr.PtrClassicFrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:ptrFrame="@{viewModel.listener}">
+
+                <android.support.v7.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:addItemDecoration="@{viewModel.type}"
+                    app:itemView="@{viewModel.itemView}"
+                    app:items="@{viewModel.items}"
+                    app:layoutManager="@{LayoutManagers.linear()}" />
+            </in.srain.cube.views.ptr.PtrClassicFrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

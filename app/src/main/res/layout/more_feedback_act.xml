@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.rd.zhongqipiaoetong.module.more.viewmodel.FeedBackVM" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/feedback_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorGrey"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/titleBar"
+            layout="@layout/appbar_layout" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x500"
+            android:layout_marginTop="@dimen/x10"
+            android:background="@color/colorViewbg">
+
+            <EditText
+                android:id="@+id/feedback_et_content"
+                style="@style/EditTextTheme"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="top"
+                android:hint="@string/feedback_et_content_hint"
+                android:maxLength="200"
+                android:singleLine="false" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/x30"
+            android:background="@color/colorViewbg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/x20"
+                android:layout_height="@dimen/x20" />
+
+            <EditText
+                android:id="@+id/feedback_et_phone"
+                style="@style/EditTextTheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x10"
+                android:hint="@string/feedback_et_phone" />
+
+        </LinearLayout>
+
+        <TextView
+            style="@style/TextViewThemeBlack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x30"
+            android:text="@string/feedback_tv_title" />
+
+        <LinearLayout style="@style/WhiteSelectorLayoutThemeLineLeft">
+
+            <TextView
+                style="@style/TextViewThemeBlack"
+                android:layout_weight="3"
+                android:text="@string/feedback_call" />
+
+            <TextView
+                style="@style/TextViewThemeBlack"
+                android:layout_weight="3"
+                android:gravity="right"
+                android:text="@string/feedback_call_phone"
+                android:textColor="@color/text_grey" />
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/WhiteLayoutTheme">
+
+            <TextView
+                style="@style/TextViewThemeBlack"
+                android:layout_weight="3"
+                android:text="@string/feedback_wechat" />
+
+            <TextView
+                style="@style/TextViewThemeBlack"
+                android:layout_weight="3"
+                android:gravity="right"
+                android:text="@string/feedback_wechat_code"
+                android:textColor="@color/text_grey" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>

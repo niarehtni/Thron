@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.rd.zhongqipiaoetong.module.homepage.viewmodel.HomePageVM" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/home_product_tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x20"
+                android:text="@{model.items.name}"
+                android:textColor="@color/black"
+                android:textSize="@dimen/x40" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x20"
+                android:text="@string/home_invest_expect_apr"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/x25" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x20"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/home_product_tv_per"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{model.items.rateYear}"
+                    android:textColor="@color/orangered"
+                    android:textSize="@dimen/x100" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x20"
+                    android:text="%"
+                    android:textColor="@color/orangered"
+                    android:textSize="@dimen/x20" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/home_ll_content"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x30"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/x20"
+                        app:middleColor="@{@color/orange}"
+                        app:middleValue="@{@string/home_invest_sold(model.items.investedCount)}" />
+                    <!--
+                        android:text="@string/home_invest_solded"-->
+                </LinearLayout>
+
+                <View style="@style/vLineStyle" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/x20"
+                        app:middleColor="@{@color/black}"
+                        app:middleValue="@{@string/home_invest_purchase(model.items.investMin)}" />
+                </LinearLayout>
+
+                <View style="@style/vLineStyle" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/x20"
+                        app:middleColor="@{@color/black}"
+                        app:middleValue="@{@string/home_invest_term(model.items.timeLimit)}" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@{model.items.timeType.equals('1') ? @string/day : @string/month}"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/x20" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/home_product_btn_buy"
+                style="@style/FilletBtnStyle"
+                android:layout_width="220dp"
+                android:layout_marginBottom="@dimen/x20"
+                android:layout_marginTop="@dimen/x20"
+                android:gravity="center"
+                android:text="@string/home_invest_now"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/x50" />
+
+            <TextView
+                android:id="@+id/home_product_tv_guarantee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/x20"
+                android:text="@string/home_invest_security"
+                android:textColor="#51AE22"
+                android:textSize="@dimen/x20" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>

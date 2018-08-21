@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.rd.zhongqipiaoetong.module.product.model.ProductInfoMo.ImageList" />
+    </data>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x320"
+        android:layout_marginTop="@dimen/x16"
+        android:scaleType="fitCenter"
+        app:src="@{item.imageUrl}" />
+</layout>

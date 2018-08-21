@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="com.rd.zhongqipiaoetong.utils.DisplayFormat" />
+
+        <import type="me.tatarka.bindingcollectionadapter.LayoutManagers" />
+
+        <variable
+            name="viewModel"
+            type="com.rd.zhongqipiaoetong.module.account.viewmodel.LoanManageVM" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            style="@style/WhiteLayoutTheme"
+            android:layout_marginTop="@dimen/x10">
+
+            <!-- 本期应还款5,2000.00元 -->
+            <TextView
+                style="@style/TextViewThemeBlack"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="@{@string/loan_repayment(DisplayFormat.doubleMoney(viewModel.item.repayment))}" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/fillet_btn"
+                android:onClick="@{viewModel.submit}"
+                android:paddingBottom="@dimen/x10"
+                android:paddingLeft="@dimen/x25"
+                android:paddingRight="@dimen/x25"
+                android:paddingTop="@dimen/x10"
+                android:text="@string/loan_submit"
+                android:textColor="@color/colorViewbg" />
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:itemView="@{viewModel.itemView}"
+            app:items="@{viewModel.item.borrowList}"
+            app:layoutManager="@{LayoutManagers.linear()}" />
+    </LinearLayout>
+</layout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.rd.zhongqipiaoetong.MainVM" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorGrey"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/main_content"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/item_selector_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorGrey"
+            android:baselineAligned="false"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/main_home"
+                style="@style/MainTabItemStyle"
+                android:drawableTop="@drawable/bottom_home_style"
+                android:onClick="@{viewModel.homeClick}"
+                android:text="@string/bottom_tv_home" />
+
+            <TextView
+                android:id="@+id/main_list"
+                style="@style/MainTabItemStyle"
+                android:drawableTop="@drawable/bottom_list_style"
+                android:onClick="@{viewModel.listClick}"
+                android:text="@string/bottom_tv_list" />
+
+            <TextView
+                android:id="@+id/main_account"
+                style="@style/MainTabItemStyle"
+                android:drawableTop="@drawable/bottom_account_style"
+                android:onClick="@{viewModel.accountClick}"
+                android:text="@string/bottom_tv_mine" />
+
+            <TextView
+                android:id="@+id/main_more"
+                style="@style/MainTabItemStyle"
+                android:drawableTop="@drawable/bottom_more_style"
+                android:onClick="@{viewModel.moreClick}"
+                android:text="@string/bottom_tv_more" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>

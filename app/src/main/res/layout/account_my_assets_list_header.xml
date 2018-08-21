@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="title"
+            type="String" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/x10">
+
+        <com.rd.zhongqipiaoetong.view.AssetsPie
+            android:id="@+id/assets_pie"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x400"
+            android:padding="@dimen/x10"
+            app:assets="@{title}"
+            app:assetsColor="@color/app_color_secondary"
+            app:roundWidth="@dimen/x40"
+            app:tips="@string/assets_total_tips"
+            app:tipsColor="@color/text_grey" />
+    </LinearLayout>
+</layout>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="me.tatarka.bindingcollectionadapter.LayoutManagers" />
+
+        <variable
+            name="viewModel"
+            type="com.rd.zhongqipiaoetong.module.account.viewmodel.JieKuanManageVM"/>
+
+        <import type="com.rd.zhongqipiaoetong.utils.DisplayFormat"/>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/titleBar"
+            layout="@layout/appbar_layout" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/app_color_principal"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/y30"
+            android:paddingLeft="@dimen/x20"
+            android:paddingRight="@dimen/x20"
+            android:paddingTop="@dimen/y30">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="已还金额（元）"
+                    android:textColor="#cfedfb"
+                    android:textSize="@dimen/x24" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="待还金额（元）"
+                    android:textColor="#cfedfb"
+                    android:textSize="@dimen/x24" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@{DisplayFormat.doubleFormat(viewModel.model.account.repaidTotal)}"
+                    android:textColor="#ffffff"
+                    android:maxLines="1"
+                    android:textSize="@dimen/x36" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@{DisplayFormat.doubleFormat(viewModel.model.account.amountToBeBack)}"
+                    android:maxLines="1"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/x36" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y60"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="在借金额（元）"
+                    android:textColor="#cfedfb"
+                    android:textSize="@dimen/x24" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="在借项目（个）"
+                    android:textColor="#cfedfb"
+                    android:textSize="@dimen/x24" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:maxLines="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@{DisplayFormat.doubleFormat(viewModel.model.account.amountBorrowing)}"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/x36" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@{viewModel.model.account.projectBorrowing}"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/x36" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <in.srain.cube.views.ptr.PtrClassicFrameLayout
+            android:id="@+id/ptrAll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:ptrFrame="@{viewModel.listener}"
+            >
+
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:addItemDecoration="@{viewModel.lineType}"
+                app:itemView="@{viewModel.itemView}"
+                app:items="@{viewModel.items}"
+                app:layoutManager="@{LayoutManagers.linear()}"/>
+
+        </in.srain.cube.views.ptr.PtrClassicFrameLayout>
+
+    </LinearLayout>
+</layout>

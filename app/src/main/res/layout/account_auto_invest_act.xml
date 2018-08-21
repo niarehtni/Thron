@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.rd.zhongqipiaoetong.module.account.viewmodel.AutoInvestVM" />
+
+        <import type="com.rd.zhongqipiaoetong.utils.DisplayFormat" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorGrey"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/titleBar"
+            layout="@layout/appbar_layout" />
+
+        <GridLayout
+            style="@style/BaseGridLayout"
+            android:layout_marginTop="@dimen/x20"
+            android:columnCount="2">
+
+            <LinearLayout
+                style="@style/TextViewInGridBlackLine"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x90"
+                android:layout_columnSpan="2">
+
+                <TextView
+                    style="@style/TextViewLeft"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/auto_usemoney"
+                    android:textSize="@dimen/sp14" />
+
+                <TextView
+                    style="@style/TextViewRight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/x10"
+                    android:text="@{DisplayFormat.XLIFFNumFormat(DisplayFormat.doubleMoney(viewModel.useMoney),@color/app_color_secondary)}" />
+
+            </LinearLayout>
+
+            <View
+                style="@style/hDividerStyle"
+                android:layout_columnSpan="2" />
+
+            <RelativeLayout
+                style="@style/TextViewInGridBlackLine"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x90"
+                android:layout_columnSpan="2">
+
+                <TextView
+                    style="@style/TextViewLeft"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/auto_status" />
+
+                <ImageView
+                    android:id="@+id/iv_status_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:onClick="@{viewModel.onAutoStatusClick}"
+                    android:contentDescription="@string/app_name"
+                    android:src="@{viewModel.enable ? @drawable/switch_on : @drawable/switch_off}" />
+            </RelativeLayout>
+
+            <TextView
+                style="@style/ArrowTextViewInGridBlackLine"
+                android:layout_height="@dimen/x90"
+                android:layout_columnSpan="2"
+                android:onClick="@{viewModel.onAutoDetailClick}"
+                android:text="@string/auto_param"
+                app:visibility="@{viewModel.enable}" />
+
+            <View
+                style="@style/hDividerStyle"
+                android:layout_columnSpan="2" />
+
+            <TextView
+                style="@style/ArrowTextViewInGridBlackLine"
+                android:layout_height="@dimen/x90"
+                android:layout_columnSpan="2"
+                android:onClick="@{viewModel.onAutoLogClick}"
+                android:text="@string/auto_log" />
+
+        </GridLayout>
+
+        <TextView
+            style="@style/TipsTheme"
+            android:text="@string/auto_invest_tips" />
+    </LinearLayout>
+</layout>

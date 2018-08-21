@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ################################################################################################### -->
+    <!-- 普通Layout中的View样式 -->
+    <!-- ################################################################################################### -->
+
+    <!-- 白色layout样式 -->
+    <style name="WhiteLayoutTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/item_selector</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:paddingLeft">@dimen/x20</item>
+        <item name="android:paddingRight">@dimen/x20</item>
+    </style>
+
+    <!-- 提示信息的 TextView 样式 -->
+    <style name="TipsTheme">
+        <item name="android:background">@color/colorGrey</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">@dimen/x20</item>
+        <item name="android:textColor">@color/text_grey</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="PadingLeftRight">
+        <item name="android:paddingLeft">@dimen/x20</item>
+        <item name="android:paddingRight">@dimen/x20</item>
+    </style>
+    <style name="PadingTopBottom">
+        <item name="android:paddingBottom">@dimen/x10</item>
+        <item name="android:paddingTop">@dimen/x10</item>
+    </style>
+
+    <!-- Layout 中的 TextView 的内容样式  -->
+    <style name="TextViewTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">@dimen/x20</item>
+        <item name="android:paddingBottom">@dimen/x20</item>
+        <item name="android:paddingLeft">@dimen/x20</item>
+        <item name="android:paddingRight">@dimen/x20</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!-- Layout 中的 记录标题 的内容样式 长度13位现在  -->
+    <style name="LogTitleTextViewThemeBlack" parent="@style/TextViewThemeBlack">
+        <item name="android:layout_width">@dimen/x500</item>
+    </style>
+
+    <!-- Layout 中的 TextViewBlack 的内容样式  -->
+    <style name="TextViewThemeBlack" parent="@style/TextViewTheme">
+        <item name="android:textColor">@color/text_black</item>
+    </style>
+
+    <!-- Layout 中的 TextViewGrey 的内容样式  -->
+    <style name="TextViewThemeGrey" parent="@style/TextViewTheme">
+        <item name="android:textColor">@color/text_grey</item>
+    </style>
+
+    <!-- 登录 注册 邮箱界面输入框 -->
+    <style name="LoginEditTextTheme" parent="@style/TextViewThemeBlack">
+        <item name="android:background">@drawable/bottom_line_white</item>
+        <item name="android:textColorHint">@color/hint_grey</item>
+        <item name="android:layout_marginRight">@dimen/x30</item>
+        <item name="android:layout_marginLeft">@dimen/x30</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!-- Layout 中的 EditText 的内容样式 -->
+    <style name="EditTextTheme" parent="@style/TextViewThemeBlack">
+        <item name="android:background">@color/colorViewbg</item>
+        <item name="android:textColorHint">@color/hint_grey</item>
+        <item name="android:layout_marginRight">@dimen/x30</item>
+        <item name="android:layout_marginLeft">@dimen/x30</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!-- 带向右箭头的TextViewBlack -->
+    <style name="ArrowTextViewThemeBlack" parent="@style/TextViewThemeBlack">
+        <item name="android:background">@drawable/item_selector</item>
+        <item name="android:drawableEnd">@drawable/ic_arrow_right</item>
+        <item name="android:drawableRight">@drawable/ic_arrow_right</item>
+        <item name="android:drawablePadding">@dimen/x20</item>
+        <item name="android:padding">@dimen/x20</item>
+    </style>
+
+    <!-- 带向右箭头的TextViewBlack -->
+    <style name="ArrowTextViewThemeGrey" parent="@style/TextViewThemeGrey">
+        <item name="android:background">@drawable/item_selector</item>
+        <item name="android:drawableEnd">@drawable/ic_arrow_right</item>
+        <item name="android:drawableRight">@drawable/ic_arrow_right</item>
+        <item name="android:drawablePadding">@dimen/x20</item>
+        <item name="android:padding">@dimen/x20</item>
+    </style>
+
+    <!-- 含下划线的WhiteLayoutTheme -->
+    <style name="WhiteLayoutThemeLine" parent="@style/WhiteLayoutTheme">
+        <item name="android:background">@drawable/bottom_line_grey</item>
+    </style>
+
+    <style name="WhiteLayoutThemeLineLeft" parent="@style/WhiteLayoutTheme">
+        <item name="android:background">@drawable/bottom_line_grey_left</item>
+    </style>
+
+    <style name="WhiteLayoutThemeLineRight" parent="@style/WhiteLayoutTheme">
+        <item name="android:background">@drawable/bottom_line_grey_right</item>
+    </style>
+
+    <style name="WhiteLayoutThemeLineBoth" parent="@style/WhiteLayoutTheme">
+        <item name="android:background">@drawable/bottom_line_grey_both</item>
+    </style>
+
+    <!-- 含下划线的WhiteSelectorLayoutTheme -->
+    <style name="WhiteSelectorLayoutThemeLine" parent="@style/WhiteLayoutTheme">
+        <item name="android:background">@drawable/item_selector_line</item>
+    </style>
+
+    <style name="WhiteSelectorLayoutThemeLineLeft" parent="@style/WhiteLayoutTheme">
+        <item name="android:background">@drawable/item_selector_line_left</item>
+    </style>
+
+    <style name="WhiteSelectorLayoutThemeLineRight" parent="@style/WhiteLayoutTheme">
+        <item name="android:background">@drawable/item_selector_line_right</item>
+    </style>
+
+    <style name="WhiteSelectorLayoutThemeLineBoth" parent="@style/WhiteLayoutTheme">
+        <item name="android:background">@drawable/item_selector_line_both</item>
+    </style>
+
+    <!-- 含下划线的TextViewBlack -->
+    <style name="TextViewThemeBlackLine" parent="@style/TextViewThemeBlack">
+        <item name="android:background">@drawable/item_selector_line</item>
+    </style>
+
+    <style name="TextViewThemeBlackLineLeft" parent="@style/TextViewThemeBlack">
+        <item name="android:background">@drawable/item_selector_line_left</item>
+    </style>
+
+    <style name="TextViewThemeBlackLineRight" parent="@style/TextViewThemeBlack">
+        <item name="android:background">@drawable/item_selector_line_right</item>
+    </style>
+
+    <style name="TextViewThemeBlackLineBoth" parent="@style/TextViewThemeBlack">
+        <item name="android:background">@drawable/item_selector_line_both</item>
+    </style>
+
+    <!-- 含下划线的TextViewGrey -->
+    <style name="TextViewThemeGreyLine" parent="@style/TextViewThemeGrey">
+        <item name="android:background">@drawable/item_selector_line</item>
+    </style>
+
+    <style name="TextViewThemeGreyLineLeft" parent="@style/TextViewThemeGrey">
+        <item name="android:background">@drawable/item_selector_line_left</item>
+    </style>
+
+    <style name="TextViewThemeGreyLineRight" parent="@style/TextViewThemeGrey">
+        <item name="android:background">@drawable/item_selector_line_right</item>
+    </style>
+
+    <style name="TextViewThemeGreyLineBoth" parent="@style/TextViewThemeGrey">
+        <item name="android:background">@drawable/item_selector_line_both</item>
+    </style>
+
+    <!-- 含下划线的EditTextTheme -->
+    <style name="EditTextThemeLine" parent="@style/EditTextTheme">
+        <item name="android:background">@drawable/bottom_line_grey</item>
+    </style>
+
+    <style name="EditTextThemeLineLeft" parent="@style/EditTextTheme">
+        <item name="android:background">@drawable/bottom_line_grey_left</item>
+    </style>
+
+    <style name="EditTextThemeLineRight" parent="@style/EditTextTheme">
+        <item name="android:background">@drawable/bottom_line_grey_right</item>
+    </style>
+
+    <style name="EditTextThemeLineBoth" parent="@style/EditTextTheme">
+        <item name="android:background">@drawable/bottom_line_grey_both</item>
+    </style>
+
+    <!-- 含下划线的ArrowTextViewThemeBlack -->
+    <style name="ArrowTextViewThemeBlackLine" parent="@style/ArrowTextViewThemeBlack">
+        <item name="android:background">@drawable/item_selector_line</item>
+    </style>
+
+    <style name="ArrowTextViewThemeBlackLineLeft" parent="@style/ArrowTextViewThemeBlack">
+        <item name="android:background">@drawable/item_selector_line_left</item>
+    </style>
+
+    <style name="ArrowTextViewThemeBlackLineRight" parent="@style/ArrowTextViewThemeBlack">
+        <item name="android:background">@drawable/item_selector_line_right</item>
+    </style>
+
+    <style name="ArrowTextViewThemeBlackLineBoth" parent="@style/ArrowTextViewThemeBlack">
+        <item name="android:background">@drawable/item_selector_line_both</item>
+    </style>
+
+    <!-- 含下划线的ArrowTextViewThemeGrey -->
+    <style name="ArrowTextViewThemeGreyLine" parent="@style/ArrowTextViewThemeGrey">
+        <item name="android:background">@drawable/item_selector_line</item>
+    </style>
+
+    <style name="ArrowTextViewThemeGreyLineLeft" parent="@style/ArrowTextViewThemeGrey">
+        <item name="android:background">@drawable/item_selector_line_left</item>
+    </style>
+
+    <style name="ArrowTextViewThemeGreyLineRight" parent="@style/ArrowTextViewThemeGrey">
+        <item name="android:background">@drawable/item_selector_line_right</item>
+    </style>
+
+    <style name="ArrowTextViewThemeGreyLineBoth" parent="@style/ArrowTextViewThemeGrey">
+        <item name="android:background">@drawable/item_selector_line_both</item>
+    </style>
+
+
+</resources>

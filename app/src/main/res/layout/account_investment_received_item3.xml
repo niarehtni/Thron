@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="com.rd.zhongqipiaoetong.utils.DisplayFormat" />
+
+        <variable
+            name="item"
+            type="String[]" />
+    </data>
+
+    <LinearLayout
+        style="@style/PadingLeftRight"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x145"
+        android:background="@drawable/item_selector"
+        android:orientation="horizontal">
+
+        <!-- 2015-09-25\n16:30:12 -->
+        <TextView
+            android:id="@+id/item_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/x20"
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
+            android:lineSpacingExtra="@dimen/x10"
+            android:padding="@dimen/x20"
+            android:text="@{item[0]}" />
+
+        <RelativeLayout
+            android:layout_width="@dimen/x10"
+            android:layout_height="@dimen/x145">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/x35"
+                android:visibility="gone"
+                android:src="@{DisplayFormat.string2Boolean(item[4]) ? @drawable/icon_dianh : @drawable/icon_dianx}" />
+
+            <View
+                style="@style/vLineStyle"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/x40"
+                android:background="@color/investmentreceived_line"
+                app:visibility="@{DisplayFormat.string2Boolean(item[4])}" />
+
+            <View
+                style="@style/vLineStyle"
+                android:layout_centerHorizontal="true"
+                android:background="@color/investmentreceived_line"
+                app:visibility="@{!DisplayFormat.string2Boolean(item[4])}" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/x40"
+            android:paddingRight="@dimen/x20"
+            android:paddingTop="@dimen/x20">
+
+            <!-- +1000.00元 -->
+            <TextView
+                android:id="@+id/item_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="@{item[1]}"
+                android:textColor="@color/app_color_secondary" />
+
+            <TextView
+                android:id="@+id/item_over"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/item_money"
+                android:paddingTop="@dimen/x20"
+                android:text="@{item[3]}"
+                android:textColor="@color/text_grey" />
+
+            <View
+                style="@style/hLineStyle"
+                android:layout_alignLeft="@id/item_money"
+                android:layout_alignStart="@id/item_money"
+                android:layout_below="@id/item_over"
+                android:layout_marginTop="@dimen/x20" />
+
+            <!-- 第3期 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:text="@{item[2]}" />
+
+        </RelativeLayout>
+    </LinearLayout>
+</layout>

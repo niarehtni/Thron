@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:stamp="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="java.lang.String" />
+
+        <import type="com.rd.zhongqipiaoetong.utils.DisplayFormat" />
+
+        <variable
+            name="info"
+            type="com.rd.zhongqipiaoetong.module.product.model.FlowDetailMo" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/x20"
+        android:background="@drawable/item_selector"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/x20"
+        android:paddingStart="@dimen/x20"
+        android:paddingTop="@dimen/x20">
+
+        <LinearLayout
+            android:id="@+id/product_financing_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/x20">
+            <!-- 标title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{info.name}"
+                android:textColor="@color/text_dark"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider_layout"
+            style="@style/hLineStyle"
+            android:layout_below="@id/product_financing_layout"
+            android:layout_marginEnd="@dimen/x40"
+            android:layout_marginLeft="@dimen/x20"
+            android:layout_marginRight="@dimen/x40"
+            android:layout_marginStart="@dimen/x20" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/x180"
+            android:layout_below="@id/divider_layout"
+            android:gravity="center_vertical"
+            android:padding="@dimen/x20">
+
+            <!-- 年化利率value -->
+            <TextView
+                android:id="@+id/financing_rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{DisplayFormat.XLIFFAprFormat(String.valueOf(info.apr))}"
+                android:textColor="@{info.scales == 100 ?@color/grey_bg:@color/app_color_secondary}" />
+
+            <!-- 年化利率key -->
+            <TextView
+                android:id="@+id/financing_rate_key"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/financing_rate"
+                android:layout_marginTop="@dimen/x20"
+                android:text="@string/product_rate2"
+                android:textColor="@color/text_grey" />
+
+            <View
+                android:id="@+id/divider_view"
+                style="@style/vLineStyle"
+                android:layout_marginLeft="@dimen/x32"
+                android:layout_marginStart="@dimen/x32"
+                android:layout_toEndOf="@id/financing_rate_key"
+                android:layout_toRightOf="@id/financing_rate_key" />
+
+            <!-- 项目期限 -->
+            <TextView
+                android:id="@+id/financing_limit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/financing_rate"
+                android:layout_marginLeft="@dimen/x40"
+                android:layout_marginStart="@dimen/x40"
+                android:layout_toEndOf="@id/divider_view"
+                android:layout_toRightOf="@id/divider_view"
+                android:text="@{DisplayFormat.XLIFFNumFormat(info.isDay() ? @string/product_lave_time(info.timeLimit):@string/product_lave_time_month(info.timeLimit), @color/text_dark)}"
+                android:textColor="@color/text_grey" />
+
+            <!-- 每份金额 -->
+            <TextView
+                android:id="@+id/financing_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/financing_rate_key"
+                android:layout_marginLeft="@dimen/x40"
+                android:layout_marginStart="@dimen/x40"
+                android:layout_toEndOf="@id/divider_view"
+                android:layout_toRightOf="@id/divider_view"
+                android:text="@{DisplayFormat.XLIFFNumFormat(@string/product_each_money(DisplayFormat.intFormat(info.eachMoney)), @color/text_dark)}"
+                android:textColor="@color/text_grey" />
+        </RelativeLayout>
+
+        <!--邮戳 (暂时不用)-->
+        <!--<com.rd.thron.view.StampWheel-->
+        <!--android:layout_width="@dimen/x160"-->
+        <!--android:layout_height="@dimen/y160"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_alignParentEnd="true"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--app:visibility="@{info.isShowStamp}"-->
+        <!--stamp:circleColor="@{info.isSoldOut ? @color/disable_circle_color : @color/enable_circle_color}"-->
+        <!--stamp:circleWidth="1dp"-->
+        <!--stamp:degrees="20"-->
+        <!--stamp:dividerWidth="2dp"-->
+        <!--stamp:stampViewtextSize="14sp"-->
+        <!--stamp:text="@{info.isSoldOut ? @string/product_sold_out : DisplayFormat.stampTimeFormat(info.addTime)}"-->
+        <!--stamp:textColor="@{info.isSoldOut ? @color/disable_circle_color : @color/enable_circle_color}"-->
+        <!--stamp:textSpace="2dp"-->
+        <!--stamp:translate="10dp" />-->
+        <com.rd.zhongqipiaoetong.view.RoundProgressBar
+            android:layout_width="@dimen/x140"
+            android:layout_height="@dimen/x140"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/x20"
+            app:progress="@{DisplayFormat.doubleFormat(info.scales * 100)}"
+            app:roundColor="@color/grey_bg"
+            app:roundProgressColor="@color/app_color_secondary"
+            app:roundTextSize="@dimen/sp16" />
+    </RelativeLayout>
+</layout>

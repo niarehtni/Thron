@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="java.lang.String" />
+
+        <import type="me.tatarka.bindingcollectionadapter.LayoutManagers" />
+
+        <import type="com.rd.zhongqipiaoetong.utils.DisplayFormat" />
+
+        <variable
+            name="viewModel"
+            type="com.rd.zhongqipiaoetong.common.ui.BaseRecyclerViewVM" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorGrey"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/titleBar"
+            layout="@layout/appbar_layout"
+            app:hidden="@{viewModel.hidden}" />
+
+        <com.rd.zhongqipiaoetong.view.PageLoadingView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:emptyState="@{viewModel.emptyState}"
+            app:visibility="@{viewModel.emptyState.loading}" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:visibility="@{viewModel.tips != null}">
+
+            <TextView
+                style="@style/TipsTheme"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="@{viewModel.tips.length &lt; 1 ? @string/empty : viewModel.tips[0]}" />
+
+            <TextView
+                style="@style/TipsTheme"
+                android:layout_width="wrap_content"
+                android:text="@{viewModel.tips.length &lt; 2 ? @string/empty : viewModel.tips[1]}"
+                app:visibility="@{viewModel.tips.length &gt; 1}" />
+        </LinearLayout>
+
+        <in.srain.cube.views.ptr.PtrClassicFrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:ptrFrame="@{viewModel.listener}">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/x20"
+                        android:background="@drawable/item_selector"
+                        android:onClick="@{viewModel.expClick}"
+                        android:orientation="vertical"
+                        android:paddingLeft="@dimen/x20"
+                        android:paddingStart="@dimen/x20"
+                        app:visibility="@{viewModel.expHidden}">
+
+                        <LinearLayout
+                            android:id="@+id/product_financing_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/x20">
+                            <!-- 标title -->
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:singleLine="true"
+                                android:text="@{viewModel.info.name}"
+                                android:textColor="@color/text_dark"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/x12"
+                                android:layout_marginStart="@dimen/x12"
+                                android:background="@drawable/new_user_bg"
+                                android:paddingBottom="2dp"
+                                android:paddingLeft="8dp"
+                                android:paddingRight="8dp"
+                                android:paddingTop="2dp"
+                                android:text="@string/product_exp"
+                                android:textColor="@color/app_color_secondary"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/divider_layout"
+                            style="@style/hLineStyle"
+                            android:layout_below="@id/product_financing_layout"
+                            android:layout_marginEnd="@dimen/x40"
+                            android:layout_marginLeft="@dimen/x20"
+                            android:layout_marginRight="@dimen/x40"
+                            android:layout_marginStart="@dimen/x20" />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/x180"
+                            android:layout_below="@id/divider_layout"
+                            android:gravity="center_vertical"
+                            android:padding="@dimen/x20">
+
+                            <!-- 年化利率value -->
+                            <TextView
+                                android:id="@+id/financing_rate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/x20"
+                                android:text="@{viewModel.info.showYearRate}"
+                                android:textColor="@{viewModel.info.isSoldOut?@color/hint_grey:@color/app_color_secondary}"
+                                android:textSize="16sp" />
+
+                            <!-- 年化利率key -->
+                            <TextView
+                                android:id="@+id/financing_rate_key"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/financing_rate"
+                                android:layout_marginTop="@dimen/x20"
+                                android:text="@string/product_rate2"
+                                android:textColor="@color/text_grey" />
+
+                            <View
+                                android:id="@+id/divider_view"
+                                style="@style/vLineStyle"
+                                android:layout_marginLeft="@dimen/x32"
+                                android:layout_marginStart="@dimen/x32"
+                                android:layout_toEndOf="@id/financing_rate_key"
+                                android:layout_toRightOf="@id/financing_rate_key" />
+
+                            <!-- 项目期限 -->
+                            <TextView
+                                android:id="@+id/financing_limit"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignBottom="@id/financing_rate"
+                                android:layout_marginLeft="@dimen/x40"
+                                android:layout_marginStart="@dimen/x40"
+                                android:layout_toEndOf="@id/divider_view"
+                                android:layout_toRightOf="@id/divider_view"
+                                android:text="@{DisplayFormat.XLIFFNumFormat(viewModel.info.isDay() ? @string/product_lave_time_int(viewModel.info.timeLimit):@string/product_lave_time_month_int(viewModel.info.timeLimit), @color/text_dark)}"
+                                android:textColor="@color/text_grey" />
+
+                            <!-- 起投金额 -->
+                            <TextView
+                                android:id="@+id/financing_money"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignBottom="@id/financing_rate_key"
+                                android:layout_marginLeft="@dimen/x40"
+                                android:layout_marginStart="@dimen/x40"
+                                android:layout_toEndOf="@id/divider_view"
+                                android:layout_toRightOf="@id/divider_view"
+                                android:text="@{DisplayFormat.XLIFFNumFormat(@string/product_project_share(DisplayFormat.intFormat(viewModel.info.amountBorrow)), @color/text_dark)}"
+                                android:textColor="@color/text_grey" />
+
+                            <com.rd.zhongqipiaoetong.view.RoundProgressBar
+                                android:layout_width="@dimen/x140"
+                                android:layout_height="@dimen/x140"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"
+                                app:progress="@{DisplayFormat.doubleFormat(viewModel.info.progressPercentage)}"
+                                app:roundColor="@color/grey_bg"
+                                app:roundProgressColor="@color/app_color_secondary"
+                                app:roundTextSize="@dimen/sp16"
+                                app:status="@{String.valueOf(viewModel.info.status)}" />
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:addItemDecoration="@{viewModel.type}"
+                        app:itemView="@{viewModel.itemView}"
+                        app:items="@{viewModel.items}"
+                        app:layoutManager="@{DisplayFormat.getLayoutManagers(viewModel.counts)}" />
+
+                </LinearLayout>
+            </ScrollView>
+        </in.srain.cube.views.ptr.PtrClassicFrameLayout>
+    </LinearLayout>
+</layout>

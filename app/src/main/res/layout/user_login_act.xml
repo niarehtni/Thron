@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.rd.zhongqipiaoetong.module.user.viewmodel.LoginVM" />
+
+        <import type="com.rd.zhongqipiaoetong.utils.DisplayFormat" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@{DisplayFormat.getBackground(@drawable/shape_gradient_blue)}"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:onTouch="@{viewModel.layoutTouch}">
+
+        <LinearLayout
+            android:id="@+id/login_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/titleBar"
+                layout="@layout/appbar_layout" />
+
+            <ImageView
+                android:id="@+id/app_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/logo" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/login_center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/login_top"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/login_username"
+                style="@style/LoginEditTextTheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/login_et_username"
+                android:onFocusChange="@{viewModel.focusChange}"
+                android:text=""
+                android:textColor="@color/colorViewbg"
+                app:list="@{viewModel.edList}"
+                app:watcher="@{viewModel.watcher}" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/login_pwd"
+                    style="@style/LoginEditTextTheme"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/login_et_password"
+                    android:inputType="textPassword"
+                    android:onFocusChange="@{viewModel.focusChange}"
+                    android:text=""
+                    android:textColor="@color/colorViewbg"
+                    app:list="@{viewModel.edList}"
+                    app:watcher="@{viewModel.watcher}" />
+
+                <ImageView
+                    android:id="@+id/login_eyes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/x35"
+                    android:onClick="@{viewModel.eyesClick}"
+                    android:src="@drawable/signup_bxs_pressed" />
+            </RelativeLayout>
+
+            <com.rd.zhongqipiaoetong.view.NoDoubleClickButton
+                android:id="@+id/login_btn_sure"
+                style="@style/FilletLoginBtnStyle"
+                android:layout_marginLeft="@dimen/x25"
+                android:layout_marginRight="@dimen/x25"
+                android:layout_marginTop="@dimen/x50"
+                android:enabled="@{viewModel.enable}"
+                android:onClick="@{viewModel.loginClick}"
+                android:text="@string/login_btn_login" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:padding="@dimen/x20">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:onClick="@{viewModel.forgetPwdClick}"
+                android:padding="@dimen/x30"
+                android:text="@string/login_tv_forget"
+                android:textColor="@color/colorViewbg" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:onClick="@{viewModel.registerClick}"
+                android:padding="@dimen/x30"
+                android:text="@string/login_tv_register"
+                android:textColor="@color/colorViewbg" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+</layout>

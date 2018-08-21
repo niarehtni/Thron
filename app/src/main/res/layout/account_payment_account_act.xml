@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.rd.zhongqipiaoetong.module.account.viewmodel.PaymentAccountVM" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/titleBar"
+            layout="@layout/appbar_layout" />
+
+        <TextView
+            style="@style/TipsTheme"
+            android:text="@string/payment_account_tips" />
+
+        <EditText
+            style="@style/EditTextThemeLineLeft"
+            android:id="@+id/payment_et_realname"
+            android:layout_margin="0dp"
+            android:drawableLeft="@drawable/payment_account_realname"
+            android:drawablePadding="@dimen/x20"
+            android:drawableStart="@drawable/payment_account_realname"
+            android:hint="@string/payment_account_input_realname"
+            android:maxLength="10"
+            android:padding="@dimen/x20"
+            app:list="@{viewModel.edList}"
+            app:watcher="@{viewModel.watcher}"/>
+
+        <EditText
+            style="@style/EditTextTheme"
+            android:id="@+id/payment_et_card"
+            android:layout_margin="0dp"
+            android:drawableLeft="@drawable/payment_account_id_card"
+            android:drawablePadding="@dimen/x20"
+            android:drawableStart="@drawable/payment_account_id_card"
+            android:hint="@string/payment_account_input_id_card"
+            android:digits="0123456789X"
+            android:maxLength="18"
+            android:padding="@dimen/x20"
+            app:list="@{viewModel.edList}"
+            app:watcher="@{viewModel.watcher}"/>
+
+        <com.rd.zhongqipiaoetong.view.NoDoubleClickButton
+            style="@style/FilletBtnStyle"
+            android:layout_marginLeft="@dimen/x20"
+            android:layout_marginRight="@dimen/x20"
+            android:layout_marginTop="@dimen/x100"
+            android:text="@string/payment_account_submit"
+            android:onClick="@{viewModel.onRegisterClick}"
+            android:enabled="@{viewModel.enable}"/>
+
+        <TextView
+            style="@style/TipsTheme"
+            android:layout_marginTop="@dimen/x20"
+            android:gravity="center"
+            android:text="@string/payment_account_prompt"
+            android:visibility="gone"/>
+    </LinearLayout>
+</layout>

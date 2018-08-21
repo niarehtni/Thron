@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="com.rd.zhongqipiaoetong.utils.DisplayFormat" />
+
+        <import type="com.rd.zhongqipiaoetong.utils.Converter" />
+
+        <variable
+            name="viewModel"
+            type="com.rd.zhongqipiaoetong.module.product.viewmodel.BondDetailVM" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorGrey"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/titleBar"
+            layout="@layout/appbar_layout" />
+
+        <in.srain.cube.views.ptr.PtrClassicFrameLayout
+            android:id="@+id/ptrAll"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            app:ptrFrame="@{viewModel.listener}">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="@dimen/x20">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/financing_detail_top_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/app_color_principal"
+                        android:orientation="vertical"
+                        android:padding="@dimen/x20">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="@string/product_rate"
+                            android:textColor="@color/text_white"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@{DisplayFormat.XLIFFAprFormat(viewModel.detail.rateYear)}"
+                            android:textColor="@color/text_white" />
+
+                        <com.rd.zhongqipiaoetong.view.CountProgress
+                            android:id="@+id/financing_CountProgress"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            custom:orientation="Vertical"
+                            custom:proColorTop="@color/white"
+                            custom:proHeight="6dp"
+                            custom:textSizes="14sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/app_color_principal"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="@dimen/x10"
+                        android:paddingTop="@dimen/x30"
+                        app:alpha="@{200}">
+                        <!-- 债券总价 -->
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/product_bond_amount"
+                            android:textColor="@color/text_white" />
+                        <!-- 项目期限 -->
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/product_bonddetail_timelave"
+                            android:textColor="@color/colorViewbg" />
+                        <!--折让率-->
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/discount_apr"
+                            android:textColor="@color/colorViewbg" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/app_color_principal"
+                        android:paddingBottom="@dimen/x30"
+                        app:alpha="@{200}">
+                        <!--债券总价-->
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@{DisplayFormat.doubleFormat(viewModel.detail.bondCapital)}"
+                            android:textColor="@color/colorViewbg"
+                            android:textSize="18sp" />
+                        <!-- 项目期限 -->
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@{String.valueOf(viewModel.detail.remainDays)}"
+                            android:textColor="@color/colorViewbg"
+                            android:textSize="18sp" />
+                        <!--折让率-->
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@{@string/apr_percent(DisplayFormat.doubleFormat(viewModel.detail.discountRate))}"
+                            android:textColor="@color/colorViewbg"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/x20"
+                        android:background="@color/colorViewbg"
+                        android:orientation="vertical"
+                        android:paddingLeft="@dimen/x24"
+                        android:paddingRight="@dimen/x24">
+
+                        <!--回款方式-->
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/x100"
+                            android:background="@drawable/item_selector_line"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/product_return_style"
+                                android:textColor="@color/text_dark" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"
+                                android:text="@{DisplayFormat.getRepayMentStr(viewModel.detail.repayWay)}"
+                                android:textColor="@color/text_grey" />
+                        </RelativeLayout>
+
+                        <!--投资时间-->
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/x100"
+                            android:background="@drawable/item_selector_line"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/product_invest_time"
+                                android:textColor="@color/text_dark" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"
+                                android:text="@{DisplayFormat.coverTimeYYMMDD(viewModel.detail.addTime)}"
+                                android:textColor="@color/text_grey" />
+                        </RelativeLayout>
+
+                        <!--剩余债权-->
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/x100"
+                            android:background="@drawable/item_selector_line"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/investment_lave_bond"
+                                android:textColor="@color/text_dark" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"
+                                android:text="@{@string/yuan(DisplayFormat.doubleFormat(viewModel.detail.remainCapital))}"
+                                android:textColor="@color/text_grey" />
+                        </RelativeLayout>
+
+                        <!--起投金额-->
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/x100"
+                            android:background="@drawable/item_selector_line"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/investment_detail_formaount2"
+                                android:textColor="@color/text_dark" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"
+                                android:text="@{@string/yuan(DisplayFormat.doubleFormat(viewModel.detail.bondCapital))}"
+                                android:textColor="@color/text_grey" />
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/x20"
+                        android:background="@color/colorViewbg"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:clickable="@{viewModel.detail!=null}"
+                            style="@style/ArrowTextViewThemeBlackLineLeft"
+                            android:gravity="center_vertical"
+                            android:onClick="@{viewModel.protocolClick}"
+                            android:text="@string/product_protocol_bond_in"
+                            android:textColor="@color/text_dark" />
+                        <!--了解项目-->
+                        <TextView
+                            android:clickable="@{viewModel.detail!=null}"
+                            style="@style/ArrowTextViewThemeBlackLineLeft"
+                            android:gravity="center_vertical"
+                            android:onClick="@{viewModel.learnProjectClick}"
+                            android:text="@string/product_understand_project"
+                            android:textColor="@color/text_dark" />
+
+                        <!--转让记录-->
+                        <LinearLayout
+                            android:clickable="@{viewModel.detail!=null}"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/item_selector"
+                            android:onClick="@{viewModel.investRecordClick}"
+                            android:paddingLeft="@dimen/x20"
+                            android:paddingStart="@dimen/x20">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/product_invest_title2"
+                                android:textColor="@color/text_dark"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                style="@style/ArrowTextViewThemeBlack"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:gravity="right"
+                                android:textColor="@color/text_grey" />
+                        </LinearLayout>
+
+                        <!--还款计划-->
+                        <TextView
+                            style="@style/ArrowTextViewThemeBlackLineLeft"
+                            android:gravity="center_vertical"
+                            android:onClick="@{viewModel.learnProjectClick}"
+                            android:text="@string/product_return_title"
+                            android:textColor="@color/text_dark"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+        </in.srain.cube.views.ptr.PtrClassicFrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/y100"
+                android:layout_height="@dimen/y100"
+                android:background="@color/colorViewbg"
+                android:contentDescription="@string/empty"
+                android:onClick="@{Converter.getInteger(viewModel.detail.getStatus) == 0?viewModel.calculatorClick:null}"
+                android:scaleType="centerInside"
+                app:colorFilter="@{Converter.getInteger(viewModel.detail.getStatus) == 0?@color/app_color_principal:@color/text_grey}"
+                app:drawable="@{@drawable/ic_calculator}" />
+
+            <TextView
+                style="@style/RectangleBtnStyle"
+                android:background="@{Converter.getInteger(viewModel.detail.getStatus) == 1?@drawable/rectangle_btn:Converter.convertColorToDrawable(@color/darkgrey)}"
+                android:gravity="center"
+                android:onClick="@{viewModel.detail.canInvest?viewModel.investClick:null}"
+                android:text="@{viewModel.detail.buttonStr}" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>

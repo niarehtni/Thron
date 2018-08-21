@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="com.rd.zhongqipiaoetong.utils.DisplayFormat" />
+
+        <variable
+            name="item"
+            type="com.rd.zhongqipiaoetong.module.account.model.AutoLogMo" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/x30"
+        android:background="@color/colorViewbg"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <!-- 金融产品增信项目第五期 -->
+            <TextView
+                style="@style/LogTitleTextViewThemeBlack"
+                android:layout_weight="1"
+                android:text="@{item.borrowName}"
+                android:textSize="@dimen/sp18" />
+
+            <TextView
+                style="@style/LogTitleTextViewThemeBlack"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="@{item.status ==1?@string/auto_status_success:@string/auto_status_fail}"
+                android:textColor="@{item.status ==1?@color/app_color_secondary:@color/text_grey}"
+                android:textSize="@dimen/sp13" />
+        </LinearLayout>
+
+        <View
+            style="@style/hLineStyle"
+            android:layout_marginLeft="@dimen/x20"
+            android:layout_marginRight="@dimen/x20" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/LogTitleTextViewThemeBlack"
+                android:layout_weight="1"
+                android:text="@string/auto_log_money" />
+
+            <TextView
+                style="@style/LogTitleTextViewThemeBlack"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="@{DisplayFormat.doubleFormat(item.tenderMoney)}"
+                android:textColor="@color/app_color_secondary" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/LogTitleTextViewThemeBlack"
+                android:layout_weight="1"
+                android:paddingTop="0dp"
+                android:text="@string/auto_log_time" />
+
+            <TextView
+                style="@style/LogTitleTextViewThemeBlack"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:paddingTop="0dp"
+                android:text="@{DisplayFormat.coverTimeYYMMDDmmss(item.addtime)}"
+                android:textColor="@color/text_grey" />
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

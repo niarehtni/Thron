@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.rd.zhongqipiaoetong.module.account.viewmodel.AutoDetailVM" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorGrey"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/titleBar"
+            layout="@layout/appbar_layout" />
+
+        <LinearLayout
+            style="@style/TopLayout"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewInLayoutBlack"
+                android:text="@string/auto_detail_money" />
+
+            <TextView
+                style="@style/TextViewInLayoutRight"
+                android:text="@{viewModel.mo.getTenderStyleStr()}"
+                android:textSize="@dimen/sp14" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/NoTopLayout"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewInLayoutBlack"
+                android:text="@string/auto_detail_time" />
+
+            <TextView
+                style="@style/TextViewInLayoutRight"
+                android:text="@{viewModel.mo.getTimeStr()}"
+                android:textSize="@dimen/sp14" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/NoTopLayout"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewInLayoutBlack"
+                android:text="@string/auto_detail_apr" />
+
+            <TextView
+                style="@style/TextViewInLayoutRight"
+                android:text="@{viewModel.mo.getAprStr()}"
+                android:textSize="@dimen/sp14" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/NoTopLayout"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewInLayoutBlack"
+                android:text="@string/auto_detail_style" />
+
+            <TextView
+                style="@style/TextViewInLayoutRight"
+                android:singleLine="false"
+                android:text="@{viewModel.mo.getStyleStr()}"
+                android:textSize="@dimen/sp14" />
+        </LinearLayout>
+
+        <com.rd.zhongqipiaoetong.view.TimeButton
+            style="@style/FilletBtnStyle"
+            android:layout_marginLeft="@dimen/x20"
+            android:layout_marginRight="@dimen/x20"
+            android:layout_marginTop="@dimen/x30"
+            android:onClick="@{viewModel.onToSetupClick}"
+            android:text="@string/auto_detail_button" />
+
+    </LinearLayout>
+</layout>

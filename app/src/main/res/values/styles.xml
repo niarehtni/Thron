@@ -1,0 +1,145 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- 自定义dialog的样式 -->
+    <style name="CustomDialog" parent="android:Theme.Dialog">
+        <item name="android:backgroundDimAmount">0.4</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowAnimationStyle">@null</item>
+    </style>
+
+    <!-- TabLayout的样式 -->
+    <style name="CustomTabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">@color/app_color_principal</item>
+        <item name="tabSelectedTextColor">@color/app_color_principal</item>
+        <item name="tabTextAppearance">@style/CustomTabTextAppearance</item>
+        <item name="tabBackground">@color/colorViewbg</item>
+    </style>
+
+    <!-- TabLayout的字体颜色 -->
+    <style name="CustomTabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textColor">@color/text_black</item>
+    </style>
+
+    <!-- 横线样式 -->
+    <style name="hLineStyle">
+        <item name="android:background">@color/line_grey</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.1dp</item>
+    </style>
+
+    <!-- 竖线样式 -->
+    <style name="vLineStyle">
+        <item name="android:layout_width">@dimen/x1</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/line_grey</item>
+    </style>
+
+    <!-- View之间的间隔样式 -->
+    <style name="hDividerStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/x24</item>
+        <item name="android:background">@color/colorGrey</item>
+    </style>
+
+    <!-- 圆角按钮的样式 -->
+    <style name="FilletBtnStyle">
+        <item name="android:background">@drawable/fillet_btn</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/y100</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="FilletLoginBtnStyle">
+        <item name="android:background">@drawable/fillet_login_btn</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/y84</item>
+        <item name="android:textColor">@color/login_btn_textcolor</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <!-- 圆角按钮的样式 -->
+    <style name="FilletRedBtnStyle">
+        <item name="android:background">@drawable/fillet_red_btn</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/y100</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <!-- 直角按钮的样式 -->
+    <style name="RectangleBtnStyle">
+        <item name="android:background">@drawable/rectangle_btn</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/y100</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <!-- 头像选择 -->
+    <style name="PopupAnimation" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/push_bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/push_bottom_out</item>
+    </style>
+
+    <!-- 主页面Tab中TextView的样式 -->
+    <style name="MainTabItemStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">@dimen/x20</item>
+        <item name="android:textColor">@drawable/tab_tv_style</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:drawablePadding">@dimen/x4</item>
+    </style>
+
+    <!-- 我的账户Item的样式 -->
+    <style name="AccountItemStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:drawablePadding">@dimen/x30</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:padding">@dimen/x40</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/x30</item>
+    </style>
+
+    <style name="calculate_dialog_style" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <!-- 边框 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsTranslucent">false</item>
+        <!-- 半透明 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 背景透明 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 模糊 -->
+        <item name="android:padding">15dp</item>
+    </style>
+
+    <style name="SwitchButtonStyleMD" parent="SwitchButtonMD">
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingBottom">4dp</item>
+    </style>
+</resources>
