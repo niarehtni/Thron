@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="mdd_dialog_msgbtn_height">120px</dimen>
+    <dimen name="mdd_dialog_msgtop_height">320px</dimen>
+    <dimen name="mdd_dialog_msgwidht">720px</dimen>
+    <drawable name="bg_main_item">@drawable/item_main160</drawable>
+</resources>

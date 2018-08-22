@@ -1,0 +1,42 @@
+[
+    {
+        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\scale_buttom.xml",
+        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\anim\\scale_buttom.xml"
+    },
+    {
+        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\anim_mddslide_open.xml",
+        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\anim\\anim_mddslide_open.xml"
+    },
+    {
+        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\anim_mdd_adloading.xml",
+        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\anim\\anim_mdd_adloading.xml"
+    },
+    {
+        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\anim_mddslide_close.xml",
+        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\anim\\anim_mddslide_close.xml"
+    },
+    {
+        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\anim_mdd_loading.xml",
+        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\anim\\anim_mdd_loading.xml"
+    },
+    {
+        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\anim_mddslide_close.xml",
+        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\anim\\anim_mddslide_close.xml"
+    },
+    {
+        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\anim_mdd_adloading.xml",
+        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\anim\\anim_mdd_adloading.xml"
+    },
+    {
+        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\anim_mddslide_open.xml",
+        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\anim\\anim_mddslide_open.xml"
+    },
+    {
+        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\anim_mdd_loading.xml",
+        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\anim\\anim_mdd_loading.xml"
+    },
+    {
+        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\scale_buttom.xml",
+        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\anim\\scale_buttom.xml"
+    }
+]

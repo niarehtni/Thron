@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="debug"><source path="D:\useful\Thron\MoneyMoreMore\build\intermediates\bundles\debug\assets"><file name="mddregister.cer" path="D:\useful\Thron\MoneyMoreMore\build\intermediates\bundles\debug\assets\mddregister.cer"/></source></dataSet><dataSet config="main"><source path="D:\useful\Thron\MoneyMoreMore\src\androidTest\assets"/><source path="D:\useful\Thron\MoneyMoreMore\build\generated\assets\shaders\androidTest\debug"/></dataSet></merger>
