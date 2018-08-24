@@ -1,13 +1,5 @@
 [
     {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\menu\\name_authorization.xml",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\menu\\name_authorization.xml"
-    },
-    {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\menu\\main.xml",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\menu\\main.xml"
-    },
-    {
         "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\menu\\name_authorization.xml",
         "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\menu\\name_authorization.xml"
     },

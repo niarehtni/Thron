@@ -1,119 +1,95 @@
 [
     {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\btn_back.9.png",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\btn_back.9.png"
-    },
-    {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\loading_01.png",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\loading_01.png"
-    },
-    {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bind_remit.png",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\bind_remit.png"
+        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\choose.png",
+        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\choose.png"
     },
     {
         "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bank_20.9.png",
         "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\bank_20.9.png"
     },
     {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\mdd_dialog_top_max.png",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\mdd_dialog_top_max.png"
-    },
-    {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\item_main160.png",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\item_main160.png"
-    },
-    {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\mdd_dialog_enter_nor_max.png",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\mdd_dialog_enter_nor_max.png"
-    },
-    {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\no_photo.9.png",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\no_photo.9.png"
-    },
-    {
         "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\loading_06.png",
         "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\loading_06.png"
-    },
-    {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bank_26.9.png",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\bank_26.9.png"
-    },
-    {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bank_27.9.png",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\bank_27.9.png"
     },
     {
         "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bind_quick.png",
         "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\bind_quick.png"
     },
     {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bank_25.png",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\bank_25.png"
-    },
-    {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bank_22.9.png",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\bank_22.9.png"
-    },
-    {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\select.9.png",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\select.9.png"
-    },
-    {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bank_23.9.png",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\bank_23.9.png"
-    },
-    {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bank_29.9.png",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\bank_29.9.png"
+        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\btn_back.9.png",
+        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\btn_back.9.png"
     },
     {
         "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\loading_05.png",
         "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\loading_05.png"
     },
     {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bank_24.9.png",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\bank_24.9.png"
+        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\select.9.png",
+        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\select.9.png"
     },
     {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bank_21.9.png",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\bank_21.9.png"
+        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\no_photo.9.png",
+        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\no_photo.9.png"
     },
     {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bank_20.9.png",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\bank_20.9.png"
+        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bind_quick_on.png",
+        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\bind_quick_on.png"
+    },
+    {
+        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\line.png",
+        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\line.png"
+    },
+    {
+        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\questions.9.png",
+        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\questions.9.png"
     },
     {
         "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bank_29.9.png",
         "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\bank_29.9.png"
     },
     {
+        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bind_remit_on.png",
+        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\bind_remit_on.png"
+    },
+    {
+        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\sub_btn_back.9.png",
+        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\sub_btn_back.9.png"
+    },
+    {
+        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\ic_launcher.png",
+        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\ic_launcher.png"
+    },
+    {
         "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bank_27.9.png",
         "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\bank_27.9.png"
     },
     {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\mdd_dialog_cancel_sel_max.png",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\mdd_dialog_cancel_sel_max.png"
+        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bank_3.9.png",
+        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\bank_3.9.png"
+    },
+    {
+        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bank_1.9.png",
+        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\bank_1.9.png"
+    },
+    {
+        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\input.9.png",
+        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\input.9.png"
+    },
+    {
+        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bank_32.9.png",
+        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\bank_32.9.png"
     },
     {
         "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bank_23.9.png",
         "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\bank_23.9.png"
     },
     {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\br_prev.9.png",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\br_prev.9.png"
+        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bank_5.9.png",
+        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\bank_5.9.png"
     },
     {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\auth_title.9.png",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\auth_title.9.png"
-    },
-    {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\loading_03.png",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\loading_03.png"
-    },
-    {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\questions.9.png",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\questions.9.png"
+        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bank_7.9.png",
+        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\bank_7.9.png"
     },
     {
         "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\mdd_dialog_top_max.png",
@@ -124,10 +100,6 @@
         "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\bank_21.9.png"
     },
     {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\auth_context.9.png",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\auth_context.9.png"
-    },
-    {
         "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\city_seleter.png",
         "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\city_seleter.png"
     },
@@ -136,20 +108,20 @@
         "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\bank_18.9.png"
     },
     {
-        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bank_12.9.png",
-        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\bank_12.9.png"
-    },
-    {
         "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bank_10.9.png",
         "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\bank_10.9.png"
     },
     {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\line.png",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\line.png"
+        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bank_12.9.png",
+        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\bank_12.9.png"
     },
     {
         "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\title_back.9.png",
         "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\title_back.9.png"
+    },
+    {
+        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\item_main160.png",
+        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\item_main160.png"
     },
     {
         "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\br_next.9.png",
@@ -160,28 +132,20 @@
         "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\auth_context.9.png"
     },
     {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bank_10.9.png",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\bank_10.9.png"
+        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\loading_03.png",
+        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\loading_03.png"
     },
     {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bank_1.9.png",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\bank_1.9.png"
+        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\auth_title.9.png",
+        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\auth_title.9.png"
     },
     {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\br_next.9.png",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\br_next.9.png"
+        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\next_btn.9.png",
+        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\next_btn.9.png"
     },
     {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\choose.png",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\choose.png"
-    },
-    {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bank_4.9.png",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\bank_4.9.png"
-    },
-    {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bank_5.9.png",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\bank_5.9.png"
+        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bank_9.9.png",
+        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\bank_9.9.png"
     },
     {
         "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\backage.9.png",
@@ -192,52 +156,48 @@
         "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\br_prev.9.png"
     },
     {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bank_17.9.png",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\bank_17.9.png"
-    },
-    {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bank_18.9.png",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\bank_18.9.png"
+        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bank_31.9.png",
+        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\bank_31.9.png"
     },
     {
         "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\noselect.9.png",
         "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\noselect.9.png"
     },
     {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\next_btn.9.png",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\next_btn.9.png"
+        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\no_selecter.png",
+        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\no_selecter.png"
     },
     {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bank_31.9.png",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\bank_31.9.png"
+        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\mdd_dialog_cancel_nor_max.png",
+        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\mdd_dialog_cancel_nor_max.png"
     },
     {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bank_32.9.png",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\bank_32.9.png"
-    },
-    {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bank_13.9.png",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\bank_13.9.png"
-    },
-    {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\mdd_dialog_cancel_nor_max.png",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\mdd_dialog_cancel_nor_max.png"
-    },
-    {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bank_28.png",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\bank_28.png"
+        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\loading_02.png",
+        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\loading_02.png"
     },
     {
         "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\mdd_dialog_enter_sel_max.png",
         "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\mdd_dialog_enter_sel_max.png"
     },
     {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\loading_02.png",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\loading_02.png"
+        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\user.png",
+        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\user.png"
     },
     {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\loading_05.png",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\loading_05.png"
+        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bank_2.9.png",
+        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\bank_2.9.png"
+    },
+    {
+        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\mdd_dialog_enter_nor_max.png",
+        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\mdd_dialog_enter_nor_max.png"
+    },
+    {
+        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bank_28.png",
+        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\bank_28.png"
+    },
+    {
+        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bank_25.png",
+        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\bank_25.png"
     },
     {
         "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\loading_01.png",
@@ -248,16 +208,12 @@
         "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\pre_btn.9.png"
     },
     {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\no_selecter.png",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\no_selecter.png"
-    },
-    {
         "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\mdd_dialog_cancel_sel_max.png",
         "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\mdd_dialog_cancel_sel_max.png"
     },
     {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bind_quick_on.png",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\bind_quick_on.png"
+        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bank_24.9.png",
+        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\bank_24.9.png"
     },
     {
         "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\edit_back.9.png",
@@ -268,16 +224,16 @@
         "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\bank_15.9.png"
     },
     {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bank_9.9.png",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\bank_9.9.png"
+        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bank_22.9.png",
+        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\bank_22.9.png"
+    },
+    {
+        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bank_17.9.png",
+        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\bank_17.9.png"
     },
     {
         "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bind_remit.png",
         "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\bind_remit.png"
-    },
-    {
-        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bank_22.9.png",
-        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\bank_22.9.png"
     },
     {
         "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bank_4.9.png",
@@ -304,240 +260,12 @@
         "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\bank_19.9.png"
     },
     {
-        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bank_11.9.png",
-        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\bank_11.9.png"
-    },
-    {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\input.9.png",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\input.9.png"
-    },
-    {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\city_seleter.png",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\city_seleter.png"
-    },
-    {
-        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\choose.png",
-        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\choose.png"
-    },
-    {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\user.png",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\user.png"
-    },
-    {
-        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\btn_back.9.png",
-        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\btn_back.9.png"
-    },
-    {
-        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\select.9.png",
-        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\select.9.png"
-    },
-    {
-        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\no_photo.9.png",
-        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\no_photo.9.png"
-    },
-    {
-        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bind_quick_on.png",
-        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\bind_quick_on.png"
-    },
-    {
-        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\line.png",
-        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\line.png"
-    },
-    {
-        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\questions.9.png",
-        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\questions.9.png"
-    },
-    {
-        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bind_remit_on.png",
-        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\bind_remit_on.png"
-    },
-    {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\selecter.png",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\selecter.png"
-    },
-    {
-        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\sub_btn_back.9.png",
-        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\sub_btn_back.9.png"
-    },
-    {
-        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\ic_launcher.png",
-        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\ic_launcher.png"
-    },
-    {
-        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bank_3.9.png",
-        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\bank_3.9.png"
-    },
-    {
-        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bank_1.9.png",
-        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\bank_1.9.png"
-    },
-    {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\btn_selecter.xml",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\btn_selecter.xml"
-    },
-    {
-        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\input.9.png",
-        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\input.9.png"
-    },
-    {
-        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bank_32.9.png",
-        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\bank_32.9.png"
-    },
-    {
-        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bank_5.9.png",
-        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\bank_5.9.png"
-    },
-    {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bank_8.9.png",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\bank_8.9.png"
-    },
-    {
-        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bank_7.9.png",
-        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\bank_7.9.png"
-    },
-    {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\sub_btn_back.9.png",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\sub_btn_back.9.png"
-    },
-    {
-        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\item_main160.png",
-        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\item_main160.png"
-    },
-    {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\loading_06.png",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\loading_06.png"
-    },
-    {
-        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\auth_title.9.png",
-        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\auth_title.9.png"
-    },
-    {
-        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\loading_03.png",
-        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\loading_03.png"
-    },
-    {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\edit_back.9.png",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\edit_back.9.png"
-    },
-    {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\mdd_dialog_enter_sel_max.png",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\mdd_dialog_enter_sel_max.png"
-    },
-    {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bank_11.9.png",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\bank_11.9.png"
-    },
-    {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\loading_04.png",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\loading_04.png"
-    },
-    {
-        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\next_btn.9.png",
-        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\next_btn.9.png"
-    },
-    {
-        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bank_9.9.png",
-        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\bank_9.9.png"
-    },
-    {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bank_2.9.png",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\bank_2.9.png"
-    },
-    {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bank_3.9.png",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\bank_3.9.png"
-    },
-    {
-        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bank_31.9.png",
-        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\bank_31.9.png"
-    },
-    {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\backage.9.png",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\backage.9.png"
-    },
-    {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\ic_launcher.png",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\ic_launcher.png"
-    },
-    {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bind_quick.png",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\bind_quick.png"
-    },
-    {
-        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\no_selecter.png",
-        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\no_selecter.png"
-    },
-    {
-        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\mdd_dialog_cancel_nor_max.png",
-        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\mdd_dialog_cancel_nor_max.png"
-    },
-    {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bank_12.9.png",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\bank_12.9.png"
-    },
-    {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bank_15.9.png",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\bank_15.9.png"
-    },
-    {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bank_19.9.png",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\bank_19.9.png"
-    },
-    {
-        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\loading_02.png",
-        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\loading_02.png"
-    },
-    {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\noselect.9.png",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\noselect.9.png"
-    },
-    {
-        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\user.png",
-        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\user.png"
-    },
-    {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\title_back.9.png",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\title_back.9.png"
-    },
-    {
-        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bank_2.9.png",
-        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\bank_2.9.png"
-    },
-    {
-        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\mdd_dialog_enter_nor_max.png",
-        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\mdd_dialog_enter_nor_max.png"
-    },
-    {
-        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bank_28.png",
-        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\bank_28.png"
-    },
-    {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\pre_btn.9.png",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\pre_btn.9.png"
-    },
-    {
-        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bank_25.png",
-        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\bank_25.png"
-    },
-    {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bank_7.9.png",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\bank_7.9.png"
-    },
-    {
-        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bank_24.9.png",
-        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\bank_24.9.png"
-    },
-    {
-        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bank_17.9.png",
-        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\bank_17.9.png"
-    },
-    {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bind_remit_on.png",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\bind_remit_on.png"
-    },
-    {
         "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bank_13.9.png",
         "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\bank_13.9.png"
+    },
+    {
+        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\bank_11.9.png",
+        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\bank_11.9.png"
     },
     {
         "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\btn_selecter.xml",

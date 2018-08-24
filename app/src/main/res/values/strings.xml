@@ -381,7 +381,7 @@
     <string name="register_invit_hint">请输入邀请人（选填）</string>
     <string name="register_register">注册</string>
     <string name="register_agree_one">点击注册表示同意</string>
-    <string name="register_agree_two">《百安用户服务协议》</string>
+    <string name="register_agree_two">《票e通用户服务协议》</string>
 
     <!-- 账户中心转让列表 -->
     <string name="creditor_title">转让列表</string>
@@ -557,9 +557,9 @@
     <string name="feedback_et_phone">请留下您的手机号码，以便我们联系您。</string>
     <string name="feedback_tv_title">您还可以通过其他方式反馈：</string>
     <string name="feedback_call">拨打客服热线</string>
-    <string name="feedback_call_phone">0571&#8211;88006226</string>
+    <string name="feedback_call_phone">4006069129</string>
     <string name="feedback_wechat">关注微信公众平台</string>
-    <string name="feedback_wechat_code">百安资产</string>
+    <string name="feedback_wechat_code">中企票e通</string>
 
     <!--  分享  -->
     <string name="share_title">分享</string>
@@ -628,7 +628,8 @@
     <string name="pgy_update_update_after">取消</string>
 
     <!-- 友盟分享 -->
-    <string name="umeng_share_content">卓越财富人生，百安理财伴您同行，快来试试吧。</string>
+    <string name="umeng_share_title">邀请您进入财务自由之路!</string>
+    <string name="umeng_share_content">卓越财富人生，移动理财APP伴您同行，快来试试吧!</string>
     <string name="umeng_share_success">分享成功</string>
     <string name="umeng_share_failed">分享失败</string>
 

@@ -96,10 +96,11 @@ android {
                         if (variant.productFlavors[0].name == 'app') {
                             fileName = "CLOUD_APP_release.apk"
                             output.outputFile = new File(outputFile.parent + "/channel_app/", fileName)
-                        } else {
-                            fileName = "CLOUD_APP_v${defaultConfig.versionName}_channel_${variant.productFlavors[0].name}.apk"
-                            output.outputFile = new File(outputFile.parent + "/channel_app/", fileName)
                         }
+//                        else {
+//                            fileName = "CLOUD_APP_v${defaultConfig.versionName}_channel_${variant.productFlavors[0].name}.apk"
+//                            output.outputFile = new File(outputFile.parent + "/channel_app/", fileName)
+//                        }
                     }
                 }
             }

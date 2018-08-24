@@ -4,160 +4,20 @@
         "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\item_bank.xml"
     },
     {
-        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\activity_recharge.xml",
-        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\activity_recharge.xml"
-    },
-    {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\item_main_area.xml",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\item_main_area.xml"
-    },
-    {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\mdd_dialog_setting.xml",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\mdd_dialog_setting.xml"
-    },
-    {
-        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\item_bind.xml",
-        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\item_bind.xml"
-    },
-    {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\activity_name_authorization.xml",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\activity_name_authorization.xml"
-    },
-    {
-        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\activity_name_authorization.xml",
-        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\activity_name_authorization.xml"
-    },
-    {
-        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\mdd_dialog_wait.xml",
-        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\mdd_dialog_wait.xml"
-    },
-    {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\activity_threeinone.xml",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\activity_threeinone.xml"
-    },
-    {
-        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\item_code.xml",
-        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\item_code.xml"
-    },
-    {
-        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\mdd_dialog_setting.xml",
-        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\mdd_dialog_setting.xml"
-    },
-    {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\activity_authorization.xml",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\activity_authorization.xml"
-    },
-    {
-        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\item_register.xml",
-        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\item_register.xml"
-    },
-    {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\activity_account.xml",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\activity_account.xml"
-    },
-    {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\activity_mddregisterfirst.xml",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\activity_mddregisterfirst.xml"
-    },
-    {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\activity_mddregisterfinish.xml",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\activity_mddregisterfinish.xml"
-    },
-    {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\mdd_base_codeitem.xml",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\mdd_base_codeitem.xml"
-    },
-    {
-        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\activity_usercard.xml",
-        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\activity_usercard.xml"
-    },
-    {
-        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\activity_deposit.xml",
-        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\activity_deposit.xml"
-    },
-    {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\item_city_list.xml",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\item_city_list.xml"
-    },
-    {
-        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\activity_bind.xml",
-        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\activity_bind.xml"
-    },
-    {
-        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\item_msgtitle.xml",
-        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\item_msgtitle.xml"
-    },
-    {
-        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\mdd_base_codeitem.xml",
-        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\mdd_base_codeitem.xml"
-    },
-    {
-        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\item_loan_list.xml",
-        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\item_loan_list.xml"
-    },
-    {
-        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\activity_account.xml",
-        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\activity_account.xml"
-    },
-    {
-        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\activity_controller.xml",
-        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\activity_controller.xml"
-    },
-    {
-        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\mdd_popup_internet.xml",
-        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\mdd_popup_internet.xml"
-    },
-    {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\item_bank.xml",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\item_bank.xml"
-    },
-    {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\mdd_dialog_message.xml",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\mdd_dialog_message.xml"
-    },
-    {
-        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\item_bind_layout.xml",
-        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\item_bind_layout.xml"
-    },
-    {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\mdd_dialog_toast.xml",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\mdd_dialog_toast.xml"
-    },
-    {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\activity_userinfo.xml",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\activity_userinfo.xml"
-    },
-    {
-        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\item_recharge_edit.xml",
-        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\item_recharge_edit.xml"
-    },
-    {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\item_loan_list.xml",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\item_loan_list.xml"
-    },
-    {
         "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\activity_mddregisterfirst.xml",
         "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\activity_mddregisterfirst.xml"
     },
     {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\item_questlayout.xml",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\item_questlayout.xml"
-    },
-    {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\mdd_popup_msg.xml",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\mdd_popup_msg.xml"
+        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\activity_recharge.xml",
+        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\activity_recharge.xml"
     },
     {
         "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\item_city_list.xml",
         "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\item_city_list.xml"
     },
     {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\activity_mddsecurity.xml",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\activity_mddsecurity.xml"
-    },
-    {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\mdd_dialog_default.xml",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\mdd_dialog_default.xml"
+        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\item_bind.xml",
+        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\item_bind.xml"
     },
     {
         "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\mdd_popup_msg.xml",
@@ -168,112 +28,88 @@
         "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\activity_authorization.xml"
     },
     {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\item_recharge_edit.xml",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\item_recharge_edit.xml"
-    },
-    {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\item_code.xml",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\item_code.xml"
-    },
-    {
         "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\activity_register.xml",
         "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\activity_register.xml"
+    },
+    {
+        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\activity_name_authorization.xml",
+        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\activity_name_authorization.xml"
     },
     {
         "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\item_questlayout.xml",
         "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\item_questlayout.xml"
     },
     {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\mdd_base_textitem.xml",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\mdd_base_textitem.xml"
-    },
-    {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\activity_bind.xml",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\activity_bind.xml"
-    },
-    {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\mdd_dialog_wait.xml",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\mdd_dialog_wait.xml"
+        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\mdd_dialog_wait.xml",
+        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\mdd_dialog_wait.xml"
     },
     {
         "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\activity_threeinone.xml",
         "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\activity_threeinone.xml"
     },
     {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\activity_deposit.xml",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\activity_deposit.xml"
+        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\item_code.xml",
+        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\item_code.xml"
+    },
+    {
+        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\mdd_dialog_setting.xml",
+        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\mdd_dialog_setting.xml"
     },
     {
         "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\activity_userinfo.xml",
         "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\activity_userinfo.xml"
     },
     {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\item_usercar_list.xml",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\item_usercar_list.xml"
-    },
-    {
         "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\item_recharge_text.xml",
         "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\item_recharge_text.xml"
     },
     {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\mdd_base_edititem.xml",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\mdd_base_edititem.xml"
-    },
-    {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\activity_recharge.xml",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\activity_recharge.xml"
+        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\item_register.xml",
+        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\item_register.xml"
     },
     {
         "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\mdd_dialog_toast.xml",
         "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\mdd_dialog_toast.xml"
     },
     {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\mdd_popup_internet.xml",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\mdd_popup_internet.xml"
+        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\activity_usercard.xml",
+        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\activity_usercard.xml"
     },
     {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\item_side.xml",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\item_side.xml"
-    },
-    {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\activity_usercard.xml",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\activity_usercard.xml"
-    },
-    {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\item_input.xml",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\item_input.xml"
+        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\activity_deposit.xml",
+        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\activity_deposit.xml"
     },
     {
         "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\item_question.xml",
         "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\item_question.xml"
     },
     {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\item_recharge_text.xml",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\item_recharge_text.xml"
+        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\activity_bind.xml",
+        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\activity_bind.xml"
     },
     {
         "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\mdd_dialog_message.xml",
         "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\mdd_dialog_message.xml"
     },
     {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\item_question.xml",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\item_question.xml"
-    },
-    {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\item_bind_layout.xml",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\item_bind_layout.xml"
-    },
-    {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\item_msgtitle.xml",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\item_msgtitle.xml"
+        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\item_msgtitle.xml",
+        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\item_msgtitle.xml"
     },
     {
         "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\activity_mddregisterfinish.xml",
         "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\activity_mddregisterfinish.xml"
     },
     {
+        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\mdd_base_codeitem.xml",
+        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\mdd_base_codeitem.xml"
+    },
+    {
         "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\base_title.xml",
         "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\base_title.xml"
+    },
+    {
+        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\item_loan_list.xml",
+        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\item_loan_list.xml"
     },
     {
         "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\mdd_base_textitem.xml",
@@ -284,20 +120,20 @@
         "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\item_input.xml"
     },
     {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\base_title.xml",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\base_title.xml"
+        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\activity_account.xml",
+        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\activity_account.xml"
+    },
+    {
+        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\activity_controller.xml",
+        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\activity_controller.xml"
     },
     {
         "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\item_side.xml",
         "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\item_side.xml"
     },
     {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\item_auth.xml",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\item_auth.xml"
-    },
-    {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\activity_register.xml",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\activity_register.xml"
+        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\mdd_popup_internet.xml",
+        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\mdd_popup_internet.xml"
     },
     {
         "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\item_main_area.xml",
@@ -316,16 +152,8 @@
         "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\mdd_base_edititem.xml"
     },
     {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\item_bind.xml",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\item_bind.xml"
-    },
-    {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\activity_controller.xml",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\activity_controller.xml"
-    },
-    {
-        "merged": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\item_register.xml",
-        "source": "D:\\working\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\item_register.xml"
+        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\item_bind_layout.xml",
+        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\item_bind_layout.xml"
     },
     {
         "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\item_auth.xml",
@@ -334,5 +162,9 @@
     {
         "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\activity_mddsecurity.xml",
         "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\activity_mddsecurity.xml"
+    },
+    {
+        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\item_recharge_edit.xml",
+        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\item_recharge_edit.xml"
     }
 ]

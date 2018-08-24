@@ -15,8 +15,8 @@ import com.rd.zhongqipiaoetong.payment.umpay.UMPayController;
 public class RDPayment {
     private static final int PAYMENTTPYE_MOREMORE = 1;
     private static final int PAYMENTTPYE_PNR      = 2;
-    private static final int PAYMENTTPYE_UFX      = 4;
     private static final int PAYMENTTYPE_UMPAY    = 3;
+    private static final int PAYMENTTPYE_UFX      = 4;
     /**
      * 调用单例对象
      */
@@ -39,10 +39,10 @@ public class RDPayment {
                 return new MoneyMoreMoreController();
             case PAYMENTTPYE_PNR:
                 return new PNRController();
+            case PAYMENTTYPE_UMPAY:
+            return new UMPayController();
             case PAYMENTTPYE_UFX:
                 return new PNRController();
-            case PAYMENTTYPE_UMPAY:
-                return new UMPayController();
         }
         return null;
     }

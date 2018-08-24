@@ -29,7 +29,7 @@ public class BaseParams {
      * 分享布局类型
      * 1 云默认  2杭文投
      */
-    public static final  int     inviteType          = 2;
+    public static final  int     inviteType          = 1;
     /**
      * OCRkey
      */
@@ -37,7 +37,7 @@ public class BaseParams {
     /**
      * 测试服务器地址
      */
-    private static final String  URL_BETA            = "http://101.254.136.221:6002";
+    private static final String  URL_BETA            = "http://47.93.26.220:8082";
     public static final  String  FRIDAY_ADDRESS      = "https://friday.erongdu.com/mobile/";
     /**
      * 正式服务器地址
