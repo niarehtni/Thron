@@ -30,8 +30,8 @@ public class PendingPaymentMo {
     /**
      * 本息金额
      */
-    private String repaymentAmount;
-    private String repaidAmount;
+    private String repaymentAmount;//本金加利息,加平台利息(标的本身带有加息)
+    private String repaidAmount;//本金加利息
     /**
      * 计息起息日
      */

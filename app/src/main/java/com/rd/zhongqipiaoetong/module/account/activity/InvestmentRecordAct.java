@@ -16,7 +16,7 @@ import com.rd.zhongqipiaoetong.utils.FeatureUtils;
  * E-mail: xth@erongdu.com
  * Date: 2016/2/26 13:39
  * <p/>
- * Description: 投资记录
+ * Description: 投资管理
  * <p/>
  * 定期理财{@link InvestmentFinancingFrag}
  * <p/>

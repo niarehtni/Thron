@@ -67,7 +67,7 @@ public class InvestRecordDetailCollectionItemMo {
     public String getStatusStr() {
         switch (status) {
             case -1:
-                return "复审未通过";
+                return "等待复审";
             case 0:
                 return "未收款";
             case 1:

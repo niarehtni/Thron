@@ -4,8 +4,8 @@
     <!-- 引导页图片 -->
     <array name="guideImages">
         <item>@drawable/guide_01</item>
-        <item>@drawable/guide_02</item>
         <item>@drawable/guide_03</item>
+        <item>@drawable/guide_02</item>
     </array>
 
     <!-- 投资记录 - titles -->
@@ -72,7 +72,7 @@
         <item>回款信息</item>
     </array>
 
-    <!-- 投资记录 - 投资信息 - 列描述 -->
+    <!-- 投资管理 - 投资信息 - 列描述 -->
     <array name="investmentDetailSuccessItemDesc">
         <item>状态</item>
         <item>金额</item>
@@ -86,7 +86,7 @@
         <item>到期日</item>
     </array>
 
-    <!-- 投资记录详情-回款中 -->
+    <!-- 投资管理详情-回款中 -->
     <array name="investRecordDetail1">
         <item>状态</item>
         <item>年化利率</item>
@@ -98,7 +98,7 @@
         <item>预计待收收益</item>
     </array>
 
-    <!-- 投资记录详情-已结算 -->
+    <!-- 投资管理详情-已结算 -->
     <array name="investRecordDetail2">
         <item>状态</item>
         <item>年化利率</item>
@@ -108,7 +108,7 @@
         <item>已收收益</item>
     </array>
 
-    <!-- 投资记录详情-投资中 -->
+    <!-- 投资管理详情-投资中 -->
     <array name="investRecordDetail0">
         <item>状态</item>
         <item>年化利率</item>

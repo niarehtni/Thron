@@ -200,11 +200,11 @@
         "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-mdpi-v4\\img_context_back.png"
     },
     {
-        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4\\enter_btn_sel.png",
-        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-mdpi-v4\\enter_btn_sel.png"
-    },
-    {
         "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4\\imq_image_ssp_queding_btn.png",
         "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-mdpi-v4\\imq_image_ssp_queding_btn.png"
+    },
+    {
+        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4\\enter_btn_sel.png",
+        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-mdpi-v4\\enter_btn_sel.png"
     }
 ]

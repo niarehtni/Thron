@@ -21,7 +21,7 @@ import com.rd.zhongqipiaoetong.module.account.viewmodel.RepaymentDetailVM;
  * E-mail: xth@erongdu.com
  * Date: 2016/3/4 18:20
  * <p/>
- * Description: 投资详情({@link InvestmentDetailAct}) - 投资信息界面
+ * Description: 回款计划-投资详情({@link InvestmentDetailAct}) - 投资信息界面
  */
 public class RepaymentDetailFrag extends BaseLazyFragment {
     private CommonRecyclerViewBinding binding;

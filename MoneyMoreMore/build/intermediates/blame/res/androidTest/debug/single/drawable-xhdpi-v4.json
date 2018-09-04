@@ -132,12 +132,12 @@
         "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\auth_context.9.png"
     },
     {
-        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\loading_03.png",
-        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\loading_03.png"
-    },
-    {
         "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\auth_title.9.png",
         "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\auth_title.9.png"
+    },
+    {
+        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\loading_03.png",
+        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\loading_03.png"
     },
     {
         "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\next_btn.9.png",

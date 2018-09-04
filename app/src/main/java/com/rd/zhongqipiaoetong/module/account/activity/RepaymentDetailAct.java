@@ -26,7 +26,7 @@ import retrofit2.Response;
  * E-mail: xth@erongdu.com
  * Date: 2016/3/2 17:11
  * <p/>
- * Description: 投资详情
+ * Description: 回款计划-投资详情
  * <p/>
  * 投资信息
  * <p/>

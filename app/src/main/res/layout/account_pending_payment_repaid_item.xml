@@ -28,7 +28,7 @@
             android:layout_width="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:text="@{DisplayFormat.doubleFormat(item.repaidAmount)}"
+            android:text="@{DisplayFormat.doubleFormat(item.repaymentAmount)}"
             android:textColor="@color/app_color_secondary" />
 
         <!-- 剩余1期（共3期） -->

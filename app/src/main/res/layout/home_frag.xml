@@ -121,6 +121,7 @@
                         app:drawableRight="@{@drawable/ic_arrow_right}" />
 
                     <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recycler"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         app:addItemDecoration="@{viewModel.type}"
@@ -158,6 +159,7 @@
                             app:drawableRight="@{@drawable/ic_arrow_right}" />
 
                         <android.support.v7.widget.RecyclerView
+                            android:id="@+id/recycler_activity"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             app:addItemDecoration="@{viewModel.typeAcitivity}"

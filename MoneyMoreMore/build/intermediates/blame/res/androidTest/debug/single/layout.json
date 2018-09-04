@@ -108,16 +108,16 @@
         "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\base_title.xml"
     },
     {
-        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\item_loan_list.xml",
-        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\item_loan_list.xml"
-    },
-    {
         "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\mdd_base_textitem.xml",
         "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\mdd_base_textitem.xml"
     },
     {
         "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\item_input.xml",
         "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\item_input.xml"
+    },
+    {
+        "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\item_loan_list.xml",
+        "source": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\bundles\\debug\\res\\layout\\item_loan_list.xml"
     },
     {
         "merged": "D:\\useful\\Thron\\MoneyMoreMore\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\activity_account.xml",

@@ -29,7 +29,7 @@ import me.tatarka.bindingcollectionadapter.ItemView;
  * E-mail: xth@erongdu.com
  * Date: 2016/3/4 18:20
  * <p/>
- * Description: 投投资详情({@link InvestmentDetailAct}) - 回款信息界面
+ * Description: 回款计划-投资详情({@link InvestmentDetailAct}) - 回款信息界面
  */
 public class RepaymentReceivedFrag extends BaseLazyFragment {
     private CommonRecyclerViewBinding    binding;
@@ -103,13 +103,15 @@ public class RepaymentReceivedFrag extends BaseLazyFragment {
         for (InvestRecordDetailCollectionItemMo item : mo.getReturnList()) {
             if(mo.getStatus() == 1){
                 list.add(new String[]{DisplayFormat.coverTimeYYMMDD(item.getRepaymentTime()),
-                        DisplayFormat
-                                .doubleFormat(item.getRepaymentAmount()), getString(R.string
+//                        DisplayFormat.doubleFormat(item.getRepaymentAmount())
+                        totalCollect//修改为回款总额:回款本金+回款利息(利息加平台利息)
+                        , getString(R.string
                         .ir_period, String.valueOf(item.getPeriod())), item.getStatusStr(), item.getPeriod() + ""});
             }else if(mo.getStatus() == 2){
                 list.add(new String[]{DisplayFormat.coverTimeYYMMDD(item.getRepaymentTime()),
-                        DisplayFormat
-                                .doubleFormat(item.getRepaidAmount()), getString(R.string
+//                        DisplayFormat.doubleFormat(item.getRepaidAmount())
+                        totalCollect
+                        , getString(R.string
                         .ir_period, String.valueOf(item.getPeriod())), item.getStatusStr(), item.getPeriod() + ""});
             }
         }

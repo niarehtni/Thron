@@ -102,7 +102,11 @@
             android:layout_height="@dimen/x180"
             android:layout_below="@id/divider_layout"
             android:gravity="center_vertical"
-            android:padding="@dimen/x20">
+            android:paddingBottom="@dimen/x20"
+            android:paddingLeft="@dimen/x20"
+            android:paddingRight="@dimen/x20"
+            android:paddingTop="@dimen/x20"
+            >
 
             <!-- 年化利率value -->
             <TextView
@@ -112,7 +116,7 @@
                 android:text="@{info.showRateYearMin}"
                 android:textSize="24sp"
                 android:textColor="@{info.isSoldOut?@color/hint_grey:@color/app_color_secondary}"
-                android:layout_marginTop="@dimen/x20"/>
+                android:layout_marginTop="@dimen/x16"/>
 
             <!-- 年化利率key -->
             <TextView

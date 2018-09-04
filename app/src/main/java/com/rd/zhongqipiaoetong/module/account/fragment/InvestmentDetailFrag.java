@@ -20,7 +20,7 @@ import com.rd.zhongqipiaoetong.module.account.viewmodel.InvestmentDetailVM;
  * E-mail: xth@erongdu.com
  * Date: 2016/3/4 18:20
  * <p/>
- * Description: 投资详情({@link InvestmentDetailAct}) - 投资信息界面
+ * Description: 投资管理-投资详情({@link InvestmentDetailAct}) - 投资信息界面
  */
 public class InvestmentDetailFrag extends BaseLazyFragment {
     private CommonRecyclerViewBinding binding;

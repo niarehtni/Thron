@@ -35,7 +35,7 @@ public class InvestRecordDetailMo {
      */
     private String paymentTime;
     /**
-     * 投资状态: 0投标待处理，1成功，2失败
+     * 投资状态: 0投标待中，1待回款，2已结算
      */
     private int status;
     /**
@@ -345,12 +345,12 @@ public class InvestRecordDetailMo {
     //显示预估待收收益
     public String showExpectInterest() {
         if (classify == 1 && isRegionConfirm == 0) {
-            return DisplayFormat.doubleMoney(interestMin) + "~" + DisplayFormat.doubleMoney(waitInterest);
+            return DisplayFormat.doubleMoney(Double.parseDouble(interestMin)+Double.parseDouble(platformInterest)) + "~" + DisplayFormat.doubleMoney(Double.parseDouble(waitInterest)+Double.parseDouble(platformInterest));
         }
         if (classify != 1 || isRegionConfirm == 1) {
-            return DisplayFormat.doubleMoney(Double.parseDouble(interest) + Double.parseDouble(platformInterest));
+            return DisplayFormat.doubleMoney(Double.parseDouble(waitInterest));
         }
-        return DisplayFormat.doubleMoney(Double.parseDouble(interest) + Double.parseDouble(platformInterest));
+        return DisplayFormat.doubleMoney(Double.parseDouble(waitInterest));
     }
 
     public String showFailMark() {

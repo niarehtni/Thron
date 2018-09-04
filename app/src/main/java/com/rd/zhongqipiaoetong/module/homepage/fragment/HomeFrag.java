@@ -33,6 +33,8 @@ public class HomeFrag extends BaseFragment {
         convenientBanner = binding.convenientBanner;
         binding.setViewModel(new HomeVM(binding,convenientBanner));
         binding.convenientBanner.invalidate();
+        binding.recycler.setNestedScrollingEnabled(false);
+        binding.recyclerActivity.setNestedScrollingEnabled(false);
         if(FeatureConfig.enableExtButtonFeature == 1){
             binding.homeExtraButton.setVisibility(View.VISIBLE);
         }

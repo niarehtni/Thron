@@ -6,7 +6,6 @@ import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import com.rd.zhongqipiaoetong.BR;
 import com.rd.zhongqipiaoetong.R;
 import com.rd.zhongqipiaoetong.common.ui.BaseLazyFragment;
@@ -29,7 +28,7 @@ import me.tatarka.bindingcollectionadapter.ItemView;
  * E-mail: xth@erongdu.com
  * Date: 2016/3/4 18:20
  * <p/>
- * Description: 投投资详情({@link InvestmentDetailAct}) - 回款信息界面
+ * Description: 投资管理-投资详情({@link InvestmentDetailAct}) - 回款信息界面
  */
 public class InvestmentReceivedFrag extends BaseLazyFragment {
     private CommonRecyclerViewBinding    binding;
@@ -73,7 +72,7 @@ public class InvestmentReceivedFrag extends BaseLazyFragment {
      */
     public void setRecordData(InvestRecordDetailMo mo) {
         detailVM.items.addAll(init(getResources().getStringArray(R.array.investmentReceivedItemDesc), mo));
-        if (mo.getStatus() != 1) {
+        if (mo.getStatus() != 1 && mo.getStatus() != 2) {
             detailVM.emptyState.setPrompt(R.string.empty_repaymentlog);
         }
     }
@@ -85,10 +84,14 @@ public class InvestmentReceivedFrag extends BaseLazyFragment {
         List<String[]> list         = new ArrayList<>();
         String         totalCollect = "";
         if (mo.getClassify() == 4) {
-            totalCollect = DisplayFormat.doubleMoney(DisplayFormat.stringToDouble(mo.getInterest()) + DisplayFormat.stringToDouble(mo.getPlatformInterest()));
+            totalCollect = DisplayFormat.doubleMoney(DisplayFormat.stringToDouble(mo.getInterest())+DisplayFormat.stringToDouble(mo.getPlatformInterest()));// + ;
         } else {
-            totalCollect = DisplayFormat.doubleMoney(DisplayFormat.stringToDouble(mo.getInterest()) + DisplayFormat.stringToDouble(mo.getCapital
-                    ()) + DisplayFormat.stringToDouble(mo.getPlatformInterest()));
+            if(mo.getStatus() == 1){
+                totalCollect = DisplayFormat.doubleMoney(DisplayFormat.stringToDouble(mo.getInterest()) + DisplayFormat.stringToDouble(mo.getCapital
+                        ()) + DisplayFormat.stringToDouble(mo.getPlatformInterest()));
+            }else{
+                totalCollect = DisplayFormat.doubleMoney(mo.getRepaidAmount());
+            }
         }
         list.add(new String[]{desc[0], totalCollect});
         if (mo.getNoPayPeriod() > 0) {
@@ -99,8 +102,9 @@ public class InvestmentReceivedFrag extends BaseLazyFragment {
         list.add(new String[]{getString(R.string.ir_hkjl)});
         for (InvestRecordDetailCollectionItemMo item : mo.getReturnList()) {
             list.add(new String[]{DisplayFormat.coverTimeYYMMDD(item.getRepaymentTime()) + "\n" + DisplayFormat.coverTimeHHmmss(item.getRepaymentTime()),
-                    DisplayFormat
-                            .doubleFormat(item.getRepaymentAmount()), getString(R.string
+//                    DisplayFormat.doubleFormat(item.getRepaymentAmount())
+                    totalCollect
+                    , getString(R.string
                     .ir_period, String.valueOf(item.getPeriod())), item.getStatusStr(), item.getPeriod() + ""});
         }
         return list;

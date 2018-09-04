@@ -23,7 +23,7 @@ import retrofit2.Response;
  * E-mail: xth@erongdu.com
  * Date: 2016/2/29 10:38
  * <p/>
- * Description: 投资记录-pager VM ({@link InvestmentFinancingFrag})
+ * Description: 投资管理-pager VM ({@link InvestmentFinancingFrag})
  */
 public class InvestmentFinancingVM extends BaseRecyclerViewVM<Object> {
     private int page = 0;
