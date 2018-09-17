@@ -4,6 +4,7 @@ import android.content.Context;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.text.InputFilter;
+import android.widget.Toast;
 
 import com.rd.zhongqipiaoetong.R;
 import com.rd.zhongqipiaoetong.common.BundleKeys;
@@ -29,7 +30,7 @@ public class RegisterSecondAct extends BaseActivity {
         binding = DataBindingUtil.setContentView(this, R.layout.user_register_second_act);
         String phone = getIntent().getStringExtra(BundleKeys.PHONE);
         String code  = getIntent().getStringExtra(BundleKeys.CODE);
-        binding.setViewModel(new RegisterSecondVM(phone, code, binding, getIntent().getBooleanExtra(BundleKeys.H5,false)));
+        binding.setViewModel(new RegisterSecondVM(this,phone, code, binding, getIntent().getBooleanExtra(BundleKeys.H5,false)));
         binding.registerPwd.setFilters(new InputFilter[]{EditTextFormat.getBlankFilter(), new InputFilter.LengthFilter(16)});
     }
 

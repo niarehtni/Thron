@@ -1,5 +1,6 @@
 package com.rd.zhongqipiaoetong.module.user.viewmodel;
 
+import android.content.Context;
 import android.content.Intent;
 import android.databinding.ObservableField;
 import android.text.TextUtils;
@@ -8,12 +9,14 @@ import android.text.method.PasswordTransformationMethod;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.igexin.sdk.PushManager;
 import com.rd.zhongqipiaoetong.MyApplication;
 import com.rd.zhongqipiaoetong.R;
 import com.rd.zhongqipiaoetong.animation.ShrinkLogic;
 import com.rd.zhongqipiaoetong.common.BundleKeys;
+import com.rd.zhongqipiaoetong.common.Constant;
 import com.rd.zhongqipiaoetong.databinding.UserRegisterSecondActBinding;
 import com.rd.zhongqipiaoetong.module.more.activity.RDWebViewAct;
 import com.rd.zhongqipiaoetong.module.user.logic.UserLogic;
@@ -50,6 +53,7 @@ public class RegisterSecondVM {
     private String      code;
     /** 动画显示逻辑控制 */
     private ShrinkLogic shrinkLogic;
+    private Context mContext;
     /**
      * 密码是否可见，默认不可见
      */
@@ -82,10 +86,11 @@ public class RegisterSecondVM {
     public ObservableField<Boolean>             btnEnable = new ObservableField<>(false);
     public ObservableField<Boolean>             isVisible = new ObservableField<>(false);
 
-    public RegisterSecondVM(String phone, String code, UserRegisterSecondActBinding binding, boolean isFromH5) {
+    public RegisterSecondVM(Context mContext,String phone, String code, UserRegisterSecondActBinding binding, boolean isFromH5) {
         this.isFromH5 = isFromH5;
         this.phone = phone;
         this.code = code;
+        this.mContext = mContext;
         this.binding = binding;
         shrinkLogic = new ShrinkLogic(binding.registerCenter, binding.appLogo);
         shrinkLogic.shrinkAnimation();
@@ -167,6 +172,9 @@ public class RegisterSecondVM {
                 Utils.toast(ActivityUtils.peek().getString(R.string.register_success));
                 if (isFromH5) {
                     UserLogic.saveToken(response.body());
+                    //注册成功即登录成功，发送通知
+                    Intent registSuccess = new Intent(Constant.REGISTSUCCESS);
+                    mContext.sendBroadcast(registSuccess);
                 } else {
                     UserLogic.login(response.body());
                 }

@@ -1,5 +1,6 @@
 package com.rd.zhongqipiaoetong.module.user.viewmodel;
 
+import android.content.Context;
 import android.content.Intent;
 import android.databinding.ObservableField;
 import android.text.TextUtils;
@@ -15,6 +16,7 @@ import com.rd.zhongqipiaoetong.MyApplication;
 import com.rd.zhongqipiaoetong.R;
 import com.rd.zhongqipiaoetong.animation.ShrinkLogic;
 import com.rd.zhongqipiaoetong.common.BundleKeys;
+import com.rd.zhongqipiaoetong.common.Constant;
 import com.rd.zhongqipiaoetong.databinding.UserLoginActBinding;
 import com.rd.zhongqipiaoetong.module.user.activity.ForgetAct;
 import com.rd.zhongqipiaoetong.module.user.activity.LoginAct;
@@ -49,6 +51,7 @@ public class LoginVM {
     private UserLoginActBinding binding;
     /** 动画显示逻辑控制 */
     private ShrinkLogic         shrinkLogic;
+    private Context mContext;
     /**
      * 监听EditText 变化
      */
@@ -69,9 +72,10 @@ public class LoginVM {
      */
     private boolean                              isVisible = false;
 
-    public LoginVM(UserLoginActBinding binding, boolean isFromH5) {
+    public LoginVM(UserLoginActBinding binding, Context mContext, boolean isFromH5) {
         this.binding = binding;
         this.isFromH5 = isFromH5;
+        this.mContext = mContext;
         shrinkLogic = new ShrinkLogic(binding.loginCenter, binding.appLogo);
         shrinkLogic.shrinkAnimation();
     }
@@ -123,6 +127,9 @@ public class LoginVM {
                 } else {
                     UserLogic.login(response.body());
                 }
+                //登录成功发送通知
+                Intent loginSuccess = new Intent(Constant.LOGINSUCCESS);
+                mContext.sendBroadcast(loginSuccess);
             }
         });
     }
@@ -152,6 +159,7 @@ public class LoginVM {
         Intent intent = new Intent();
         intent.putExtra(BundleKeys.H5, isFromH5);
         ActivityUtils.push(RegisterFirstAct.class, intent);
+        ActivityUtils.peek().finish();
     }
 
     /**

@@ -24,7 +24,6 @@ public class RDClient {
     // retrofit实例
     private Retrofit retrofit;
     private BasicParamsInject inject;
-
     /**
      * 私有化构造方法
      */

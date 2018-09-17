@@ -103,4 +103,8 @@ public class Constant {
 
     //请求公钥的接口
     public static final String URL = "http://mtest.cbhb.com.cn/mbank/common/MCPerPublicPinQry.do";
+
+    //各种通知
+    public static final String LOGINSUCCESS = "登录成功";
+    public static final String REGISTSUCCESS = "注册成功";
 }

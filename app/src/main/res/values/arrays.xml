@@ -4,8 +4,8 @@
     <!-- 引导页图片 -->
     <array name="guideImages">
         <item>@drawable/guide_01</item>
-        <item>@drawable/guide_03</item>
         <item>@drawable/guide_02</item>
+        <item>@drawable/guide_03</item>
     </array>
 
     <!-- 投资记录 - titles -->

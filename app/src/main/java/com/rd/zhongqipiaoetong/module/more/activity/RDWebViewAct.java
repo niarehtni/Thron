@@ -3,10 +3,13 @@ package com.rd.zhongqipiaoetong.module.more.activity;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.BroadcastReceiver;
 import android.content.ClipData;
 import android.content.ComponentName;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.databinding.DataBindingUtil;
@@ -21,12 +24,18 @@ import android.view.View;
 import android.webkit.JsResult;
 import android.webkit.ValueCallback;
 import android.webkit.WebChromeClient;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
 
+import com.rd.zhongqipiaoetong.MyApplication;
 import com.rd.zhongqipiaoetong.R;
 import com.rd.zhongqipiaoetong.common.BundleKeys;
+import com.rd.zhongqipiaoetong.common.Constant;
+import com.rd.zhongqipiaoetong.common.info.SharedInfo;
 import com.rd.zhongqipiaoetong.common.ui.BaseActivity;
 import com.rd.zhongqipiaoetong.databinding.WebviewActBinding;
+import com.rd.zhongqipiaoetong.module.user.model.OauthTokenMo;
+import com.rd.zhongqipiaoetong.network.RequestParams;
 import com.rd.zhongqipiaoetong.utils.ActivityUtils;
 import com.rd.zhongqipiaoetong.utils.Utils;
 import com.rd.zhongqipiaoetong.view.KeyboardPlugin;
@@ -45,28 +54,28 @@ public class RDWebViewAct extends BaseActivity {
     /**
      * webView  title 必传
      */
-    String  title;
+    String title;
     /**
      * webView url 跳转  必传
      */
-    String  url;
+    String url;
     /**
      * webView param拼接  非必传
      */
-    String  params;
+    String params;
     /**
      * webView postData post数据  非必传
      */
-    String  postData;
+    String postData;
     /**
      * html内容  非必传
      */
-    String  data;
+    String data;
     boolean needGoBack;
     /**
      * 调用相机
      */
-    private ValueCallback<Uri>   mUploadMessage;// 表单的数据信息
+    private ValueCallback<Uri> mUploadMessage;// 表单的数据信息
     private ValueCallback<Uri[]> mUploadCallbackAboveL;
     private final static int FILECHOOSER_RESULTCODE = 1;// 表单的结果回调
     private Uri imageUri;
@@ -83,7 +92,7 @@ public class RDWebViewAct extends BaseActivity {
                 }
             });
         }
-        if (getIntent().getIntExtra(BundleKeys.LOADPROTOCOL,-1) == 1){//右侧按钮下载协议
+        if (getIntent().getIntExtra(BundleKeys.LOADPROTOCOL, -1) == 1) {//右侧按钮下载协议
             binding.titleBar.appbar.setRightTextOption("下载", new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -102,6 +111,8 @@ public class RDWebViewAct extends BaseActivity {
             url = url + params;
         }
         System.out.println("url" + url);
+        WebSettings settings = binding.rdWebview.getSettings();
+        settings.setLoadWithOverviewMode(true);
         binding.rdWebview.setWebChromeClient(new WebChromeClient() {
             @Override
             public boolean onJsAlert(WebView view, String url, String message,
@@ -138,6 +149,7 @@ public class RDWebViewAct extends BaseActivity {
                 mUploadMessage = uploadMsg;
                 take();
             }
+
             /**
              * 调用相机
              */
@@ -146,6 +158,7 @@ public class RDWebViewAct extends BaseActivity {
                 mUploadMessage = uploadMsg;
                 take();
             }
+
             /**
              * 调用相机
              */
@@ -155,7 +168,7 @@ public class RDWebViewAct extends BaseActivity {
                 take();
             }
         });
-        binding.rdWebview.addJavascriptInterface(new KeyboardPlugin(this,binding.rdWebview),"KeyboardJs");
+        binding.rdWebview.addJavascriptInterface(new KeyboardPlugin(this, binding.rdWebview), "KeyboardJs");
 
         if (postData == null) {
             if (TextUtils.isEmpty(url)) {
@@ -166,6 +179,33 @@ public class RDWebViewAct extends BaseActivity {
         } else {
             binding.rdWebview.postUrl(url, Utils.getBytes(postData.replace("?", ""), "BASE64"));
         }
+
+        registBroadcastReciever();
+    }
+
+    private BroadcastReceiver successReceiver;
+
+    public void registBroadcastReciever() {
+        successReceiver = new BroadcastReceiver() {
+
+            @Override
+            public void onReceive(Context context, Intent intent) {
+                if (intent.getAction().equals(Constant.LOGINSUCCESS) || intent.getAction().equals(Constant.REGISTSUCCESS)) {
+                    binding.rdWebview.loadUrl(url+ "&" + RequestParams.TOKEN + "=" + SharedInfo.getInstance().getValue(OauthTokenMo.class).getOauthToken()
+                            + "&" + RequestParams.USER_ID + "=" + SharedInfo.getInstance().getValue(OauthTokenMo.class).getUserId());
+                }
+            }
+        };
+        IntentFilter intentFilter = new IntentFilter();
+        intentFilter.addAction(Constant.LOGINSUCCESS);
+        intentFilter.addAction(Constant.REGISTSUCCESS);
+        registerReceiver(successReceiver,intentFilter);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        unregisterReceiver(successReceiver);
     }
 
     @Override
@@ -184,7 +224,7 @@ public class RDWebViewAct extends BaseActivity {
     }
 
     private void closeAndSetMsg() {
-        setResult(999);
+//        setResult(999);
         ActivityUtils.pop(this);
     }
 
@@ -233,8 +273,8 @@ public class RDWebViewAct extends BaseActivity {
             if (data == null) {
                 results = new Uri[]{imageUri};
             } else {
-                String   dataString = data.getDataString();
-                ClipData clipData   = data.getClipData();
+                String dataString = data.getDataString();
+                ClipData clipData = data.getClipData();
                 if (clipData != null) {
                     results = new Uri[clipData.getItemCount()];
                     for (int i = 0; i < clipData.getItemCount(); i++) {
@@ -267,13 +307,13 @@ public class RDWebViewAct extends BaseActivity {
         }
         File file = new File(imageStorageDir + File.separator + "IMG_" + String.valueOf(System.currentTimeMillis()) + ".jpg");
         imageUri = Uri.fromFile(file);
-        final List<Intent>      cameraIntents  = new ArrayList<Intent>();
-        final Intent            captureIntent  = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
-        final PackageManager    packageManager = getPackageManager();
-        final List<ResolveInfo> listCam        = packageManager.queryIntentActivities(captureIntent, 0);
+        final List<Intent> cameraIntents = new ArrayList<Intent>();
+        final Intent captureIntent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
+        final PackageManager packageManager = getPackageManager();
+        final List<ResolveInfo> listCam = packageManager.queryIntentActivities(captureIntent, 0);
         for (ResolveInfo res : listCam) {
             final String packageName = res.activityInfo.packageName;
-            final Intent i           = new Intent(captureIntent);
+            final Intent i = new Intent(captureIntent);
             i.setComponent(new ComponentName(res.activityInfo.packageName, res.activityInfo.name));
             i.setPackage(packageName);
             i.putExtra(MediaStore.EXTRA_OUTPUT, imageUri);

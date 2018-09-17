@@ -7,7 +7,7 @@
         android:id="@+id/guide_viewpager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/guide_01" />
+        android:background="@drawable/guide_02" />
 
     <LinearLayout
         android:id="@+id/guide_bottom_point"

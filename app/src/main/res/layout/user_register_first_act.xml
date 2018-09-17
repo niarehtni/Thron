@@ -108,14 +108,15 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
             android:layout_gravity="bottom"
-            android:gravity="center"
+            android:layout_below="@+id/register_center"
+            android:gravity="end"
+            android:layout_marginTop="@dimen/y50"
             android:onClick="@{viewModel.loginClick}"
             android:padding="@dimen/x30"
-            android:text="@string/register_login"
-            android:textColor="@color/colorViewbg"
-            android:textSize="@dimen/x30"
-            android:visibility="gone"/>
+            android:text="@string/register_login_back"
+            android:textColor="@color/login_btn_textcolor"
+            android:textSize="@dimen/x25"
+            />
     </RelativeLayout>
 </layout>

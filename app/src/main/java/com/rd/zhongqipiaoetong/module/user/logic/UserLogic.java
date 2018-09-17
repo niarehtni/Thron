@@ -92,7 +92,7 @@ public class UserLogic {
     }
 
     /**
-     * 清楚本地用户信息
+     * 清除本地用户信息
      *
      * @param isReMove
      *         是否删除手势密码

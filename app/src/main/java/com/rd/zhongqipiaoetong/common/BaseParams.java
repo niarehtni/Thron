@@ -20,7 +20,7 @@ public class BaseParams {
     /**
      * 是否是debug模式
      */
-    public static final  boolean IS_DEBUG            = true;
+    public static final  boolean IS_DEBUG            = false;
     /**
      * 支付类型 1双乾 2汇付 4UFX 3联动优势
      */
@@ -37,12 +37,12 @@ public class BaseParams {
     /**
      * 测试服务器地址
      */
-    private static final String  URL_BETA            = "http://47.93.26.220:8082";
+    private static final String  URL_BETA            = "https://www.51ztj.com";
     public static final  String  FRIDAY_ADDRESS      = "https://friday.erongdu.com/mobile/";
     /**
      * 正式服务器地址
      */
-    private static final String  URL_RELEASE         = "https://api.p2p.erongyun.com";
+    private static final String  URL_RELEASE         = "https://www.51ztj.com";
     /**
      * 服务器地址
      */
@@ -54,19 +54,19 @@ public class BaseParams {
     /**
      * appkey
      */
-    public static final  String  APP_KEY             = "cccc8bc3d6630bf84a08f9ba361baea0";
+    public static final  String  APP_KEY             = "6tqiC0AsASwO8T6MvMNfFJK1DQfsHiLC";
     /**
      * app_secret
      */
-    public static final  String  APP_SECRET          = "db71ba971de545590a39e7dfa51ded2f";
+    public static final  String  APP_SECRET          = "gxixd9reotfifeqollfi0e2wgfkcey4x";
     /**
      * friday appkey
      */
-    public static final  String  FRIDAY_APPKEY       = "cccc8bc3d6630bf84a08f9ba361baea0";
+    public static final  String  FRIDAY_APPKEY       = "6tqiC0AsASwO8T6MvMNfFJK1DQfsHiLC";
     /**
      * friday app secret
      */
-    public static final  String  FRIDAY_APPSECRET    = "db71ba971de545590a39e7dfa51ded2f";
+    public static final  String  FRIDAY_APPSECRET    = "gxixd9reotfifeqollfi0e2wgfkcey4x";
     /**
      * ios传“IOS”，安卓传“ANDROID”
      */
@@ -102,8 +102,8 @@ public class BaseParams {
     /**
      * 微信APPKey APPSecret
      */
-    public static final  String  APPKeyWX            = "wx75096ef724742d5f";//其他项目的key 需要替换
-    public static final  String  APPSecretWx         = "775207436cc9287b2e76a11803d3a9f9";//其他项目的key 需要替换
+    public static final  String  APPKeyWX            = "wxcd27d6ab6f4c3b53";//其他项目的key 需要替换
+    public static final  String  APPSecretWx         = "0d62be666a2215d54e15e258d9702ba7";//其他项目的key 需要替换
     /**
      * 微博APPKey APPSecret
      */

@@ -132,7 +132,7 @@ android {
                         GETUI_APP_ID     : "mrmZ1D4Cmb9D4LdnS7c536",
                         GETUI_APP_KEY    : "qxQouKgtRV9TK090kllob6",
                         GETUI_APP_SECRET : "KxYHRSsw077quu5fjkZ7z1",
-                        UMENG_APPKEY     : "581ad45d99f0c75be8001d07",
+                        UMENG_APPKEY     : "5b6c014da40fa316e3000011",
                         APP_CHANNEL_VALUE: name]
         }
     }

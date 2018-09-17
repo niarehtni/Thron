@@ -1,6 +1,7 @@
 package com.rd.zhongqipiaoetong;
 
 import android.app.Application;
+import android.content.Context;
 import android.util.DisplayMetrics;
 
 import com.bumptech.glide.request.target.ViewTarget;
@@ -23,6 +24,8 @@ import com.umeng.socialize.PlatformConfig;
 import com.yitong.entity.KeyVo;
 
 import java.util.Map;
+
+import javax.net.ssl.HttpsURLConnection;
 
 import retrofit2.Call;
 import retrofit2.Response;
@@ -142,6 +145,8 @@ public class MyApplication extends Application {
         if (!Utils.isConnect(this)) {
             ErrorInfo.getInstance().addError(null, getString(R.string.app_network_error));
         }
+
+
         // 监听APP是否到后台
         watcher = new GestureLockWatcher(this);
         watcher.setOnScreenPressedListener(new GestureLockWatcher.OnScreenPressedListener() {

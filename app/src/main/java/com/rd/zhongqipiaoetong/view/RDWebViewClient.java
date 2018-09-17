@@ -17,6 +17,7 @@ import com.rd.zhongqipiaoetong.module.more.activity.InvitationAct;
 import com.rd.zhongqipiaoetong.module.more.activity.InvitationTypeBAct;
 import com.rd.zhongqipiaoetong.module.product.activity.FinancingDetailAct;
 import com.rd.zhongqipiaoetong.module.user.activity.LoginAct;
+import com.rd.zhongqipiaoetong.module.user.activity.RegisterFirstAct;
 import com.rd.zhongqipiaoetong.utils.ActivityUtils;
 
 /**
@@ -63,7 +64,13 @@ public class RDWebViewClient extends WebViewClient {
             ActivityUtils.push(FinancingDetailAct.class, intent);
         } else if (url.equals("mobile://app?goto=home")) {
             ActivityUtils.push(MainAct.class);
-        } else if (url.equals("rdthron://app/user/account")) {
+        }
+        else if (url.equals("rdthron://app/user/login")) {//中秋活动跳登录
+            Intent intent = new Intent();
+            intent.putExtra(BundleKeys.H5,true);
+            ActivityUtils.push(LoginAct.class,intent);
+        }
+        else if (url.equals("rdthron://app/user/account")) {
             ActivityUtils.peek().finish();
             Intent intent = new Intent();
             intent.putExtra(BundleKeys.IS_SHOW, true);
